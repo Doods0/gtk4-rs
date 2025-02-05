@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4/src/functions.rs`."><title>functions.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../static.files/storage-59e33391.js"></script><script defer src="../../static.files/src-script-56102188.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4/src/functions.rs`."><title>functions.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gdk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../static.files/storage-302de22f.js"></script><script defer src="../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -604,9 +604,9 @@
         <span class="kw">let </span><span class="kw-2">mut </span>value = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.Uninitialized.html#tymethod.uninitialized">glib::Value::uninitialized</a>();
         <span class="kw">let _ </span>= <a href="../../gdk4_sys/fn.gdk_content_deserialize_finish.html">ffi::gdk_content_deserialize_finish</a>(<a href="#98">res</a>, <a href="#102">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>, <span class="kw-2">&amp;mut </span><a href="#101">error</a>);
         <span class="kw">let </span>result = <span class="kw">if </span>error.is_null() {
-            <span class="prelude-val">Ok</span>(<a href="#102">value</a>)
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<a href="#102">value</a>)
         } <span class="kw">else </span>{
-            <span class="prelude-val">Err</span>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#101">error</a>))
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#101">error</a>))
         };
         <span class="kw">let </span>callback: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/thread_guard/struct.ThreadGuard.html">glib::thread_guard::ThreadGuard</a>&lt;R&gt;&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#99">user_data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
         <span class="kw">let </span>callback = <a href="#109">callback</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/thread_guard/struct.ThreadGuard.html#method.into_inner">into_inner</a>();
@@ -620,7 +620,7 @@
             <a href="#76">type_</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             <a href="#77">io_priority</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             <a href="#78">cancellable</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.map">map</a>(|p| <a href="#120">p</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
-            <span class="prelude-val">Some</span>(<a href="#113">callback</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#113">callback</a>),
             <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="#92">user_data</a>) <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
         );
     }
@@ -642,7 +642,7 @@
             <span class="kw-2">&amp;</span><a href="#136">mime_type</a>,
             <a href="#130">type_</a>,
             <a href="#131">io_priority</a>,
-            <span class="prelude-val">Some</span>(<a href="#137">cancellable</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#137">cancellable</a>),
             <span class="kw">move </span>|res| {
                 <a href="#137">send</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/gio/gio_future/struct.GioFutureResult.html#method.resolve">resolve</a>(<a href="#144">res</a>);
             },
@@ -687,17 +687,17 @@
             <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_func&lt;T: <span class="lifetime">'static</span>&gt;(data: glib::ffi::gpointer) {
                 <span class="kw">let </span>_task_data: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;<a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;T&gt;&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#185">data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
             }
-            <a href="#182">task_data</a> = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.new">Box::new</a>(<span class="prelude-val">None</span>));
+            <a href="#182">task_data</a> = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.new">Box::new</a>(<a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>));
             <a href="../../gdk4_sys/fn.gdk_content_deserializer_set_task_data.html">ffi::gdk_content_deserializer_set_task_data</a>(
                 <a href="#177">deserializer</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#182">task_data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="#185-187">notify_func</a>::&lt;T&gt;),
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#185-187">notify_func</a>::&lt;T&gt;),
             );
         }
 
         (<span class="kw-2">*</span><a href="#178">callback</a>)(<span class="kw-2">&amp;</span><a href="#177">deserializer</a>, <span class="kw-2">&amp;mut *</span><a href="#182">task_data</a>);
     }
-    <span class="kw">let </span>deserialize = <span class="prelude-val">Some</span>(<a href="#171-197">deserialize_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
+    <span class="kw">let </span>deserialize = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#171-197">deserialize_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
     <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_func&lt;
         T: <span class="lifetime">'static</span>,
         P: <a href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html">Fn</a>(<span class="kw-2">&amp;</span><a href="auto/content_deserializer.rs.html#8-26">ContentDeserializer</a>, <span class="kw-2">&amp;mut </span><a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;T&gt;) + <span class="lifetime">'static</span>,
@@ -706,7 +706,7 @@
     ) {
         <span class="kw">let </span>_callback: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;P&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#203">data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
     }
-    <span class="kw">let </span>destroy_call4 = <span class="prelude-val">Some</span>(<a href="#199-206">notify_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
+    <span class="kw">let </span>destroy_call4 = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#199-206">notify_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
     <span class="kw">let </span>super_callback0: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;P&gt; = <a href="#170">deserialize_data</a>;
     <span class="kw">unsafe </span>{
         <a href="../../gdk4_sys/fn.gdk_content_register_deserializer.html">ffi::gdk_content_register_deserializer</a>(
@@ -755,17 +755,17 @@
             <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_func&lt;T: <span class="lifetime">'static</span>&gt;(data: glib::ffi::gpointer) {
                 <span class="kw">let </span>_task_data: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;<a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;T&gt;&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#253">data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
             }
-            <a href="#250">task_data</a> = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.new">Box::new</a>(<span class="prelude-val">None</span>));
+            <a href="#250">task_data</a> = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.new">Box::new</a>(<a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>));
             <a href="../../gdk4_sys/fn.gdk_content_serializer_set_task_data.html">ffi::gdk_content_serializer_set_task_data</a>(
                 <a href="#246">serializer</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                 <a href="#250">task_data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="#253-255">notify_func</a>::&lt;T&gt;),
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#253-255">notify_func</a>::&lt;T&gt;),
             );
         }
 
         (<span class="kw-2">*</span><a href="#247">callback</a>)(<span class="kw-2">&amp;</span><a href="#246">serializer</a>, <span class="kw-2">&amp;mut *</span><a href="#250">task_data</a>);
     }
-    <span class="kw">let </span>serialize = <span class="prelude-val">Some</span>(<a href="#240-265">serialize_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
+    <span class="kw">let </span>serialize = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#240-265">serialize_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
     <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn </span>notify_func&lt;
         T: <span class="lifetime">'static</span>,
         P: <a href="https://doc.rust-lang.org/nightly/core/ops/function/trait.Fn.html">Fn</a>(<span class="kw-2">&amp;</span><a href="auto/content_serializer.rs.html#8-27">ContentSerializer</a>, <span class="kw-2">&amp;mut </span><a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;T&gt;) + <span class="lifetime">'static</span>,
@@ -774,7 +774,7 @@
     ) {
         <span class="kw">let </span>_callback: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;P&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#271">data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
     }
-    <span class="kw">let </span>destroy_call4 = <span class="prelude-val">Some</span>(<a href="#267-274">notify_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
+    <span class="kw">let </span>destroy_call4 = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#267-274">notify_func</a>::&lt;T, P&gt; <span class="kw">as _</span>);
     <span class="kw">let </span>super_callback0: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;P&gt; = <a href="#239">serialize_data</a>;
     <span class="kw">unsafe </span>{
         <a href="../../gdk4_sys/fn.gdk_content_register_serializer.html">ffi::gdk_content_register_serializer</a>(
@@ -834,9 +834,9 @@
         <span class="kw">let </span><span class="kw-2">mut </span>error = <a href="https://doc.rust-lang.org/nightly/core/ptr/fn.null_mut.html">ptr::null_mut</a>();
         <span class="kw">let _ </span>= <a href="../../gdk4_sys/fn.gdk_content_serialize_finish.html">ffi::gdk_content_serialize_finish</a>(<a href="#329">res</a>, <span class="kw-2">&amp;mut </span><a href="#332">error</a>);
         <span class="kw">let </span>result = <span class="kw">if </span>error.is_null() {
-            <span class="prelude-val">Ok</span>(())
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(())
         } <span class="kw">else </span>{
-            <span class="prelude-val">Err</span>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#332">error</a>))
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#332">error</a>))
         };
         <span class="kw">let </span>callback: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box</a>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/thread_guard/struct.ThreadGuard.html">glib::thread_guard::ThreadGuard</a>&lt;R&gt;&gt; = <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box::from_raw</a>(<a href="#330">user_data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
         <span class="kw">let </span>callback = <a href="#339">callback</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/thread_guard/struct.ThreadGuard.html#method.into_inner">into_inner</a>();
@@ -850,7 +850,7 @@
             <a href="#308">value</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             <a href="#309">io_priority</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
             <a href="#310">cancellable</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.map">map</a>(|p| <a href="#350">p</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
-            <span class="prelude-val">Some</span>(<a href="#343">callback</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#343">callback</a>),
             <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box::into_raw</a>(<a href="#323">user_data</a>) <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
         );
     }
@@ -873,7 +873,7 @@
             <span class="kw-2">&amp;</span><a href="#366">mime_type</a>,
             <span class="kw-2">&amp;</span><a href="#367">value</a>,
             <a href="#361">io_priority</a>,
-            <span class="prelude-val">Some</span>(<a href="#368">cancellable</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#368">cancellable</a>),
             <span class="kw">move </span>|res| {
                 <a href="#368">send</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/gio/gio_future/struct.GioFutureResult.html#method.resolve">resolve</a>(<a href="#375">res</a>);
             },

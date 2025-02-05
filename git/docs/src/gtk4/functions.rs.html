@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/functions.rs`."><title>functions.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../static.files/storage-59e33391.js"></script><script defer src="../../static.files/src-script-56102188.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/functions.rs`."><title>functions.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../static.files/storage-302de22f.js"></script><script defer src="../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -761,13 +761,13 @@
                 <a href="#206">accelerator_mods</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.as_mut_ptr">as_mut_ptr</a>(),
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>((
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((
                     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlib.html#tymethod.from_glib">gdk::Key::from_glib</a>(<a href="#205">accelerator_key</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()),
                     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#206">accelerator_mods</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()),
                 ))
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         })
     }
 }
@@ -831,14 +831,14 @@
                     }
                 }
                 <span class="kw">let </span>accelerator_codes = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/collections/slice/struct.Slice.html#method.from_glib_full_num">Slice::from_glib_full_num</a>(<a href="#266">accelerator_codes_ptr</a>, <a href="#276">len</a>);
-                <span class="prelude-val">Some</span>((
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((
                     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlib.html#tymethod.from_glib">gdk::Key::from_glib</a>(<a href="#265">accelerator_key</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()),
                     <a href="#282">accelerator_codes</a>,
                     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#267">accelerator_mods</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()),
                 ))
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         })
     }
 }
@@ -897,9 +897,9 @@
         <span class="kw">let </span><span class="kw-2">mut </span>error = <a href="https://doc.rust-lang.org/nightly/core/ptr/fn.null_mut.html">std::ptr::null_mut</a>();
         <span class="kw">let _ </span>= <a href="../../gtk4_sys/fn.gtk_show_uri_full_finish.html">ffi::gtk_show_uri_full_finish</a>(<a href="#342">parent_ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../gtk4_sys/struct.GtkWindow.html">ffi::GtkWindow</a>, <a href="#343">res</a>, <span class="kw-2">&amp;mut </span><a href="#346">error</a>);
         <span class="kw">let </span>result = <span class="kw">if </span>error.is_null() {
-            <span class="prelude-val">Ok</span>(())
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(())
         } <span class="kw">else </span>{
-            <span class="prelude-val">Err</span>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#346">error</a>))
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#346">error</a>))
         };
         <span class="kw">let </span>callback: <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">Box_</a>&lt;<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/thread_guard/struct.ThreadGuard.html">glib::thread_guard::ThreadGuard</a>&lt;P&gt;&gt; =
             <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.from_raw">Box_::from_raw</a>(<a href="#344">user_data</a> <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>);
@@ -913,7 +913,7 @@
             <a href="#323">uri</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             <a href="#324">timestamp</a>,
             <a href="#325">cancellable</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.map">map</a>(|p| <a href="#364">p</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
-            <span class="prelude-val">Some</span>(<a href="#358">callback</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#358">callback</a>),
             <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box_::into_raw</a>(<a href="#339">user_data</a>) <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
         );
     }
@@ -934,7 +934,7 @@
             <a href="#379">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.as_ref">as_ref</a>().<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.map">map</a>(<a href="https://doc.rust-lang.org/nightly/core/borrow/trait.Borrow.html#tymethod.borrow">::std::borrow::Borrow::borrow</a>),
             <span class="kw-2">&amp;</span><a href="#380">uri</a>,
             <a href="#376">timestamp</a>,
-            <span class="prelude-val">Some</span>(<a href="#381">cancellable</a>),
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#381">cancellable</a>),
             <span class="kw">move </span>|res| {
                 <a href="#381">send</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/gio/gio_future/struct.GioFutureResult.html#method.resolve">resolve</a>(<a href="#387">res</a>);
             },
@@ -957,7 +957,7 @@
     <span class="kw">let </span>quark = <span class="kw-2">*</span><a href="#405">QUARK</a>.<a href="https://doc.rust-lang.org/nightly/std/sync/once_lock/struct.OnceLock.html#method.get_or_init">get_or_init</a>(|| <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/quark/struct.Quark.html#method.from_str">Quark::from_str</a>(<span class="string">"gtk-rs-about-dialog"</span>));
 
     <span class="kw">unsafe </span>{
-        <span class="kw">if let </span><span class="prelude-val">Some</span>(d) = <a href="#403">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.and_then">and_then</a>(|p| <a href="#409">p</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html#tymethod.qdata">qdata</a>::&lt;<a href="auto/about_dialog.rs.html#16-908">AboutDialog</a>&gt;(<a href="#406">quark</a>)) {
+        <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(d) = <a href="#403">parent</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.and_then">and_then</a>(|p| <a href="#409">p</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectExt.html#tymethod.qdata">qdata</a>::&lt;<a href="auto/about_dialog.rs.html#16-908">AboutDialog</a>&gt;(<a href="#406">quark</a>)) {
             <a href="#409">d</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="auto/widget.rs.html#3953-3957">show</a>();
         } <span class="kw">else </span>{
             <span class="kw">let </span><span class="kw-2">mut </span>builder = glib::Object::builder::&lt;<a href="auto/about_dialog.rs.html#16-908">AboutDialog</a>&gt;();
@@ -968,7 +968,7 @@
             <a href="#416">about_dialog</a>.<a href="auto/window.rs.html#2199-2203">set_hide_on_close</a>(<span class="bool-val">true</span>);
 
             <span class="comment">// cache the dialog if a parent is set
-            </span><span class="kw">if let </span><span class="prelude-val">Some</span>(dialog_parent) = <a href="#403">parent</a> {
+            </span><span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(dialog_parent) = <a href="#403">parent</a> {
                 <a href="#416">about_dialog</a>.<a href="auto/window.rs.html#2250-2254">set_modal</a>(<span class="bool-val">true</span>);
                 <a href="#416">about_dialog</a>.<a href="auto/window.rs.html#2355-2362">set_transient_for</a>(<a href="#403">parent</a>);
                 <a href="#416">about_dialog</a>.<a href="auto/window.rs.html#2115-2122">set_destroy_with_parent</a>(<span class="bool-val">true</span>);

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/tree_model.rs`."><title>tree_model.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/tree_model.rs`."><title>tree_model.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -1379,7 +1379,7 @@
 }
 
 <span class="kw">impl </span><a href="#14-276">TreeModel</a> {
-    <span class="kw">pub const </span>NONE: <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#14-276">TreeModel</a>&gt; = <span class="prelude-val">None</span>;
+    <span class="kw">pub const </span>NONE: <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="kw-2">&amp;</span><span class="lifetime">'static </span><a href="#14-276">TreeModel</a>&gt; = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>;
 }
 
 <span class="doccomment">/// Trait containing all [`struct@TreeModel`] methods.
@@ -1414,7 +1414,7 @@
             <span class="kw">let </span>callback = <a href="#306">data</a> <span class="kw">as </span><span class="kw-2">*mut </span>P;
             (<span class="kw-2">*</span><a href="#311">callback</a>)(<span class="kw-2">&amp;</span><a href="#308">model</a>, <span class="kw-2">&amp;</span><a href="#309">path</a>, <span class="kw-2">&amp;</span><a href="#310">iter</a>).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>()
         }
-        <span class="kw">let </span>func = <span class="prelude-val">Some</span>(<a href="#302-313">func_func</a>::&lt;P&gt; <span class="kw">as _</span>);
+        <span class="kw">let </span>func = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#302-313">func_func</a>::&lt;P&gt; <span class="kw">as _</span>);
         <span class="kw">let </span>super_callback0: <span class="kw-2">&amp;mut </span>P = <span class="kw-2">&amp;mut </span><a href="#301">func_data</a>;
         <span class="kw">unsafe </span>{
             <a href="../../../gtk4_sys/fn.gtk_tree_model_foreach.html">ffi::gtk_tree_model_foreach</a>(
@@ -1501,10 +1501,10 @@
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.mut_override.html">mut_override</a>(<a href="#392">path</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>),
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#394">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#394">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1534,10 +1534,10 @@
                 <a href="#428">iter</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtrMut.html#tymethod.to_glib_none_mut">to_glib_none_mut</a>().<span class="number">0</span>,
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#428">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#428">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1570,10 +1570,10 @@
                 <a href="#461">path_string</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#463">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#463">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1677,10 +1677,10 @@
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.mut_override.html">mut_override</a>(<a href="#568">parent</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>),
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#570">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#570">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1790,10 +1790,10 @@
                 <a href="#680">n</a>,
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#682">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#682">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1830,10 +1830,10 @@
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.mut_override.html">mut_override</a>(<a href="#721">child</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>),
             ));
             <span class="kw">if </span>ret {
-                <span class="prelude-val">Some</span>(<a href="#723">iter</a>)
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#723">iter</a>)
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1993,7 +1993,7 @@
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#869">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html#tymethod.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <span class="string">c"row-changed"</span>.<a href="https://doc.rust-lang.org/nightly/core/ffi/c_str/struct.CStr.html#method.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     <a href="#872-887">row_changed_trampoline</a>::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box_::into_raw</a>(<a href="#889">f</a>),
@@ -2032,7 +2032,7 @@
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#912">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html#tymethod.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <span class="string">c"row-deleted"</span>.<a href="https://doc.rust-lang.org/nightly/core/ffi/c_str/struct.CStr.html#method.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     <a href="#913-926">row_deleted_trampoline</a>::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box_::into_raw</a>(<a href="#928">f</a>),
@@ -2072,7 +2072,7 @@
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#948">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html#tymethod.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <span class="string">c"row-has-child-toggled"</span>.<a href="https://doc.rust-lang.org/nightly/core/ffi/c_str/struct.CStr.html#method.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     <a href="#951-966">row_has_child_toggled_trampoline</a>::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box_::into_raw</a>(<a href="#968">f</a>),
@@ -2116,7 +2116,7 @@
             <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/signal/fn.connect_raw.html">connect_raw</a>(
                 <a class="self" href="#992">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.ObjectType.html#tymethod.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
                 <span class="string">c"row-inserted"</span>.<a href="https://doc.rust-lang.org/nightly/core/ffi/c_str/struct.CStr.html#method.as_ptr">as_ptr</a>() <span class="kw">as </span><span class="kw-2">*const </span><span class="kw">_</span>,
-                <span class="prelude-val">Some</span>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="https://doc.rust-lang.org/nightly/core/intrinsics/fn.transmute.html">std::mem::transmute</a>::&lt;<span class="kw-2">*const </span>(), <span class="kw">unsafe extern </span><span class="string">"C" </span><span class="kw">fn</span>()&gt;(
                     <a href="#995-1010">row_inserted_trampoline</a>::&lt;<span class="self">Self</span>, F&gt; <span class="kw">as </span><span class="kw-2">*const </span>(),
                 )),
                 <a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html#method.into_raw">Box_::into_raw</a>(<a href="#1012">f</a>),

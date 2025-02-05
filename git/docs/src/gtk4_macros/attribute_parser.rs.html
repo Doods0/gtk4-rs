@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4-macros/src/attribute_parser.rs`."><title>attribute_parser.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4_macros" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../static.files/storage-59e33391.js"></script><script defer src="../../static.files/src-script-56102188.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4-macros/src/attribute_parser.rs`."><title>attribute_parser.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4_macros" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../static.files/storage-302de22f.js"></script><script defer src="../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -445,8 +445,8 @@
 <a href="#371" id="371">371</a>
 <a href="#372" id="372">372</a></pre></div><pre class="rust"><code><span class="comment">// Take a look at the license at the top of the repository in the LICENSE file.
 
-</span><span class="kw">use </span><a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Span.html">proc_macro2::Span</a>;
-<span class="kw">use </span><a href="https://docs.rs/quote/1.0.37/quote/to_tokens/trait.ToTokens.html">quote::ToTokens</a>;
+</span><span class="kw">use </span><a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Span.html">proc_macro2::Span</a>;
+<span class="kw">use </span><a href="https://docs.rs/quote/1.0.38/quote/to_tokens/trait.ToTokens.html">quote::ToTokens</a>;
 <span class="kw">use </span>syn::{
     parse::{<a href="https://docs.rs/syn/2.0.90/syn/parse/trait.Parse.html">Parse</a>, <a href="https://docs.rs/syn/2.0.90/syn/parse/type.ParseStream.html">ParseStream</a>},
     <a href="https://docs.rs/syn/2.0.90/syn/punctuated/struct.Punctuated.html">punctuated::Punctuated</a>,
@@ -475,7 +475,7 @@
 
 <span class="kw">impl </span><a href="https://docs.rs/syn/2.0.90/syn/parse/trait.Parse.html">Parse</a> <span class="kw">for </span><a href="#26-29">Template</a> {
     <span class="kw">fn </span>parse(input: <a href="https://docs.rs/syn/2.0.90/syn/parse/type.ParseStream.html">ParseStream</a>) -&gt; <a class="prelude-ty" href="https://docs.rs/syn/2.0.90/syn/error/type.Result.html">Result</a>&lt;<span class="self">Self</span>&gt; {
-        <span class="kw">let </span><span class="kw-2">mut </span>source = <span class="prelude-val">None</span>;
+        <span class="kw">let </span><span class="kw-2">mut </span>source = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>;
         <span class="kw">let </span><span class="kw-2">mut </span>allow_template_child_without_attribute = <span class="bool-val">false</span>;
 
         <span class="kw">while </span>!input.is_empty() {
@@ -542,14 +542,14 @@
             }
         }
 
-        <span class="kw">let </span><span class="prelude-val">Some</span>(source) = <a href="#33">source</a> <span class="kw">else </span>{
-            <span class="kw">return </span><span class="prelude-val">Err</span>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new">Error::new</a>(
-                <a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Span.html#method.call_site">Span::call_site</a>(),
+        <span class="kw">let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(source) = <a href="#33">source</a> <span class="kw">else </span>{
+            <span class="kw">return </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new">Error::new</a>(
+                <a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Span.html#method.call_site">Span::call_site</a>(),
                 <span class="string">"Invalid meta, specify one of 'file', 'resource', or 'string'"</span>,
             ));
         };
 
-        <span class="prelude-val">Ok</span>(<a href="#26-29">Template</a> {
+        <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<a href="#26-29">Template</a> {
             <a href="#100">source</a>,
             <a href="#34">allow_template_child_without_attribute</a>,
         })
@@ -583,18 +583,18 @@
             }
         }
 
-        <span class="prelude-val">None
-    </span>}
+        <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+    </a>}
 }
 
 <span class="kw">pub fn </span>parse_template_source(input: <span class="kw-2">&amp;</span><a href="https://docs.rs/syn/2.0.90/syn/derive/struct.DeriveInput.html">DeriveInput</a>) -&gt; <a class="prelude-ty" href="https://docs.rs/syn/2.0.90/syn/error/type.Result.html">Result</a>&lt;<a href="#26-29">Template</a>&gt; {
-    <span class="kw">let </span><span class="prelude-val">Some</span>(attr) = <a href="#145">input</a>
+    <span class="kw">let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(attr) = <a href="#145">input</a>
         .attrs
         .<a href="https://doc.rust-lang.org/nightly/core/foreigntype.slice.html#method.iter">iter</a>()
         .<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html#tymethod.find">find</a>(|attr| <a href="#149">attr</a>.<a href="https://docs.rs/syn/2.0.90/syn/attr/struct.Attribute.html#method.path">path</a>().<a href="https://docs.rs/syn/2.0.90/syn/path/struct.Path.html#method.is_ident">is_ident</a>(<span class="string">"template"</span>))
     <span class="kw">else </span>{
-        <span class="kw">return </span><span class="prelude-val">Err</span>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new">Error::new</a>(
-            <a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Span.html#method.call_site">Span::call_site</a>(),
+        <span class="kw">return </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new">Error::new</a>(
+            <a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Span.html#method.call_site">Span::call_site</a>(),
             <span class="string">"Missing 'template' attribute"</span>,
         ));
     };
@@ -606,7 +606,7 @@
 </span><span class="kw">pub enum </span>FieldAttributeArg {
     <span class="attr">#[allow(dead_code)]
     </span><span class="comment">// The span is needed for xml_validation feature
-    </span>Id(<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>, <a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Span.html">Span</a>),
+    </span>Id(<a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a>, <a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Span.html">Span</a>),
     Internal(<a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a>),
 }
 
@@ -633,14 +633,14 @@
 
 <span class="doccomment">/// A field with an attribute.
 </span><span class="kw">pub struct </span>AttributedField {
-    <span class="kw">pub </span>ident: <a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Ident.html">Ident</a>,
+    <span class="kw">pub </span>ident: <a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Ident.html">Ident</a>,
     <span class="kw">pub </span>ty: <a href="https://docs.rs/syn/2.0.90/syn/ty/enum.Type.html">Type</a>,
     <span class="kw">pub </span>attr: <a href="#184-187">FieldAttribute</a>,
 }
 
 <span class="kw">impl </span><a href="#190-194">AttributedField</a> {
     <span class="kw">pub fn </span>id(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://doc.rust-lang.org/nightly/alloc/string/struct.String.html">String</a> {
-        <span class="kw">let </span><span class="kw-2">mut </span>name = <span class="prelude-val">None</span>;
+        <span class="kw">let </span><span class="kw-2">mut </span>name = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>;
         <span class="kw">for </span>arg <span class="kw">in </span><span class="kw-2">&amp;</span><span class="self">self</span>.attr.args {
             <span class="kw">if let </span>FieldAttributeArg::Id(value, <span class="kw">_</span>) = arg {
                 name = <span class="prelude-val">Some</span>(value)
@@ -650,13 +650,13 @@
     }
 
     <span class="attr">#[cfg(feature = <span class="string">"xml_validation"</span>)]
-    </span><span class="kw">pub fn </span>id_span(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Span.html">Span</a> {
+    </span><span class="kw">pub fn </span>id_span(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Span.html">Span</a> {
         <span class="kw">for </span>arg <span class="kw">in </span><span class="kw-2">&amp;</span><span class="self">self</span>.attr.args {
             <span class="kw">if let </span>FieldAttributeArg::Id(<span class="kw">_</span>, span) = arg {
                 <span class="kw">return </span><span class="kw-2">*</span>span;
             }
         }
-        <a class="self" href="#208">self</a>.ident.<a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.Ident.html#method.span">span</a>()
+        <a class="self" href="#208">self</a>.ident.<a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.Ident.html#method.span">span</a>()
     }
 }
 
@@ -679,23 +679,23 @@
             <span class="kw">let </span>keyword = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
             <span class="kw">let _</span>: <a class="macro" href="https://docs.rs/syn/2.0.90/syn/macro.Token.html">Token!</a>[=] = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
             <span class="kw">let </span>value = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
-            <span class="prelude-val">Ok</span>(<span class="self">Self</span>::Id { <a href="#234">keyword</a>, <a href="#236">value</a> })
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<span class="self">Self</span>::Id { <a href="#234">keyword</a>, <a href="#236">value</a> })
         } <span class="kw">else if </span>lookahead.peek(kw::internal) {
             <span class="kw">let </span>keyword = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
             <span class="kw">let _</span>: <a class="macro" href="https://docs.rs/syn/2.0.90/syn/macro.Token.html">Token!</a>[=] = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
             <span class="kw">let </span>value = <a href="#231">input</a>.<a href="https://docs.rs/syn/2.0.90/syn/parse/struct.ParseBuffer.html#method.parse">parse</a>()<span class="question-mark">?</span>;
-            <span class="prelude-val">Ok</span>(<span class="self">Self</span>::Internal { <a href="#239">keyword</a>, <a href="#241">value</a> })
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<span class="self">Self</span>::Internal { <a href="#239">keyword</a>, <a href="#241">value</a> })
         } <span class="kw">else </span>{
-            <span class="prelude-val">Err</span>(<a href="#232">lookahead</a>.<a href="https://docs.rs/syn/2.0.90/syn/lookahead/struct.Lookahead1.html#method.error">error</a>())
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="#232">lookahead</a>.<a href="https://docs.rs/syn/2.0.90/syn/lookahead/struct.Lookahead1.html#method.error">error</a>())
         }
     }
 }
 
-<span class="kw">impl </span><a href="https://docs.rs/quote/1.0.37/quote/to_tokens/trait.ToTokens.html">ToTokens</a> <span class="kw">for </span><a href="#219-228">TemplateChildAttributeMeta</a> {
-    <span class="kw">fn </span>to_tokens(<span class="kw-2">&amp;</span><span class="self">self</span>, tokens: <span class="kw-2">&amp;mut </span><a href="https://docs.rs/proc-macro2/1.0.92/proc_macro2/struct.TokenStream.html">proc_macro2::TokenStream</a>) {
+<span class="kw">impl </span><a href="https://docs.rs/quote/1.0.38/quote/to_tokens/trait.ToTokens.html">ToTokens</a> <span class="kw">for </span><a href="#219-228">TemplateChildAttributeMeta</a> {
+    <span class="kw">fn </span>to_tokens(<span class="kw-2">&amp;</span><span class="self">self</span>, tokens: <span class="kw-2">&amp;mut </span><a href="https://docs.rs/proc-macro2/1.0.93/proc_macro2/struct.TokenStream.html">proc_macro2::TokenStream</a>) {
         <span class="kw">match </span><span class="self"><a href="#250">self</a> </span>{
-            <span class="self">Self</span>::Id { keyword, .. } =&gt; <a href="#252">keyword</a>.<a href="https://docs.rs/quote/1.0.37/quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">to_tokens</a>(<a href="#250">tokens</a>),
-            <span class="self">Self</span>::Internal { keyword, .. } =&gt; <a href="#253">keyword</a>.<a href="https://docs.rs/quote/1.0.37/quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">to_tokens</a>(<a href="#250">tokens</a>),
+            <a href="#220-223"><span class="self">Self</span>::Id</a> { keyword, .. } =&gt; <a href="#252">keyword</a>.<a href="https://docs.rs/quote/1.0.38/quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">to_tokens</a>(<a href="#250">tokens</a>),
+            <a href="#224-227"><span class="self">Self</span>::Internal</a> { keyword, .. } =&gt; <a href="#253">keyword</a>.<a href="https://docs.rs/quote/1.0.38/quote/to_tokens/trait.ToTokens.html#tymethod.to_tokens">to_tokens</a>(<a href="#250">tokens</a>),
         }
     }
 }
@@ -726,15 +726,15 @@
         }
     }
 
-    <span class="prelude-val">Ok</span>(<a href="#184-187">FieldAttribute</a> { <a href="#258">ty</a>, <a href="#259">args</a> })
+    <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<a href="#184-187">FieldAttribute</a> { <a href="#258">ty</a>, <a href="#259">args</a> })
 }
 
 <span class="kw">fn </span>parse_field(field: <span class="kw-2">&amp;</span><a href="https://docs.rs/syn/2.0.90/syn/data/struct.Field.html">Field</a>) -&gt; <a class="prelude-ty" href="https://docs.rs/syn/2.0.90/syn/error/type.Result.html">Result</a>&lt;<a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<a href="#190-194">AttributedField</a>&gt;&gt; {
-    <span class="kw">let </span><span class="prelude-val">Some</span>(ident) = <span class="kw-2">&amp;</span><a href="#287">field</a>.ident <span class="kw">else </span>{
-        <span class="kw">return </span><span class="prelude-val">Err</span>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new_spanned">Error::new_spanned</a>(<a href="#287">field</a>, <span class="string">"expected identifier"</span>));
+    <span class="kw">let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(ident) = <span class="kw-2">&amp;</span><a href="#287">field</a>.ident <span class="kw">else </span>{
+        <span class="kw">return </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Err">Err</a>(<a href="https://docs.rs/syn/2.0.90/syn/error/struct.Error.html#method.new_spanned">Error::new_spanned</a>(<a href="#287">field</a>, <span class="string">"expected identifier"</span>));
     };
 
-    <span class="kw">let </span><span class="kw-2">mut </span>attr_field = <span class="prelude-val">None</span>;
+    <span class="kw">let </span><span class="kw-2">mut </span>attr_field = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>;
 
     <span class="kw">for </span>attr <span class="kw">in </span><span class="kw-2">&amp;</span>field.attrs {
         <span class="kw">let </span>ty = <span class="kw">if </span>attr.path().is_ident(<span class="string">"template_child"</span>) {
@@ -759,7 +759,7 @@
         })
     }
 
-    <span class="prelude-val">Ok</span>(<a href="#292">attr_field</a>)
+    <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<a href="#292">attr_field</a>)
 }
 
 <span class="kw">fn </span>path_is_template_child(path: <span class="kw-2">&amp;</span><a href="https://docs.rs/syn/2.0.90/syn/path/struct.Path.html">syn::Path</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.bool.html">bool</a> {
@@ -813,6 +813,6 @@
         }
     }
 
-    <span class="prelude-val">Ok</span>(<a href="#348">attributed_fields</a>)
+    <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/result/enum.Result.html#variant.Ok">Ok</a>(<a href="#348">attributed_fields</a>)
 }
 </code></pre></div></section></main></body></html>

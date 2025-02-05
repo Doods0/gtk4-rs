@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4/src/auto/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gdk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gdk4/src/auto/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gdk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -3424,19 +3424,19 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkAxisUse.html">ffi::GdkAxisUse</a> {
         <span class="kw">match </span><span class="self"><a href="#62">self</a> </span>{
-            <span class="self">Self</span>::Ignore =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_IGNORE.html">ffi::GDK_AXIS_IGNORE</a>,
-            <span class="self">Self</span>::X =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_X.html">ffi::GDK_AXIS_X</a>,
-            <span class="self">Self</span>::Y =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_Y.html">ffi::GDK_AXIS_Y</a>,
-            <span class="self">Self</span>::DeltaX =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DELTA_X.html">ffi::GDK_AXIS_DELTA_X</a>,
-            <span class="self">Self</span>::DeltaY =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DELTA_Y.html">ffi::GDK_AXIS_DELTA_Y</a>,
-            <span class="self">Self</span>::Pressure =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_PRESSURE.html">ffi::GDK_AXIS_PRESSURE</a>,
-            <span class="self">Self</span>::Xtilt =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_XTILT.html">ffi::GDK_AXIS_XTILT</a>,
-            <span class="self">Self</span>::Ytilt =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_YTILT.html">ffi::GDK_AXIS_YTILT</a>,
-            <span class="self">Self</span>::Wheel =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_WHEEL.html">ffi::GDK_AXIS_WHEEL</a>,
-            <span class="self">Self</span>::Distance =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DISTANCE.html">ffi::GDK_AXIS_DISTANCE</a>,
-            <span class="self">Self</span>::Rotation =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_ROTATION.html">ffi::GDK_AXIS_ROTATION</a>,
-            <span class="self">Self</span>::Slider =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_SLIDER.html">ffi::GDK_AXIS_SLIDER</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#76">value</a>,
+            <a href="#19"><span class="self">Self</span>::Ignore</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_IGNORE.html">ffi::GDK_AXIS_IGNORE</a>,
+            <a href="#22"><span class="self">Self</span>::X</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_X.html">ffi::GDK_AXIS_X</a>,
+            <a href="#25"><span class="self">Self</span>::Y</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_Y.html">ffi::GDK_AXIS_Y</a>,
+            <a href="#28"><span class="self">Self</span>::DeltaX</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DELTA_X.html">ffi::GDK_AXIS_DELTA_X</a>,
+            <a href="#31"><span class="self">Self</span>::DeltaY</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DELTA_Y.html">ffi::GDK_AXIS_DELTA_Y</a>,
+            <a href="#34"><span class="self">Self</span>::Pressure</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_PRESSURE.html">ffi::GDK_AXIS_PRESSURE</a>,
+            <a href="#37"><span class="self">Self</span>::Xtilt</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_XTILT.html">ffi::GDK_AXIS_XTILT</a>,
+            <a href="#40"><span class="self">Self</span>::Ytilt</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_YTILT.html">ffi::GDK_AXIS_YTILT</a>,
+            <a href="#43"><span class="self">Self</span>::Wheel</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_WHEEL.html">ffi::GDK_AXIS_WHEEL</a>,
+            <a href="#46"><span class="self">Self</span>::Distance</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_DISTANCE.html">ffi::GDK_AXIS_DISTANCE</a>,
+            <a href="#49"><span class="self">Self</span>::Rotation</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_ROTATION.html">ffi::GDK_AXIS_ROTATION</a>,
+            <a href="#52"><span class="self">Self</span>::Slider</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_AXIS_SLIDER.html">ffi::GDK_AXIS_SLIDER</a>,
+            <a href="#54"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#76">value</a>,
         }
     }
 }
@@ -3552,9 +3552,9 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkCicpRange.html">ffi::GdkCicpRange</a> {
         <span class="kw">match </span><span class="self"><a href="#190">self</a> </span>{
-            <span class="self">Self</span>::Narrow =&gt; <a href="../../../gdk4_sys/constant.GDK_CICP_RANGE_NARROW.html">ffi::GDK_CICP_RANGE_NARROW</a>,
-            <span class="self">Self</span>::Full =&gt; <a href="../../../gdk4_sys/constant.GDK_CICP_RANGE_FULL.html">ffi::GDK_CICP_RANGE_FULL</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#194">value</a>,
+            <a href="#175"><span class="self">Self</span>::Narrow</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CICP_RANGE_NARROW.html">ffi::GDK_CICP_RANGE_NARROW</a>,
+            <a href="#178"><span class="self">Self</span>::Full</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CICP_RANGE_FULL.html">ffi::GDK_CICP_RANGE_FULL</a>,
+            <a href="#180"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#194">value</a>,
         }
     }
 }
@@ -3691,16 +3691,16 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkCrossingMode.html">ffi::GdkCrossingMode</a> {
         <span class="kw">match </span><span class="self"><a href="#329">self</a> </span>{
-            <span class="self">Self</span>::Normal =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_NORMAL.html">ffi::GDK_CROSSING_NORMAL</a>,
-            <span class="self">Self</span>::Grab =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GRAB.html">ffi::GDK_CROSSING_GRAB</a>,
-            <span class="self">Self</span>::Ungrab =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_UNGRAB.html">ffi::GDK_CROSSING_UNGRAB</a>,
-            <span class="self">Self</span>::GtkGrab =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GTK_GRAB.html">ffi::GDK_CROSSING_GTK_GRAB</a>,
-            <span class="self">Self</span>::GtkUngrab =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GTK_UNGRAB.html">ffi::GDK_CROSSING_GTK_UNGRAB</a>,
-            <span class="self">Self</span>::StateChanged =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_STATE_CHANGED.html">ffi::GDK_CROSSING_STATE_CHANGED</a>,
-            <span class="self">Self</span>::TouchBegin =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_TOUCH_BEGIN.html">ffi::GDK_CROSSING_TOUCH_BEGIN</a>,
-            <span class="self">Self</span>::TouchEnd =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_TOUCH_END.html">ffi::GDK_CROSSING_TOUCH_END</a>,
-            <span class="self">Self</span>::DeviceSwitch =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_DEVICE_SWITCH.html">ffi::GDK_CROSSING_DEVICE_SWITCH</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#340">value</a>,
+            <a href="#290"><span class="self">Self</span>::Normal</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_NORMAL.html">ffi::GDK_CROSSING_NORMAL</a>,
+            <a href="#293"><span class="self">Self</span>::Grab</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GRAB.html">ffi::GDK_CROSSING_GRAB</a>,
+            <a href="#296"><span class="self">Self</span>::Ungrab</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_UNGRAB.html">ffi::GDK_CROSSING_UNGRAB</a>,
+            <a href="#299"><span class="self">Self</span>::GtkGrab</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GTK_GRAB.html">ffi::GDK_CROSSING_GTK_GRAB</a>,
+            <a href="#302"><span class="self">Self</span>::GtkUngrab</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_GTK_UNGRAB.html">ffi::GDK_CROSSING_GTK_UNGRAB</a>,
+            <a href="#306"><span class="self">Self</span>::StateChanged</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_STATE_CHANGED.html">ffi::GDK_CROSSING_STATE_CHANGED</a>,
+            <a href="#310"><span class="self">Self</span>::TouchBegin</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_TOUCH_BEGIN.html">ffi::GDK_CROSSING_TOUCH_BEGIN</a>,
+            <a href="#314"><span class="self">Self</span>::TouchEnd</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_TOUCH_END.html">ffi::GDK_CROSSING_TOUCH_END</a>,
+            <a href="#319"><span class="self">Self</span>::DeviceSwitch</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_CROSSING_DEVICE_SWITCH.html">ffi::GDK_CROSSING_DEVICE_SWITCH</a>,
+            <a href="#321"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#340">value</a>,
         }
     }
 }
@@ -3807,10 +3807,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkDevicePadFeature.html">ffi::GdkDevicePadFeature</a> {
         <span class="kw">match </span><span class="self"><a href="#445">self</a> </span>{
-            <span class="self">Self</span>::Button =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_BUTTON.html">ffi::GDK_DEVICE_PAD_FEATURE_BUTTON</a>,
-            <span class="self">Self</span>::Ring =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_RING.html">ffi::GDK_DEVICE_PAD_FEATURE_RING</a>,
-            <span class="self">Self</span>::Strip =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_STRIP.html">ffi::GDK_DEVICE_PAD_FEATURE_STRIP</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#450">value</a>,
+            <a href="#429"><span class="self">Self</span>::Button</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_BUTTON.html">ffi::GDK_DEVICE_PAD_FEATURE_BUTTON</a>,
+            <a href="#432"><span class="self">Self</span>::Ring</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_RING.html">ffi::GDK_DEVICE_PAD_FEATURE_RING</a>,
+            <a href="#435"><span class="self">Self</span>::Strip</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_PAD_FEATURE_STRIP.html">ffi::GDK_DEVICE_PAD_FEATURE_STRIP</a>,
+            <a href="#437"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#450">value</a>,
         }
     }
 }
@@ -3927,15 +3927,15 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkDeviceToolType.html">ffi::GdkDeviceToolType</a> {
         <span class="kw">match </span><span class="self"><a href="#565">self</a> </span>{
-            <span class="self">Self</span>::Unknown =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_UNKNOWN.html">ffi::GDK_DEVICE_TOOL_TYPE_UNKNOWN</a>,
-            <span class="self">Self</span>::Pen =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_PEN.html">ffi::GDK_DEVICE_TOOL_TYPE_PEN</a>,
-            <span class="self">Self</span>::Eraser =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_ERASER.html">ffi::GDK_DEVICE_TOOL_TYPE_ERASER</a>,
-            <span class="self">Self</span>::Brush =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_BRUSH.html">ffi::GDK_DEVICE_TOOL_TYPE_BRUSH</a>,
-            <span class="self">Self</span>::Pencil =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_PENCIL.html">ffi::GDK_DEVICE_TOOL_TYPE_PENCIL</a>,
-            <span class="self">Self</span>::Airbrush =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_AIRBRUSH.html">ffi::GDK_DEVICE_TOOL_TYPE_AIRBRUSH</a>,
-            <span class="self">Self</span>::Mouse =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_MOUSE.html">ffi::GDK_DEVICE_TOOL_TYPE_MOUSE</a>,
-            <span class="self">Self</span>::Lens =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_LENS.html">ffi::GDK_DEVICE_TOOL_TYPE_LENS</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#575">value</a>,
+            <a href="#534"><span class="self">Self</span>::Unknown</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_UNKNOWN.html">ffi::GDK_DEVICE_TOOL_TYPE_UNKNOWN</a>,
+            <a href="#537"><span class="self">Self</span>::Pen</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_PEN.html">ffi::GDK_DEVICE_TOOL_TYPE_PEN</a>,
+            <a href="#540"><span class="self">Self</span>::Eraser</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_ERASER.html">ffi::GDK_DEVICE_TOOL_TYPE_ERASER</a>,
+            <a href="#543"><span class="self">Self</span>::Brush</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_BRUSH.html">ffi::GDK_DEVICE_TOOL_TYPE_BRUSH</a>,
+            <a href="#546"><span class="self">Self</span>::Pencil</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_PENCIL.html">ffi::GDK_DEVICE_TOOL_TYPE_PENCIL</a>,
+            <a href="#549"><span class="self">Self</span>::Airbrush</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_AIRBRUSH.html">ffi::GDK_DEVICE_TOOL_TYPE_AIRBRUSH</a>,
+            <a href="#552"><span class="self">Self</span>::Mouse</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_MOUSE.html">ffi::GDK_DEVICE_TOOL_TYPE_MOUSE</a>,
+            <a href="#555"><span class="self">Self</span>::Lens</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DEVICE_TOOL_TYPE_LENS.html">ffi::GDK_DEVICE_TOOL_TYPE_LENS</a>,
+            <a href="#557"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#575">value</a>,
         }
     }
 }
@@ -4047,10 +4047,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkDmabufError.html">ffi::GdkDmabufError</a> {
         <span class="kw">match </span><span class="self"><a href="#685">self</a> </span>{
-            <span class="self">Self</span>::NotAvailable =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_NOT_AVAILABLE.html">ffi::GDK_DMABUF_ERROR_NOT_AVAILABLE</a>,
-            <span class="self">Self</span>::UnsupportedFormat =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_DMABUF_ERROR_UNSUPPORTED_FORMAT</a>,
-            <span class="self">Self</span>::CreationFailed =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_CREATION_FAILED.html">ffi::GDK_DMABUF_ERROR_CREATION_FAILED</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#690">value</a>,
+            <a href="#666"><span class="self">Self</span>::NotAvailable</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_NOT_AVAILABLE.html">ffi::GDK_DMABUF_ERROR_NOT_AVAILABLE</a>,
+            <a href="#669"><span class="self">Self</span>::UnsupportedFormat</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_DMABUF_ERROR_UNSUPPORTED_FORMAT</a>,
+            <a href="#673"><span class="self">Self</span>::CreationFailed</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DMABUF_ERROR_CREATION_FAILED.html">ffi::GDK_DMABUF_ERROR_CREATION_FAILED</a>,
+            <a href="#675"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#690">value</a>,
         }
     }
 }
@@ -4092,7 +4092,7 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#729">code</a>) } {
-            value =&gt; <span class="prelude-val">Some</span>(<a href="#732">value</a>),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#732">value</a>),
         }
     }
 }
@@ -4190,10 +4190,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkDragCancelReason.html">ffi::GdkDragCancelReason</a> {
         <span class="kw">match </span><span class="self"><a href="#828">self</a> </span>{
-            <span class="self">Self</span>::NoTarget =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_NO_TARGET.html">ffi::GDK_DRAG_CANCEL_NO_TARGET</a>,
-            <span class="self">Self</span>::UserCancelled =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_USER_CANCELLED.html">ffi::GDK_DRAG_CANCEL_USER_CANCELLED</a>,
-            <span class="self">Self</span>::Error =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_ERROR.html">ffi::GDK_DRAG_CANCEL_ERROR</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#833">value</a>,
+            <a href="#812"><span class="self">Self</span>::NoTarget</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_NO_TARGET.html">ffi::GDK_DRAG_CANCEL_NO_TARGET</a>,
+            <a href="#815"><span class="self">Self</span>::UserCancelled</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_USER_CANCELLED.html">ffi::GDK_DRAG_CANCEL_USER_CANCELLED</a>,
+            <a href="#818"><span class="self">Self</span>::Error</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_CANCEL_ERROR.html">ffi::GDK_DRAG_CANCEL_ERROR</a>,
+            <a href="#820"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#833">value</a>,
         }
     }
 }
@@ -4381,37 +4381,37 @@
 
     <span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkEventType.html">ffi::GdkEventType</a> {
         <span class="kw">match </span><span class="self"><a href="#1019">self</a> </span>{
-            <span class="self">Self</span>::Delete =&gt; <a href="../../../gdk4_sys/constant.GDK_DELETE.html">ffi::GDK_DELETE</a>,
-            <span class="self">Self</span>::MotionNotify =&gt; <a href="../../../gdk4_sys/constant.GDK_MOTION_NOTIFY.html">ffi::GDK_MOTION_NOTIFY</a>,
-            <span class="self">Self</span>::ButtonPress =&gt; <a href="../../../gdk4_sys/constant.GDK_BUTTON_PRESS.html">ffi::GDK_BUTTON_PRESS</a>,
-            <span class="self">Self</span>::ButtonRelease =&gt; <a href="../../../gdk4_sys/constant.GDK_BUTTON_RELEASE.html">ffi::GDK_BUTTON_RELEASE</a>,
-            <span class="self">Self</span>::KeyPress =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_PRESS.html">ffi::GDK_KEY_PRESS</a>,
-            <span class="self">Self</span>::KeyRelease =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_RELEASE.html">ffi::GDK_KEY_RELEASE</a>,
-            <span class="self">Self</span>::EnterNotify =&gt; <a href="../../../gdk4_sys/constant.GDK_ENTER_NOTIFY.html">ffi::GDK_ENTER_NOTIFY</a>,
-            <span class="self">Self</span>::LeaveNotify =&gt; <a href="../../../gdk4_sys/constant.GDK_LEAVE_NOTIFY.html">ffi::GDK_LEAVE_NOTIFY</a>,
-            <span class="self">Self</span>::FocusChange =&gt; <a href="../../../gdk4_sys/constant.GDK_FOCUS_CHANGE.html">ffi::GDK_FOCUS_CHANGE</a>,
-            <span class="self">Self</span>::ProximityIn =&gt; <a href="../../../gdk4_sys/constant.GDK_PROXIMITY_IN.html">ffi::GDK_PROXIMITY_IN</a>,
-            <span class="self">Self</span>::ProximityOut =&gt; <a href="../../../gdk4_sys/constant.GDK_PROXIMITY_OUT.html">ffi::GDK_PROXIMITY_OUT</a>,
-            <span class="self">Self</span>::DragEnter =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_ENTER.html">ffi::GDK_DRAG_ENTER</a>,
-            <span class="self">Self</span>::DragLeave =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_LEAVE.html">ffi::GDK_DRAG_LEAVE</a>,
-            <span class="self">Self</span>::DragMotion =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_MOTION.html">ffi::GDK_DRAG_MOTION</a>,
-            <span class="self">Self</span>::DropStart =&gt; <a href="../../../gdk4_sys/constant.GDK_DROP_START.html">ffi::GDK_DROP_START</a>,
-            <span class="self">Self</span>::Scroll =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL.html">ffi::GDK_SCROLL</a>,
-            <span class="self">Self</span>::GrabBroken =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAB_BROKEN.html">ffi::GDK_GRAB_BROKEN</a>,
-            <span class="self">Self</span>::TouchBegin =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_BEGIN.html">ffi::GDK_TOUCH_BEGIN</a>,
-            <span class="self">Self</span>::TouchUpdate =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_UPDATE.html">ffi::GDK_TOUCH_UPDATE</a>,
-            <span class="self">Self</span>::TouchEnd =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_END.html">ffi::GDK_TOUCH_END</a>,
-            <span class="self">Self</span>::TouchCancel =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_CANCEL.html">ffi::GDK_TOUCH_CANCEL</a>,
-            <span class="self">Self</span>::TouchpadSwipe =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_SWIPE.html">ffi::GDK_TOUCHPAD_SWIPE</a>,
-            <span class="self">Self</span>::TouchpadPinch =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_PINCH.html">ffi::GDK_TOUCHPAD_PINCH</a>,
-            <span class="self">Self</span>::PadButtonPress =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_BUTTON_PRESS.html">ffi::GDK_PAD_BUTTON_PRESS</a>,
-            <span class="self">Self</span>::PadButtonRelease =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_BUTTON_RELEASE.html">ffi::GDK_PAD_BUTTON_RELEASE</a>,
-            <span class="self">Self</span>::PadRing =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_RING.html">ffi::GDK_PAD_RING</a>,
-            <span class="self">Self</span>::PadStrip =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_STRIP.html">ffi::GDK_PAD_STRIP</a>,
-            <span class="self">Self</span>::PadGroupMode =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_GROUP_MODE.html">ffi::GDK_PAD_GROUP_MODE</a>,
+            <a href="#918"><span class="self">Self</span>::Delete</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DELETE.html">ffi::GDK_DELETE</a>,
+            <a href="#921"><span class="self">Self</span>::MotionNotify</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MOTION_NOTIFY.html">ffi::GDK_MOTION_NOTIFY</a>,
+            <a href="#924"><span class="self">Self</span>::ButtonPress</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_BUTTON_PRESS.html">ffi::GDK_BUTTON_PRESS</a>,
+            <a href="#927"><span class="self">Self</span>::ButtonRelease</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_BUTTON_RELEASE.html">ffi::GDK_BUTTON_RELEASE</a>,
+            <a href="#930"><span class="self">Self</span>::KeyPress</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_PRESS.html">ffi::GDK_KEY_PRESS</a>,
+            <a href="#933"><span class="self">Self</span>::KeyRelease</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_RELEASE.html">ffi::GDK_KEY_RELEASE</a>,
+            <a href="#936"><span class="self">Self</span>::EnterNotify</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_ENTER_NOTIFY.html">ffi::GDK_ENTER_NOTIFY</a>,
+            <a href="#939"><span class="self">Self</span>::LeaveNotify</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_LEAVE_NOTIFY.html">ffi::GDK_LEAVE_NOTIFY</a>,
+            <a href="#942"><span class="self">Self</span>::FocusChange</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_FOCUS_CHANGE.html">ffi::GDK_FOCUS_CHANGE</a>,
+            <a href="#946"><span class="self">Self</span>::ProximityIn</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PROXIMITY_IN.html">ffi::GDK_PROXIMITY_IN</a>,
+            <a href="#950"><span class="self">Self</span>::ProximityOut</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PROXIMITY_OUT.html">ffi::GDK_PROXIMITY_OUT</a>,
+            <a href="#953"><span class="self">Self</span>::DragEnter</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_ENTER.html">ffi::GDK_DRAG_ENTER</a>,
+            <a href="#956"><span class="self">Self</span>::DragLeave</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_LEAVE.html">ffi::GDK_DRAG_LEAVE</a>,
+            <a href="#960"><span class="self">Self</span>::DragMotion</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DRAG_MOTION.html">ffi::GDK_DRAG_MOTION</a>,
+            <a href="#963"><span class="self">Self</span>::DropStart</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_DROP_START.html">ffi::GDK_DROP_START</a>,
+            <a href="#966"><span class="self">Self</span>::Scroll</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL.html">ffi::GDK_SCROLL</a>,
+            <a href="#969"><span class="self">Self</span>::GrabBroken</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAB_BROKEN.html">ffi::GDK_GRAB_BROKEN</a>,
+            <a href="#972"><span class="self">Self</span>::TouchBegin</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_BEGIN.html">ffi::GDK_TOUCH_BEGIN</a>,
+            <a href="#975"><span class="self">Self</span>::TouchUpdate</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_UPDATE.html">ffi::GDK_TOUCH_UPDATE</a>,
+            <a href="#978"><span class="self">Self</span>::TouchEnd</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_END.html">ffi::GDK_TOUCH_END</a>,
+            <a href="#981"><span class="self">Self</span>::TouchCancel</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCH_CANCEL.html">ffi::GDK_TOUCH_CANCEL</a>,
+            <a href="#985"><span class="self">Self</span>::TouchpadSwipe</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_SWIPE.html">ffi::GDK_TOUCHPAD_SWIPE</a>,
+            <a href="#989"><span class="self">Self</span>::TouchpadPinch</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_PINCH.html">ffi::GDK_TOUCHPAD_PINCH</a>,
+            <a href="#992"><span class="self">Self</span>::PadButtonPress</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_BUTTON_PRESS.html">ffi::GDK_PAD_BUTTON_PRESS</a>,
+            <a href="#995"><span class="self">Self</span>::PadButtonRelease</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_BUTTON_RELEASE.html">ffi::GDK_PAD_BUTTON_RELEASE</a>,
+            <a href="#998"><span class="self">Self</span>::PadRing</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_RING.html">ffi::GDK_PAD_RING</a>,
+            <a href="#1001"><span class="self">Self</span>::PadStrip</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_STRIP.html">ffi::GDK_PAD_STRIP</a>,
+            <a href="#1004"><span class="self">Self</span>::PadGroupMode</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_PAD_GROUP_MODE.html">ffi::GDK_PAD_GROUP_MODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_8"</span>)]
-            </span><span class="self">Self</span>::TouchpadHold =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_HOLD.html">ffi::GDK_TOUCHPAD_HOLD</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1051">value</a>,
+            </span><a href="#1010"><span class="self">Self</span>::TouchpadHold</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_HOLD.html">ffi::GDK_TOUCHPAD_HOLD</a>,
+            <a href="#1012"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1051">value</a>,
         }
     }
 }
@@ -4535,9 +4535,9 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkFullscreenMode.html">ffi::GdkFullscreenMode</a> {
         <span class="kw">match </span><span class="self"><a href="#1173">self</a> </span>{
-            <span class="self">Self</span>::CurrentMonitor =&gt; <a href="../../../gdk4_sys/constant.GDK_FULLSCREEN_ON_CURRENT_MONITOR.html">ffi::GDK_FULLSCREEN_ON_CURRENT_MONITOR</a>,
-            <span class="self">Self</span>::AllMonitors =&gt; <a href="../../../gdk4_sys/constant.GDK_FULLSCREEN_ON_ALL_MONITORS.html">ffi::GDK_FULLSCREEN_ON_ALL_MONITORS</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1177">value</a>,
+            <a href="#1160"><span class="self">Self</span>::CurrentMonitor</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_FULLSCREEN_ON_CURRENT_MONITOR.html">ffi::GDK_FULLSCREEN_ON_CURRENT_MONITOR</a>,
+            <a href="#1163"><span class="self">Self</span>::AllMonitors</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_FULLSCREEN_ON_ALL_MONITORS.html">ffi::GDK_FULLSCREEN_ON_ALL_MONITORS</a>,
+            <a href="#1165"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1177">value</a>,
         }
     }
 }
@@ -4643,12 +4643,12 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkGLError.html">ffi::GdkGLError</a> {
         <span class="kw">match </span><span class="self"><a href="#1281">self</a> </span>{
-            <span class="self">Self</span>::NotAvailable =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_NOT_AVAILABLE.html">ffi::GDK_GL_ERROR_NOT_AVAILABLE</a>,
-            <span class="self">Self</span>::UnsupportedFormat =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_GL_ERROR_UNSUPPORTED_FORMAT</a>,
-            <span class="self">Self</span>::UnsupportedProfile =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_UNSUPPORTED_PROFILE.html">ffi::GDK_GL_ERROR_UNSUPPORTED_PROFILE</a>,
-            <span class="self">Self</span>::CompilationFailed =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_COMPILATION_FAILED.html">ffi::GDK_GL_ERROR_COMPILATION_FAILED</a>,
-            <span class="self">Self</span>::LinkFailed =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_LINK_FAILED.html">ffi::GDK_GL_ERROR_LINK_FAILED</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1288">value</a>,
+            <a href="#1259"><span class="self">Self</span>::NotAvailable</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_NOT_AVAILABLE.html">ffi::GDK_GL_ERROR_NOT_AVAILABLE</a>,
+            <a href="#1262"><span class="self">Self</span>::UnsupportedFormat</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_GL_ERROR_UNSUPPORTED_FORMAT</a>,
+            <a href="#1265"><span class="self">Self</span>::UnsupportedProfile</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_UNSUPPORTED_PROFILE.html">ffi::GDK_GL_ERROR_UNSUPPORTED_PROFILE</a>,
+            <a href="#1268"><span class="self">Self</span>::CompilationFailed</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_COMPILATION_FAILED.html">ffi::GDK_GL_ERROR_COMPILATION_FAILED</a>,
+            <a href="#1271"><span class="self">Self</span>::LinkFailed</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GL_ERROR_LINK_FAILED.html">ffi::GDK_GL_ERROR_LINK_FAILED</a>,
+            <a href="#1273"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1288">value</a>,
         }
     }
 }
@@ -4688,7 +4688,7 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#1325">code</a>) } {
-            value =&gt; <span class="prelude-val">Some</span>(<a href="#1328">value</a>),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#1328">value</a>),
         }
     }
 }
@@ -4796,17 +4796,17 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkGravity.html">ffi::GdkGravity</a> {
         <span class="kw">match </span><span class="self"><a href="#1434">self</a> </span>{
-            <span class="self">Self</span>::NorthWest =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH_WEST.html">ffi::GDK_GRAVITY_NORTH_WEST</a>,
-            <span class="self">Self</span>::North =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH.html">ffi::GDK_GRAVITY_NORTH</a>,
-            <span class="self">Self</span>::NorthEast =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH_EAST.html">ffi::GDK_GRAVITY_NORTH_EAST</a>,
-            <span class="self">Self</span>::West =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_WEST.html">ffi::GDK_GRAVITY_WEST</a>,
-            <span class="self">Self</span>::Center =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_CENTER.html">ffi::GDK_GRAVITY_CENTER</a>,
-            <span class="self">Self</span>::East =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_EAST.html">ffi::GDK_GRAVITY_EAST</a>,
-            <span class="self">Self</span>::SouthWest =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH_WEST.html">ffi::GDK_GRAVITY_SOUTH_WEST</a>,
-            <span class="self">Self</span>::South =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH.html">ffi::GDK_GRAVITY_SOUTH</a>,
-            <span class="self">Self</span>::SouthEast =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH_EAST.html">ffi::GDK_GRAVITY_SOUTH_EAST</a>,
-            <span class="self">Self</span>::Static =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_STATIC.html">ffi::GDK_GRAVITY_STATIC</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1446">value</a>,
+            <a href="#1396"><span class="self">Self</span>::NorthWest</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH_WEST.html">ffi::GDK_GRAVITY_NORTH_WEST</a>,
+            <a href="#1399"><span class="self">Self</span>::North</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH.html">ffi::GDK_GRAVITY_NORTH</a>,
+            <a href="#1402"><span class="self">Self</span>::NorthEast</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_NORTH_EAST.html">ffi::GDK_GRAVITY_NORTH_EAST</a>,
+            <a href="#1405"><span class="self">Self</span>::West</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_WEST.html">ffi::GDK_GRAVITY_WEST</a>,
+            <a href="#1408"><span class="self">Self</span>::Center</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_CENTER.html">ffi::GDK_GRAVITY_CENTER</a>,
+            <a href="#1411"><span class="self">Self</span>::East</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_EAST.html">ffi::GDK_GRAVITY_EAST</a>,
+            <a href="#1414"><span class="self">Self</span>::SouthWest</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH_WEST.html">ffi::GDK_GRAVITY_SOUTH_WEST</a>,
+            <a href="#1417"><span class="self">Self</span>::South</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH.html">ffi::GDK_GRAVITY_SOUTH</a>,
+            <a href="#1420"><span class="self">Self</span>::SouthEast</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_SOUTH_EAST.html">ffi::GDK_GRAVITY_SOUTH_EAST</a>,
+            <a href="#1424"><span class="self">Self</span>::Static</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_GRAVITY_STATIC.html">ffi::GDK_GRAVITY_STATIC</a>,
+            <a href="#1426"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1446">value</a>,
         }
     }
 }
@@ -4930,14 +4930,14 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkInputSource.html">ffi::GdkInputSource</a> {
         <span class="kw">match </span><span class="self"><a href="#1568">self</a> </span>{
-            <span class="self">Self</span>::Mouse =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_MOUSE.html">ffi::GDK_SOURCE_MOUSE</a>,
-            <span class="self">Self</span>::Pen =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_PEN.html">ffi::GDK_SOURCE_PEN</a>,
-            <span class="self">Self</span>::Keyboard =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_KEYBOARD.html">ffi::GDK_SOURCE_KEYBOARD</a>,
-            <span class="self">Self</span>::Touchscreen =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TOUCHSCREEN.html">ffi::GDK_SOURCE_TOUCHSCREEN</a>,
-            <span class="self">Self</span>::Touchpad =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TOUCHPAD.html">ffi::GDK_SOURCE_TOUCHPAD</a>,
-            <span class="self">Self</span>::Trackpoint =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TRACKPOINT.html">ffi::GDK_SOURCE_TRACKPOINT</a>,
-            <span class="self">Self</span>::TabletPad =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TABLET_PAD.html">ffi::GDK_SOURCE_TABLET_PAD</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1577">value</a>,
+            <a href="#1537"><span class="self">Self</span>::Mouse</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_MOUSE.html">ffi::GDK_SOURCE_MOUSE</a>,
+            <a href="#1540"><span class="self">Self</span>::Pen</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_PEN.html">ffi::GDK_SOURCE_PEN</a>,
+            <a href="#1543"><span class="self">Self</span>::Keyboard</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_KEYBOARD.html">ffi::GDK_SOURCE_KEYBOARD</a>,
+            <a href="#1547"><span class="self">Self</span>::Touchscreen</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TOUCHSCREEN.html">ffi::GDK_SOURCE_TOUCHSCREEN</a>,
+            <a href="#1551"><span class="self">Self</span>::Touchpad</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TOUCHPAD.html">ffi::GDK_SOURCE_TOUCHPAD</a>,
+            <a href="#1554"><span class="self">Self</span>::Trackpoint</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TRACKPOINT.html">ffi::GDK_SOURCE_TRACKPOINT</a>,
+            <a href="#1558"><span class="self">Self</span>::TabletPad</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SOURCE_TABLET_PAD.html">ffi::GDK_SOURCE_TABLET_PAD</a>,
+            <a href="#1560"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1577">value</a>,
         }
     }
 }
@@ -5045,10 +5045,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkKeyMatch.html">ffi::GdkKeyMatch</a> {
         <span class="kw">match </span><span class="self"><a href="#1683">self</a> </span>{
-            <span class="self">Self</span>::None =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_NONE.html">ffi::GDK_KEY_MATCH_NONE</a>,
-            <span class="self">Self</span>::Partial =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_PARTIAL.html">ffi::GDK_KEY_MATCH_PARTIAL</a>,
-            <span class="self">Self</span>::Exact =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_EXACT.html">ffi::GDK_KEY_MATCH_EXACT</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1688">value</a>,
+            <a href="#1666"><span class="self">Self</span>::None</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_NONE.html">ffi::GDK_KEY_MATCH_NONE</a>,
+            <a href="#1670"><span class="self">Self</span>::Partial</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_PARTIAL.html">ffi::GDK_KEY_MATCH_PARTIAL</a>,
+            <a href="#1673"><span class="self">Self</span>::Exact</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_KEY_MATCH_EXACT.html">ffi::GDK_KEY_MATCH_EXACT</a>,
+            <a href="#1675"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1688">value</a>,
         }
     }
 }
@@ -5305,68 +5305,68 @@
 
     <span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkMemoryFormat.html">ffi::GdkMemoryFormat</a> {
         <span class="kw">match </span><span class="self"><a href="#1943">self</a> </span>{
-            <span class="self">Self</span>::B8g8r8a8Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_B8G8R8A8_PREMULTIPLIED</a>,
-            <span class="self">Self</span>::A8r8g8b8Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8R8G8B8_PREMULTIPLIED.html">ffi::GDK_MEMORY_A8R8G8B8_PREMULTIPLIED</a>,
-            <span class="self">Self</span>::R8g8b8a8Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_R8G8B8A8_PREMULTIPLIED</a>,
-            <span class="self">Self</span>::B8g8r8a8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8A8.html">ffi::GDK_MEMORY_B8G8R8A8</a>,
-            <span class="self">Self</span>::A8r8g8b8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8R8G8B8.html">ffi::GDK_MEMORY_A8R8G8B8</a>,
-            <span class="self">Self</span>::R8g8b8a8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8A8.html">ffi::GDK_MEMORY_R8G8B8A8</a>,
-            <span class="self">Self</span>::A8b8g8r8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8B8G8R8.html">ffi::GDK_MEMORY_A8B8G8R8</a>,
-            <span class="self">Self</span>::R8g8b8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8.html">ffi::GDK_MEMORY_R8G8B8</a>,
-            <span class="self">Self</span>::B8g8r8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8.html">ffi::GDK_MEMORY_B8G8R8</a>,
+            <a href="#1782"><span class="self">Self</span>::B8g8r8a8Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_B8G8R8A8_PREMULTIPLIED</a>,
+            <a href="#1786"><span class="self">Self</span>::A8r8g8b8Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8R8G8B8_PREMULTIPLIED.html">ffi::GDK_MEMORY_A8R8G8B8_PREMULTIPLIED</a>,
+            <a href="#1790"><span class="self">Self</span>::R8g8b8a8Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_R8G8B8A8_PREMULTIPLIED</a>,
+            <a href="#1793"><span class="self">Self</span>::B8g8r8a8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8A8.html">ffi::GDK_MEMORY_B8G8R8A8</a>,
+            <a href="#1796"><span class="self">Self</span>::A8r8g8b8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8R8G8B8.html">ffi::GDK_MEMORY_A8R8G8B8</a>,
+            <a href="#1799"><span class="self">Self</span>::R8g8b8a8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8A8.html">ffi::GDK_MEMORY_R8G8B8A8</a>,
+            <a href="#1802"><span class="self">Self</span>::A8b8g8r8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8B8G8R8.html">ffi::GDK_MEMORY_A8B8G8R8</a>,
+            <a href="#1805"><span class="self">Self</span>::R8g8b8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8.html">ffi::GDK_MEMORY_R8G8B8</a>,
+            <a href="#1808"><span class="self">Self</span>::B8g8r8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8.html">ffi::GDK_MEMORY_B8G8R8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16.html">ffi::GDK_MEMORY_R16G16B16</a>,
+            </span><a href="#1813"><span class="self">Self</span>::R16g16b16</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16.html">ffi::GDK_MEMORY_R16G16B16</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16a16Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16_PREMULTIPLIED.html">ffi::GDK_MEMORY_R16G16B16A16_PREMULTIPLIED</a>,
+            </span><a href="#1819"><span class="self">Self</span>::R16g16b16a16Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16_PREMULTIPLIED.html">ffi::GDK_MEMORY_R16G16B16A16_PREMULTIPLIED</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16a16 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16.html">ffi::GDK_MEMORY_R16G16B16A16</a>,
+            </span><a href="#1824"><span class="self">Self</span>::R16g16b16a16</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16.html">ffi::GDK_MEMORY_R16G16B16A16</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16_FLOAT.html">ffi::GDK_MEMORY_R16G16B16_FLOAT</a>,
+            </span><a href="#1829"><span class="self">Self</span>::R16g16b16Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16_FLOAT.html">ffi::GDK_MEMORY_R16G16B16_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16a16FloatPremultiplied =&gt; {
+            </span><a href="#1835"><span class="self">Self</span>::R16g16b16a16FloatPremultiplied</a> =&gt; {
                 <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16_FLOAT_PREMULTIPLIED.html">ffi::GDK_MEMORY_R16G16B16A16_FLOAT_PREMULTIPLIED</a>
             }
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R16g16b16a16Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16_FLOAT.html">ffi::GDK_MEMORY_R16G16B16A16_FLOAT</a>,
+            </span><a href="#1840"><span class="self">Self</span>::R16g16b16a16Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R16G16B16A16_FLOAT.html">ffi::GDK_MEMORY_R16G16B16A16_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R32g32b32Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R32G32B32_FLOAT.html">ffi::GDK_MEMORY_R32G32B32_FLOAT</a>,
+            </span><a href="#1845"><span class="self">Self</span>::R32g32b32Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R32G32B32_FLOAT.html">ffi::GDK_MEMORY_R32G32B32_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R32g32b32a32FloatPremultiplied =&gt; {
+            </span><a href="#1851"><span class="self">Self</span>::R32g32b32a32FloatPremultiplied</a> =&gt; {
                 <a href="../../../gdk4_sys/constant.GDK_MEMORY_R32G32B32A32_FLOAT_PREMULTIPLIED.html">ffi::GDK_MEMORY_R32G32B32A32_FLOAT_PREMULTIPLIED</a>
             }
             <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
-            </span><span class="self">Self</span>::R32g32b32a32Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R32G32B32A32_FLOAT.html">ffi::GDK_MEMORY_R32G32B32A32_FLOAT</a>,
+            </span><a href="#1856"><span class="self">Self</span>::R32g32b32a32Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R32G32B32A32_FLOAT.html">ffi::GDK_MEMORY_R32G32B32A32_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G8a8Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_G8A8_PREMULTIPLIED</a>,
+            </span><a href="#1862"><span class="self">Self</span>::G8a8Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8A8_PREMULTIPLIED.html">ffi::GDK_MEMORY_G8A8_PREMULTIPLIED</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G8a8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8A8.html">ffi::GDK_MEMORY_G8A8</a>,
+            </span><a href="#1867"><span class="self">Self</span>::G8a8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8A8.html">ffi::GDK_MEMORY_G8A8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8.html">ffi::GDK_MEMORY_G8</a>,
+            </span><a href="#1872"><span class="self">Self</span>::G8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G8.html">ffi::GDK_MEMORY_G8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G16a16Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16A16_PREMULTIPLIED.html">ffi::GDK_MEMORY_G16A16_PREMULTIPLIED</a>,
+            </span><a href="#1878"><span class="self">Self</span>::G16a16Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16A16_PREMULTIPLIED.html">ffi::GDK_MEMORY_G16A16_PREMULTIPLIED</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G16a16 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16A16.html">ffi::GDK_MEMORY_G16A16</a>,
+            </span><a href="#1883"><span class="self">Self</span>::G16a16</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16A16.html">ffi::GDK_MEMORY_G16A16</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::G16 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16.html">ffi::GDK_MEMORY_G16</a>,
+            </span><a href="#1888"><span class="self">Self</span>::G16</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_G16.html">ffi::GDK_MEMORY_G16</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::A8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8.html">ffi::GDK_MEMORY_A8</a>,
+            </span><a href="#1893"><span class="self">Self</span>::A8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8.html">ffi::GDK_MEMORY_A8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::A16 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A16.html">ffi::GDK_MEMORY_A16</a>,
+            </span><a href="#1898"><span class="self">Self</span>::A16</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A16.html">ffi::GDK_MEMORY_A16</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::A16Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A16_FLOAT.html">ffi::GDK_MEMORY_A16_FLOAT</a>,
+            </span><a href="#1903"><span class="self">Self</span>::A16Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A16_FLOAT.html">ffi::GDK_MEMORY_A16_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::A32Float =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A32_FLOAT.html">ffi::GDK_MEMORY_A32_FLOAT</a>,
+            </span><a href="#1908"><span class="self">Self</span>::A32Float</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A32_FLOAT.html">ffi::GDK_MEMORY_A32_FLOAT</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::A8b8g8r8Premultiplied =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8B8G8R8_PREMULTIPLIED.html">ffi::GDK_MEMORY_A8B8G8R8_PREMULTIPLIED</a>,
+            </span><a href="#1914"><span class="self">Self</span>::A8b8g8r8Premultiplied</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_A8B8G8R8_PREMULTIPLIED.html">ffi::GDK_MEMORY_A8B8G8R8_PREMULTIPLIED</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::B8g8r8x8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8X8.html">ffi::GDK_MEMORY_B8G8R8X8</a>,
+            </span><a href="#1919"><span class="self">Self</span>::B8g8r8x8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_B8G8R8X8.html">ffi::GDK_MEMORY_B8G8R8X8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::X8r8g8b8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_X8R8G8B8.html">ffi::GDK_MEMORY_X8R8G8B8</a>,
+            </span><a href="#1924"><span class="self">Self</span>::X8r8g8b8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_X8R8G8B8.html">ffi::GDK_MEMORY_X8R8G8B8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::R8g8b8x8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8X8.html">ffi::GDK_MEMORY_R8G8B8X8</a>,
+            </span><a href="#1929"><span class="self">Self</span>::R8g8b8x8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_R8G8B8X8.html">ffi::GDK_MEMORY_R8G8B8X8</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::X8b8g8r8 =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_X8B8G8R8.html">ffi::GDK_MEMORY_X8B8G8R8</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2006">value</a>,
+            </span><a href="#1934"><span class="self">Self</span>::X8b8g8r8</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_MEMORY_X8B8G8R8.html">ffi::GDK_MEMORY_X8B8G8R8</a>,
+            <a href="#1936"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2006">value</a>,
         }
     }
 }
@@ -5543,13 +5543,13 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkNotifyType.html">ffi::GdkNotifyType</a> {
         <span class="kw">match </span><span class="self"><a href="#2181">self</a> </span>{
-            <span class="self">Self</span>::Ancestor =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_ANCESTOR.html">ffi::GDK_NOTIFY_ANCESTOR</a>,
-            <span class="self">Self</span>::Virtual =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_VIRTUAL.html">ffi::GDK_NOTIFY_VIRTUAL</a>,
-            <span class="self">Self</span>::Inferior =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_INFERIOR.html">ffi::GDK_NOTIFY_INFERIOR</a>,
-            <span class="self">Self</span>::Nonlinear =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_NONLINEAR.html">ffi::GDK_NOTIFY_NONLINEAR</a>,
-            <span class="self">Self</span>::NonlinearVirtual =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_NONLINEAR_VIRTUAL.html">ffi::GDK_NOTIFY_NONLINEAR_VIRTUAL</a>,
-            <span class="self">Self</span>::Unknown =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_UNKNOWN.html">ffi::GDK_NOTIFY_UNKNOWN</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2189">value</a>,
+            <a href="#2150"><span class="self">Self</span>::Ancestor</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_ANCESTOR.html">ffi::GDK_NOTIFY_ANCESTOR</a>,
+            <a href="#2154"><span class="self">Self</span>::Virtual</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_VIRTUAL.html">ffi::GDK_NOTIFY_VIRTUAL</a>,
+            <a href="#2158"><span class="self">Self</span>::Inferior</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_INFERIOR.html">ffi::GDK_NOTIFY_INFERIOR</a>,
+            <a href="#2162"><span class="self">Self</span>::Nonlinear</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_NONLINEAR.html">ffi::GDK_NOTIFY_NONLINEAR</a>,
+            <a href="#2168"><span class="self">Self</span>::NonlinearVirtual</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_NONLINEAR_VIRTUAL.html">ffi::GDK_NOTIFY_NONLINEAR_VIRTUAL</a>,
+            <a href="#2171"><span class="self">Self</span>::Unknown</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_NOTIFY_UNKNOWN.html">ffi::GDK_NOTIFY_UNKNOWN</a>,
+            <a href="#2173"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2189">value</a>,
         }
     }
 }
@@ -5660,12 +5660,12 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkScrollDirection.html">ffi::GdkScrollDirection</a> {
         <span class="kw">match </span><span class="self"><a href="#2298">self</a> </span>{
-            <span class="self">Self</span>::Up =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UP.html">ffi::GDK_SCROLL_UP</a>,
-            <span class="self">Self</span>::Down =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_DOWN.html">ffi::GDK_SCROLL_DOWN</a>,
-            <span class="self">Self</span>::Left =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_LEFT.html">ffi::GDK_SCROLL_LEFT</a>,
-            <span class="self">Self</span>::Right =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_RIGHT.html">ffi::GDK_SCROLL_RIGHT</a>,
-            <span class="self">Self</span>::Smooth =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_SMOOTH.html">ffi::GDK_SCROLL_SMOOTH</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2305">value</a>,
+            <a href="#2275"><span class="self">Self</span>::Up</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UP.html">ffi::GDK_SCROLL_UP</a>,
+            <a href="#2278"><span class="self">Self</span>::Down</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_DOWN.html">ffi::GDK_SCROLL_DOWN</a>,
+            <a href="#2281"><span class="self">Self</span>::Left</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_LEFT.html">ffi::GDK_SCROLL_LEFT</a>,
+            <a href="#2284"><span class="self">Self</span>::Right</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_RIGHT.html">ffi::GDK_SCROLL_RIGHT</a>,
+            <a href="#2288"><span class="self">Self</span>::Smooth</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_SMOOTH.html">ffi::GDK_SCROLL_SMOOTH</a>,
+            <a href="#2290"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2305">value</a>,
         }
     }
 }
@@ -5785,9 +5785,9 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkScrollUnit.html">ffi::GdkScrollUnit</a> {
         <span class="kw">match </span><span class="self"><a href="#2423">self</a> </span>{
-            <span class="self">Self</span>::Wheel =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UNIT_WHEEL.html">ffi::GDK_SCROLL_UNIT_WHEEL</a>,
-            <span class="self">Self</span>::Surface =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UNIT_SURFACE.html">ffi::GDK_SCROLL_UNIT_SURFACE</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2427">value</a>,
+            <a href="#2407"><span class="self">Self</span>::Wheel</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UNIT_WHEEL.html">ffi::GDK_SCROLL_UNIT_WHEEL</a>,
+            <a href="#2411"><span class="self">Self</span>::Surface</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SCROLL_UNIT_SURFACE.html">ffi::GDK_SCROLL_UNIT_SURFACE</a>,
+            <a href="#2413"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2427">value</a>,
         }
     }
 }
@@ -5911,13 +5911,13 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkSubpixelLayout.html">ffi::GdkSubpixelLayout</a> {
         <span class="kw">match </span><span class="self"><a href="#2549">self</a> </span>{
-            <span class="self">Self</span>::Unknown =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_UNKNOWN.html">ffi::GDK_SUBPIXEL_LAYOUT_UNKNOWN</a>,
-            <span class="self">Self</span>::None =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_NONE.html">ffi::GDK_SUBPIXEL_LAYOUT_NONE</a>,
-            <span class="self">Self</span>::HorizontalRgb =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB.html">ffi::GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB</a>,
-            <span class="self">Self</span>::HorizontalBgr =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR.html">ffi::GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR</a>,
-            <span class="self">Self</span>::VerticalRgb =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB.html">ffi::GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB</a>,
-            <span class="self">Self</span>::VerticalBgr =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR.html">ffi::GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2557">value</a>,
+            <a href="#2524"><span class="self">Self</span>::Unknown</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_UNKNOWN.html">ffi::GDK_SUBPIXEL_LAYOUT_UNKNOWN</a>,
+            <a href="#2527"><span class="self">Self</span>::None</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_NONE.html">ffi::GDK_SUBPIXEL_LAYOUT_NONE</a>,
+            <a href="#2530"><span class="self">Self</span>::HorizontalRgb</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB.html">ffi::GDK_SUBPIXEL_LAYOUT_HORIZONTAL_RGB</a>,
+            <a href="#2533"><span class="self">Self</span>::HorizontalBgr</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR.html">ffi::GDK_SUBPIXEL_LAYOUT_HORIZONTAL_BGR</a>,
+            <a href="#2536"><span class="self">Self</span>::VerticalRgb</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB.html">ffi::GDK_SUBPIXEL_LAYOUT_VERTICAL_RGB</a>,
+            <a href="#2539"><span class="self">Self</span>::VerticalBgr</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR.html">ffi::GDK_SUBPIXEL_LAYOUT_VERTICAL_BGR</a>,
+            <a href="#2541"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2557">value</a>,
         }
     }
 }
@@ -6036,15 +6036,15 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkSurfaceEdge.html">ffi::GdkSurfaceEdge</a> {
         <span class="kw">match </span><span class="self"><a href="#2674">self</a> </span>{
-            <span class="self">Self</span>::NorthWest =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH_WEST.html">ffi::GDK_SURFACE_EDGE_NORTH_WEST</a>,
-            <span class="self">Self</span>::North =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH.html">ffi::GDK_SURFACE_EDGE_NORTH</a>,
-            <span class="self">Self</span>::NorthEast =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH_EAST.html">ffi::GDK_SURFACE_EDGE_NORTH_EAST</a>,
-            <span class="self">Self</span>::West =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_WEST.html">ffi::GDK_SURFACE_EDGE_WEST</a>,
-            <span class="self">Self</span>::East =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_EAST.html">ffi::GDK_SURFACE_EDGE_EAST</a>,
-            <span class="self">Self</span>::SouthWest =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH_WEST.html">ffi::GDK_SURFACE_EDGE_SOUTH_WEST</a>,
-            <span class="self">Self</span>::South =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH.html">ffi::GDK_SURFACE_EDGE_SOUTH</a>,
-            <span class="self">Self</span>::SouthEast =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH_EAST.html">ffi::GDK_SURFACE_EDGE_SOUTH_EAST</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2684">value</a>,
+            <a href="#2643"><span class="self">Self</span>::NorthWest</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH_WEST.html">ffi::GDK_SURFACE_EDGE_NORTH_WEST</a>,
+            <a href="#2646"><span class="self">Self</span>::North</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH.html">ffi::GDK_SURFACE_EDGE_NORTH</a>,
+            <a href="#2649"><span class="self">Self</span>::NorthEast</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_NORTH_EAST.html">ffi::GDK_SURFACE_EDGE_NORTH_EAST</a>,
+            <a href="#2652"><span class="self">Self</span>::West</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_WEST.html">ffi::GDK_SURFACE_EDGE_WEST</a>,
+            <a href="#2655"><span class="self">Self</span>::East</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_EAST.html">ffi::GDK_SURFACE_EDGE_EAST</a>,
+            <a href="#2658"><span class="self">Self</span>::SouthWest</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH_WEST.html">ffi::GDK_SURFACE_EDGE_SOUTH_WEST</a>,
+            <a href="#2661"><span class="self">Self</span>::South</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH.html">ffi::GDK_SURFACE_EDGE_SOUTH</a>,
+            <a href="#2664"><span class="self">Self</span>::SouthEast</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_SURFACE_EDGE_SOUTH_EAST.html">ffi::GDK_SURFACE_EDGE_SOUTH_EAST</a>,
+            <a href="#2666"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2684">value</a>,
         }
     }
 }
@@ -6158,11 +6158,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkTextureError.html">ffi::GdkTextureError</a> {
         <span class="kw">match </span><span class="self"><a href="#2796">self</a> </span>{
-            <span class="self">Self</span>::TooLarge =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_TOO_LARGE.html">ffi::GDK_TEXTURE_ERROR_TOO_LARGE</a>,
-            <span class="self">Self</span>::CorruptImage =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_CORRUPT_IMAGE.html">ffi::GDK_TEXTURE_ERROR_CORRUPT_IMAGE</a>,
-            <span class="self">Self</span>::UnsupportedContent =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT.html">ffi::GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT</a>,
-            <span class="self">Self</span>::UnsupportedFormat =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_TEXTURE_ERROR_UNSUPPORTED_FORMAT</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2802">value</a>,
+            <a href="#2774"><span class="self">Self</span>::TooLarge</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_TOO_LARGE.html">ffi::GDK_TEXTURE_ERROR_TOO_LARGE</a>,
+            <a href="#2777"><span class="self">Self</span>::CorruptImage</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_CORRUPT_IMAGE.html">ffi::GDK_TEXTURE_ERROR_CORRUPT_IMAGE</a>,
+            <a href="#2781"><span class="self">Self</span>::UnsupportedContent</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT.html">ffi::GDK_TEXTURE_ERROR_UNSUPPORTED_CONTENT</a>,
+            <a href="#2784"><span class="self">Self</span>::UnsupportedFormat</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TEXTURE_ERROR_UNSUPPORTED_FORMAT.html">ffi::GDK_TEXTURE_ERROR_UNSUPPORTED_FORMAT</a>,
+            <a href="#2786"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2802">value</a>,
         }
     }
 }
@@ -6205,7 +6205,7 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#2842">code</a>) } {
-            value =&gt; <span class="prelude-val">Some</span>(<a href="#2845">value</a>),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#2845">value</a>),
         }
     }
 }
@@ -6308,10 +6308,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkTitlebarGesture.html">ffi::GdkTitlebarGesture</a> {
         <span class="kw">match </span><span class="self"><a href="#2946">self</a> </span>{
-            <span class="self">Self</span>::DoubleClick =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_DOUBLE_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_DOUBLE_CLICK</a>,
-            <span class="self">Self</span>::RightClick =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_RIGHT_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_RIGHT_CLICK</a>,
-            <span class="self">Self</span>::MiddleClick =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_MIDDLE_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_MIDDLE_CLICK</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#2951">value</a>,
+            <a href="#2928"><span class="self">Self</span>::DoubleClick</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_DOUBLE_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_DOUBLE_CLICK</a>,
+            <a href="#2931"><span class="self">Self</span>::RightClick</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_RIGHT_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_RIGHT_CLICK</a>,
+            <a href="#2934"><span class="self">Self</span>::MiddleClick</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TITLEBAR_GESTURE_MIDDLE_CLICK.html">ffi::GDK_TITLEBAR_GESTURE_MIDDLE_CLICK</a>,
+            <a href="#2936"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#2951">value</a>,
         }
     }
 }
@@ -6448,11 +6448,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkTouchpadGesturePhase.html">ffi::GdkTouchpadGesturePhase</a> {
         <span class="kw">match </span><span class="self"><a href="#3086">self</a> </span>{
-            <span class="self">Self</span>::Begin =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_BEGIN.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_BEGIN</a>,
-            <span class="self">Self</span>::Update =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_UPDATE.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_UPDATE</a>,
-            <span class="self">Self</span>::End =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_END.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_END</a>,
-            <span class="self">Self</span>::Cancel =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_CANCEL.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_CANCEL</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#3092">value</a>,
+            <a href="#3065"><span class="self">Self</span>::Begin</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_BEGIN.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_BEGIN</a>,
+            <a href="#3068"><span class="self">Self</span>::Update</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_UPDATE.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_UPDATE</a>,
+            <a href="#3072"><span class="self">Self</span>::End</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_END.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_END</a>,
+            <a href="#3076"><span class="self">Self</span>::Cancel</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_TOUCHPAD_GESTURE_PHASE_CANCEL.html">ffi::GDK_TOUCHPAD_GESTURE_PHASE_CANCEL</a>,
+            <a href="#3078"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#3092">value</a>,
         }
     }
 }
@@ -6552,9 +6552,9 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gdk4_sys/type.GdkVulkanError.html">ffi::GdkVulkanError</a> {
         <span class="kw">match </span><span class="self"><a href="#3190">self</a> </span>{
-            <span class="self">Self</span>::Unsupported =&gt; <a href="../../../gdk4_sys/constant.GDK_VULKAN_ERROR_UNSUPPORTED.html">ffi::GDK_VULKAN_ERROR_UNSUPPORTED</a>,
-            <span class="self">Self</span>::NotAvailable =&gt; <a href="../../../gdk4_sys/constant.GDK_VULKAN_ERROR_NOT_AVAILABLE.html">ffi::GDK_VULKAN_ERROR_NOT_AVAILABLE</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#3194">value</a>,
+            <a href="#3177"><span class="self">Self</span>::Unsupported</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_VULKAN_ERROR_UNSUPPORTED.html">ffi::GDK_VULKAN_ERROR_UNSUPPORTED</a>,
+            <a href="#3180"><span class="self">Self</span>::NotAvailable</a> =&gt; <a href="../../../gdk4_sys/constant.GDK_VULKAN_ERROR_NOT_AVAILABLE.html">ffi::GDK_VULKAN_ERROR_NOT_AVAILABLE</a>,
+            <a href="#3182"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#3194">value</a>,
         }
     }
 }
@@ -6591,7 +6591,7 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#3228">code</a>) } {
-            value =&gt; <span class="prelude-val">Some</span>(<a href="#3231">value</a>),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#3231">value</a>),
         }
     }
 }

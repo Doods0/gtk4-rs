@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/accessible.rs`."><title>accessible.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/accessible.rs`."><title>accessible.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -400,15 +400,15 @@
                 <a href="#77">height</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.as_mut_ptr">as_mut_ptr</a>(),
             ));
             <span class="kw">if </span>res {
-                <span class="prelude-val">Some</span>((
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((
                     <a href="#74">x</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                     <a href="#75">y</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                     <a href="#76">width</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                     <a href="#77">height</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                 ))
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -483,12 +483,12 @@
     <span class="kw">fn </span>interface_init(iface: <span class="kw-2">&amp;mut </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Interface.html">glib::Interface</a>&lt;<span class="self">Self</span>&gt;) {
         <span class="kw">let </span>iface = <a href="#166">iface</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html#tymethod.as_mut">as_mut</a>();
 
-        <a href="#167">iface</a>.get_platform_state = <span class="prelude-val">Some</span>(<a href="#178-186">accessible_get_platform_state</a>::&lt;T&gt;);
-        <a href="#167">iface</a>.get_bounds = <span class="prelude-val">Some</span>(<a href="#188-208">accessible_get_bounds</a>::&lt;T&gt;);
-        <a href="#167">iface</a>.get_at_context = <span class="prelude-val">Some</span>(<a href="#210-217">accessible_get_at_context</a>::&lt;T&gt;);
-        <a href="#167">iface</a>.get_accessible_parent = <span class="prelude-val">Some</span>(<a href="#219-226">accessible_get_accessible_parent</a>::&lt;T&gt;);
-        <a href="#167">iface</a>.get_first_accessible_child = <span class="prelude-val">Some</span>(<a href="#228-235">accessible_get_first_accessible_child</a>::&lt;T&gt;);
-        <a href="#167">iface</a>.get_next_accessible_sibling = <span class="prelude-val">Some</span>(<a href="#237-244">accessible_get_next_accessible_sibling</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_platform_state = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#178-186">accessible_get_platform_state</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_bounds = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#188-208">accessible_get_bounds</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_at_context = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#210-217">accessible_get_at_context</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_accessible_parent = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#219-226">accessible_get_accessible_parent</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_first_accessible_child = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#228-235">accessible_get_first_accessible_child</a>::&lt;T&gt;);
+        <a href="#167">iface</a>.get_next_accessible_sibling = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#237-244">accessible_get_next_accessible_sibling</a>::&lt;T&gt;);
     }
 }
 
@@ -512,7 +512,7 @@
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#189">accessible</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#195">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html#tymethod.imp">imp</a>();
 
-    <span class="kw">if let </span><span class="prelude-val">Some</span>((x, y, width, height)) = <a href="#196">imp</a>.<a href="#21-23">bounds</a>() {
+    <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((x, y, width, height)) = <a href="#196">imp</a>.<a href="#21-23">bounds</a>() {
         <span class="kw-2">*</span><a href="#190">xptr</a> = <a href="#198">x</a>;
         <span class="kw-2">*</span><a href="#191">yptr</a> = <a href="#198">y</a>;
         <span class="kw-2">*</span><a href="#192">widthptr</a> = <a href="#198">width</a>;

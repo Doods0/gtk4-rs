@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/accessible_text.rs`."><title>accessible_text.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/accessible_text.rs`."><title>accessible_text.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -863,10 +863,10 @@
                     .<a href="https://doc.rust-lang.org/nightly/core/iter/traits/collect/trait.IntoIterator.html#tymethod.into_iter">into_iter</a>()
                     .<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html#tymethod.flat_map">flat_map</a>(|range| {
                         <span class="kw">if let </span>(<span class="prelude-val">Some</span>(name), <span class="prelude-val">Some</span>(value)) = (<a href="#98">names</a>.<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html#tymethod.next">next</a>(), <a href="#99">values</a>.<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html#tymethod.next">next</a>()) {
-                            <span class="prelude-val">Some</span>((<a href="#103">range</a>, <a href="#104">name</a>, <a href="#104">value</a>))
+                            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((<a href="#103">range</a>, <a href="#104">name</a>, <a href="#104">value</a>))
                         } <span class="kw">else </span>{
-                            <span class="prelude-val">None
-                        </span>}
+                            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+                        </a>}
                     })
                     .<a href="https://doc.rust-lang.org/nightly/core/iter/traits/iterator/trait.Iterator.html#tymethod.collect">collect</a>()
             }
@@ -938,14 +938,14 @@
             );
 
             <span class="kw">if </span>!bytes.is_null() {
-                <span class="prelude-val">Some</span>((
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((
                     <a href="#165">start</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                     <a href="#166">end</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>(),
                     <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#168">bytes</a>),
                 ))
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1007,10 +1007,10 @@
             ));
 
             <span class="kw">if </span>filled {
-                <span class="prelude-val">Some</span>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.UnsafeFrom.html#tymethod.unsafe_from">graphene::Rect::unsafe_from</a>(<a href="#236">extents</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()))
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.UnsafeFrom.html#tymethod.unsafe_from">graphene::Rect::unsafe_from</a>(<a href="#236">extents</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()))
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1038,10 +1038,10 @@
             ));
 
             <span class="kw">if </span>offset_set {
-                <span class="prelude-val">Some</span>(<a href="#268">offset</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>())
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#268">offset</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>())
             } <span class="kw">else </span>{
-                <span class="prelude-val">None
-            </span>}
+                <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+            </a>}
         }
     }
 
@@ -1083,17 +1083,17 @@
     <span class="kw">fn </span>interface_init(iface: <span class="kw-2">&amp;mut </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.Interface.html">glib::Interface</a>&lt;<span class="self">Self</span>&gt;) {
         <span class="kw">let </span>iface = <a href="#322">iface</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html#tymethod.as_mut">as_mut</a>();
 
-        <a href="#323">iface</a>.get_contents = <span class="prelude-val">Some</span>(<a href="#340-350">accessible_text_get_contents</a>::&lt;T&gt;);
-        <a href="#323">iface</a>.get_contents_at = <span class="prelude-val">Some</span>(<a href="#352-376">accessible_text_get_contents_at</a>::&lt;T&gt;);
-        <a href="#323">iface</a>.get_caret_position = <span class="prelude-val">Some</span>(<a href="#378-385">accessible_text_get_caret_position</a>::&lt;T&gt;);
-        <a href="#323">iface</a>.get_selection = <span class="prelude-val">Some</span>(<a href="#387-407">accessible_text_get_selection</a>::&lt;T&gt;);
-        <a href="#323">iface</a>.get_attributes = <span class="prelude-val">Some</span>(<a href="#409-447">accessible_text_get_attributes</a>::&lt;T&gt;);
-        <a href="#323">iface</a>.get_default_attributes = <span class="prelude-val">Some</span>(<a href="#449-474">accessible_text_get_default_attributes</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_contents = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#340-350">accessible_text_get_contents</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_contents_at = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#352-376">accessible_text_get_contents_at</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_caret_position = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#378-385">accessible_text_get_caret_position</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_selection = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#387-407">accessible_text_get_selection</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_attributes = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#409-447">accessible_text_get_attributes</a>::&lt;T&gt;);
+        <a href="#323">iface</a>.get_default_attributes = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#449-474">accessible_text_get_default_attributes</a>::&lt;T&gt;);
 
         <span class="attr">#[cfg(feature = <span class="string">"v4_16"</span>)]
         </span>{
-            <a href="#323">iface</a>.get_extents = <span class="prelude-val">Some</span>(<a href="#478-497">accessible_text_get_extents</a>::&lt;T&gt;);
-            <a href="#323">iface</a>.get_offset = <span class="prelude-val">Some</span>(<a href="#501-520">accessible_text_get_offset</a>::&lt;T&gt;);
+            <a href="#323">iface</a>.get_extents = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#478-497">accessible_text_get_extents</a>::&lt;T&gt;);
+            <a href="#323">iface</a>.get_offset = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#501-520">accessible_text_get_offset</a>::&lt;T&gt;);
         }
     }
 }
@@ -1120,7 +1120,7 @@
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#353">accessible_text</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#359">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html#tymethod.imp">imp</a>();
 
-    <span class="kw">if let </span><span class="prelude-val">Some</span>((r_start, r_end, bytes)) =
+    <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((r_start, r_end, bytes)) =
         <a href="#360">imp</a>.<a href="#29-35">contents_at</a>(<a href="#354">offset</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.FromGlib.html#tymethod.from_glib">AccessibleTextGranularity::from_glib</a>(<a href="#355">granularity</a>))
     {
         <span class="kw">if </span>!start.is_null() {
@@ -1247,7 +1247,7 @@
 
     <span class="kw">let </span>rect = <a href="#485">imp</a>.<a href="#45-47">extents</a>(<a href="#480">start</a>, <a href="#481">end</a>);
 
-    <span class="kw">if let </span><span class="prelude-val">Some</span>(rect) = <a href="#487">rect</a> {
+    <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(rect) = <a href="#487">rect</a> {
         <span class="kw-2">*</span><a href="#482">extents</a> = <span class="kw-2">*</span><a href="#489">rect</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/graphene/auto/rect/struct.Rect.html#method.as_ptr">as_ptr</a>();
 
         <span class="bool-val">true
@@ -1269,7 +1269,7 @@
 
     <span class="kw">let </span>pos = <a href="#507">imp</a>.<a href="#52-54">offset</a>(<span class="kw-2">&amp;</span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_borrow.html">from_glib_borrow</a>(<a href="#503">point</a>));
 
-    <span class="kw">if let </span><span class="prelude-val">Some</span>(pos) = <a href="#509">pos</a> {
+    <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(pos) = <a href="#509">pos</a> {
         <span class="kw">if </span>!offset.is_null() {
             <span class="kw-2">*</span><a href="#504">offset</a> = <a href="#511">pos</a>;
         }

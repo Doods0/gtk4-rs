@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../static.files/storage-59e33391.js"></script><script defer src="../../static.files/src-script-56102188.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../static.files/storage-302de22f.js"></script><script defer src="../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -348,10 +348,10 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match </span><a href="#47">code</a> {
-            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_DEPRECATED.html">ffi::GTK_CSS_PARSER_WARNING_DEPRECATED</a> =&gt; <span class="prelude-val">Some</span>(<span class="self">Self</span>::Deprecated),
-            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_SYNTAX.html">ffi::GTK_CSS_PARSER_WARNING_SYNTAX</a> =&gt; <span class="prelude-val">Some</span>(<span class="self">Self</span>::Syntax),
-            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_UNIMPLEMENTED.html">ffi::GTK_CSS_PARSER_WARNING_UNIMPLEMENTED</a> =&gt; <span class="prelude-val">Some</span>(<span class="self">Self</span>::Unimplemented),
-            value =&gt; <span class="prelude-val">Some</span>(<a href="auto/enums.rs.html#4181"><span class="self">Self</span>::__Unknown</a>(<a href="#53">value</a>)),
+            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_DEPRECATED.html">ffi::GTK_CSS_PARSER_WARNING_DEPRECATED</a> =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<span class="self">Self</span>::Deprecated),
+            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_SYNTAX.html">ffi::GTK_CSS_PARSER_WARNING_SYNTAX</a> =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<span class="self">Self</span>::Syntax),
+            <a href="../../gtk4_sys/constant.GTK_CSS_PARSER_WARNING_UNIMPLEMENTED.html">ffi::GTK_CSS_PARSER_WARNING_UNIMPLEMENTED</a> =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<span class="self">Self</span>::Unimplemented),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="auto/enums.rs.html#4181"><span class="self">Self</span>::__Unknown</a>(<a href="#53">value</a>)),
         }
     }
 }
@@ -435,17 +435,17 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../gtk4_sys/type.GtkAlign.html">ffi::GtkAlign</a> {
         <span class="kw">match </span><span class="self"><a href="#135">self</a> </span>{
-            <span class="self">Self</span>::Fill =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_FILL.html">ffi::GTK_ALIGN_FILL</a>,
-            <span class="self">Self</span>::Start =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_START.html">ffi::GTK_ALIGN_START</a>,
-            <span class="self">Self</span>::End =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_END.html">ffi::GTK_ALIGN_END</a>,
-            <span class="self">Self</span>::Center =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_CENTER.html">ffi::GTK_ALIGN_CENTER</a>,
+            <a href="#81"><span class="self">Self</span>::Fill</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_FILL.html">ffi::GTK_ALIGN_FILL</a>,
+            <a href="#84"><span class="self">Self</span>::Start</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_START.html">ffi::GTK_ALIGN_START</a>,
+            <a href="#87"><span class="self">Self</span>::End</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_END.html">ffi::GTK_ALIGN_END</a>,
+            <a href="#90"><span class="self">Self</span>::Center</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_CENTER.html">ffi::GTK_ALIGN_CENTER</a>,
             <span class="attr">#[cfg(not(feature = <span class="string">"v4_12"</span>))]
             </span><span class="self">Self</span>::Baseline =&gt; ffi::GTK_ALIGN_BASELINE,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::BaselineFill | <span class="self">Self</span>::Baseline =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_BASELINE_FILL.html">ffi::GTK_ALIGN_BASELINE_FILL</a>,
+            </span><a href="#99"><span class="self">Self</span>::BaselineFill</a> | <a href="#94"><span class="self">Self</span>::Baseline</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_BASELINE_FILL.html">ffi::GTK_ALIGN_BASELINE_FILL</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_12"</span>)]
-            </span><span class="self">Self</span>::BaselineCenter =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_BASELINE_CENTER.html">ffi::GTK_ALIGN_BASELINE_CENTER</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#147">value</a>,
+            </span><a href="#104"><span class="self">Self</span>::BaselineCenter</a> =&gt; <a href="../../gtk4_sys/constant.GTK_ALIGN_BASELINE_CENTER.html">ffi::GTK_ALIGN_BASELINE_CENTER</a>,
+            <a href="#106"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#147">value</a>,
         }
     }
 }

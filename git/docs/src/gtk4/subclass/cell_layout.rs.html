@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/cell_layout.rs`."><title>cell_layout.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/cell_layout.rs`."><title>cell_layout.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -500,7 +500,7 @@
         iter: <span class="kw-2">&amp;</span><a href="../auto/tree_iter.rs.html#8-25">TreeIter</a>,
     ) {
         <span class="kw">unsafe </span>{
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(callback) = <a class="self" href="#22">self</a>.callback {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(callback) = <a class="self" href="#22">self</a>.callback {
                 <a href="#29">callback</a>(
                     <a href="#23">cell_layout</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#24">cell_renderer</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -517,7 +517,7 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>drop(<span class="kw-2">&amp;mut </span><span class="self">self</span>) {
         <span class="kw">unsafe </span>{
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(destroy_notify) = <a class="self" href="#44">self</a>.destroy_notify {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(destroy_notify) = <a class="self" href="#44">self</a>.destroy_notify {
                 <a href="#46">destroy_notify</a>(<a class="self" href="#44">self</a>.user_data);
             }
         }
@@ -578,7 +578,7 @@
             <span class="kw">let </span>parent_iface = <a href="#103">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                 <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#104">parent_iface</a>).add_attribute {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#104">parent_iface</a>).add_attribute {
                 <a href="#107">f</a>(
                     <a class="self" href="#101">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#101">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -595,7 +595,7 @@
             <span class="kw">let </span>parent_iface = <a href="#120">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                 <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#121">parent_iface</a>).clear_attributes {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#121">parent_iface</a>).clear_attributes {
                 <a href="#124">f</a>(
                     <a class="self" href="#118">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#118">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -636,7 +636,7 @@
                 .<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.as_ref">as_ref</a>()
                 .<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.expect">expect</a>(<span class="string">"no parent \"set_cell_data_func\" implementation"</span>);
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(data_cb) = <a href="#153">callback</a> {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(data_cb) = <a href="#153">callback</a> {
                 <a href="#160">f</a>(
                     <a class="self" href="#150">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#152">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -648,9 +648,9 @@
                 <a href="#160">f</a>(
                     <a class="self" href="#150">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#152">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
-                    <span class="prelude-val">None</span>,
+                    <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>,
                     <a href="https://doc.rust-lang.org/nightly/core/ptr/fn.null_mut.html">std::ptr::null_mut</a>(),
-                    <span class="prelude-val">None</span>,
+                    <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>,
                 );
             }
         }
@@ -663,7 +663,7 @@
                 <span class="kw">let </span>parent_iface = <a href="#188">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                     <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-                <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#189">parent_iface</a>).reorder {
+                <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#189">parent_iface</a>).reorder {
                     <a href="#192">f</a>(
                         <a class="self" href="#185">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                         <a href="#185">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -680,7 +680,7 @@
             <span class="kw">let </span>parent_iface = <a href="#205">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                 <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#206">parent_iface</a>).clear {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#206">parent_iface</a>).clear {
                 <a href="#209">f</a>(<a class="self" href="#203">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>);
             }
         }
@@ -692,7 +692,7 @@
             <span class="kw">let </span>parent_iface = <a href="#217">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                 <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#218">parent_iface</a>).pack_start {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#218">parent_iface</a>).pack_start {
                 <a href="#221">f</a>(
                     <a class="self" href="#215">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#215">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -708,7 +708,7 @@
             <span class="kw">let </span>parent_iface = <a href="#233">type_data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_interface">parent_interface</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;()
                 <span class="kw">as </span><span class="kw-2">*const </span><a href="../../../gtk4_sys/struct.GtkCellLayoutIface.html">ffi::GtkCellLayoutIface</a>;
 
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#234">parent_iface</a>).pack_end {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#234">parent_iface</a>).pack_end {
                 <a href="#237">f</a>(
                     <a class="self" href="#231">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/cell_layout.rs.html#10-135">CellLayout</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#231">cell</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -743,15 +743,15 @@
 
         <a class="macro" href="../rt.rs.html#24-36">assert_initialized_main_thread!</a>();
 
-        <a href="#268">iface</a>.get_area = <span class="prelude-val">Some</span>(<a href="#284-291">cell_layout_get_area</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.pack_start = <span class="prelude-val">Some</span>(<a href="#293-303">cell_layout_pack_start</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.pack_end = <span class="prelude-val">Some</span>(<a href="#305-315">cell_layout_pack_end</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.clear = <span class="prelude-val">Some</span>(<a href="#317-322">cell_layout_clear</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.reorder = <span class="prelude-val">Some</span>(<a href="#324-334">cell_layout_reorder</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.add_attribute = <span class="prelude-val">Some</span>(<a href="#336-348">cell_layout_add_attribute</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.clear_attributes = <span class="prelude-val">Some</span>(<a href="#350-359">cell_layout_clear_attributes</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.set_cell_data_func = <span class="prelude-val">Some</span>(<a href="#361-384">cell_layout_set_cell_data_func</a>::&lt;T&gt;);
-        <a href="#268">iface</a>.get_cells = <span class="prelude-val">Some</span>(<a href="#386-401">cell_layout_get_cells</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.get_area = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#284-291">cell_layout_get_area</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.pack_start = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#293-303">cell_layout_pack_start</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.pack_end = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#305-315">cell_layout_pack_end</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.clear = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#317-322">cell_layout_clear</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.reorder = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#324-334">cell_layout_reorder</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.add_attribute = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#336-348">cell_layout_add_attribute</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.clear_attributes = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#350-359">cell_layout_clear_attributes</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.set_cell_data_func = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#361-384">cell_layout_set_cell_data_func</a>::&lt;T&gt;);
+        <a href="#268">iface</a>.get_cells = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#386-401">cell_layout_get_cells</a>::&lt;T&gt;);
     }
 }
 
@@ -845,9 +845,9 @@
     <span class="kw">let </span>cell: <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/struct.Borrowed.html">Borrowed</a>&lt;<a href="../auto/cell_renderer.rs.html#17-183">CellRenderer</a>&gt; = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_borrow.html">from_glib_borrow</a>(<a href="#363">cellptr</a>);
 
     <span class="kw">let </span>callback = <span class="kw">if </span>callback.is_none() {
-        <span class="prelude-val">None
-    </span>} <span class="kw">else </span>{
-        <span class="prelude-val">Some</span>(<a href="#14-18">CellLayoutDataCallback</a> {
+        <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+    </a>} <span class="kw">else </span>{
+        <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#14-18">CellLayoutDataCallback</a> {
             <a href="#364">callback</a>,
             <a href="#365">user_data</a>,
             <a href="#366">destroy_notify</a>,

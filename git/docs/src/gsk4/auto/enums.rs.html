@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4/src/auto/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gsk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4/src/auto/enums.rs`."><title>enums.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gsk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -2040,23 +2040,23 @@
 
     <span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskBlendMode.html">ffi::GskBlendMode</a> {
         <span class="kw">match </span><span class="self"><a href="#78">self</a> </span>{
-            <span class="self">Self</span>::Default =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DEFAULT.html">ffi::GSK_BLEND_MODE_DEFAULT</a>,
-            <span class="self">Self</span>::Multiply =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_MULTIPLY.html">ffi::GSK_BLEND_MODE_MULTIPLY</a>,
-            <span class="self">Self</span>::Screen =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SCREEN.html">ffi::GSK_BLEND_MODE_SCREEN</a>,
-            <span class="self">Self</span>::Overlay =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_OVERLAY.html">ffi::GSK_BLEND_MODE_OVERLAY</a>,
-            <span class="self">Self</span>::Darken =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DARKEN.html">ffi::GSK_BLEND_MODE_DARKEN</a>,
-            <span class="self">Self</span>::Lighten =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_LIGHTEN.html">ffi::GSK_BLEND_MODE_LIGHTEN</a>,
-            <span class="self">Self</span>::ColorDodge =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR_DODGE.html">ffi::GSK_BLEND_MODE_COLOR_DODGE</a>,
-            <span class="self">Self</span>::ColorBurn =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR_BURN.html">ffi::GSK_BLEND_MODE_COLOR_BURN</a>,
-            <span class="self">Self</span>::HardLight =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_HARD_LIGHT.html">ffi::GSK_BLEND_MODE_HARD_LIGHT</a>,
-            <span class="self">Self</span>::SoftLight =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SOFT_LIGHT.html">ffi::GSK_BLEND_MODE_SOFT_LIGHT</a>,
-            <span class="self">Self</span>::Difference =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DIFFERENCE.html">ffi::GSK_BLEND_MODE_DIFFERENCE</a>,
-            <span class="self">Self</span>::Exclusion =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_EXCLUSION.html">ffi::GSK_BLEND_MODE_EXCLUSION</a>,
-            <span class="self">Self</span>::Color =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR.html">ffi::GSK_BLEND_MODE_COLOR</a>,
-            <span class="self">Self</span>::Hue =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_HUE.html">ffi::GSK_BLEND_MODE_HUE</a>,
-            <span class="self">Self</span>::Saturation =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SATURATION.html">ffi::GSK_BLEND_MODE_SATURATION</a>,
-            <span class="self">Self</span>::Luminosity =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_LUMINOSITY.html">ffi::GSK_BLEND_MODE_LUMINOSITY</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#96">value</a>,
+            <a href="#21"><span class="self">Self</span>::Default</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DEFAULT.html">ffi::GSK_BLEND_MODE_DEFAULT</a>,
+            <a href="#25"><span class="self">Self</span>::Multiply</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_MULTIPLY.html">ffi::GSK_BLEND_MODE_MULTIPLY</a>,
+            <a href="#29"><span class="self">Self</span>::Screen</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SCREEN.html">ffi::GSK_BLEND_MODE_SCREEN</a>,
+            <a href="#33"><span class="self">Self</span>::Overlay</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_OVERLAY.html">ffi::GSK_BLEND_MODE_OVERLAY</a>,
+            <a href="#36"><span class="self">Self</span>::Darken</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DARKEN.html">ffi::GSK_BLEND_MODE_DARKEN</a>,
+            <a href="#39"><span class="self">Self</span>::Lighten</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_LIGHTEN.html">ffi::GSK_BLEND_MODE_LIGHTEN</a>,
+            <a href="#42"><span class="self">Self</span>::ColorDodge</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR_DODGE.html">ffi::GSK_BLEND_MODE_COLOR_DODGE</a>,
+            <a href="#45"><span class="self">Self</span>::ColorBurn</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR_BURN.html">ffi::GSK_BLEND_MODE_COLOR_BURN</a>,
+            <a href="#48"><span class="self">Self</span>::HardLight</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_HARD_LIGHT.html">ffi::GSK_BLEND_MODE_HARD_LIGHT</a>,
+            <a href="#51"><span class="self">Self</span>::SoftLight</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SOFT_LIGHT.html">ffi::GSK_BLEND_MODE_SOFT_LIGHT</a>,
+            <a href="#54"><span class="self">Self</span>::Difference</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_DIFFERENCE.html">ffi::GSK_BLEND_MODE_DIFFERENCE</a>,
+            <a href="#57"><span class="self">Self</span>::Exclusion</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_EXCLUSION.html">ffi::GSK_BLEND_MODE_EXCLUSION</a>,
+            <a href="#60"><span class="self">Self</span>::Color</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_COLOR.html">ffi::GSK_BLEND_MODE_COLOR</a>,
+            <a href="#63"><span class="self">Self</span>::Hue</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_HUE.html">ffi::GSK_BLEND_MODE_HUE</a>,
+            <a href="#66"><span class="self">Self</span>::Saturation</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_SATURATION.html">ffi::GSK_BLEND_MODE_SATURATION</a>,
+            <a href="#69"><span class="self">Self</span>::Luminosity</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_MODE_LUMINOSITY.html">ffi::GSK_BLEND_MODE_LUMINOSITY</a>,
+            <a href="#71"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#96">value</a>,
         }
     }
 }
@@ -2172,11 +2172,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskCorner.html">ffi::GskCorner</a> {
         <span class="kw">match </span><span class="self"><a href="#210">self</a> </span>{
-            <span class="self">Self</span>::TopLeft =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_TOP_LEFT.html">ffi::GSK_CORNER_TOP_LEFT</a>,
-            <span class="self">Self</span>::TopRight =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_TOP_RIGHT.html">ffi::GSK_CORNER_TOP_RIGHT</a>,
-            <span class="self">Self</span>::BottomRight =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_BOTTOM_RIGHT.html">ffi::GSK_CORNER_BOTTOM_RIGHT</a>,
-            <span class="self">Self</span>::BottomLeft =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_BOTTOM_LEFT.html">ffi::GSK_CORNER_BOTTOM_LEFT</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#216">value</a>,
+            <a href="#191"><span class="self">Self</span>::TopLeft</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_TOP_LEFT.html">ffi::GSK_CORNER_TOP_LEFT</a>,
+            <a href="#194"><span class="self">Self</span>::TopRight</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_TOP_RIGHT.html">ffi::GSK_CORNER_TOP_RIGHT</a>,
+            <a href="#197"><span class="self">Self</span>::BottomRight</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_BOTTOM_RIGHT.html">ffi::GSK_CORNER_BOTTOM_RIGHT</a>,
+            <a href="#200"><span class="self">Self</span>::BottomLeft</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CORNER_BOTTOM_LEFT.html">ffi::GSK_CORNER_BOTTOM_LEFT</a>,
+            <a href="#202"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#216">value</a>,
         }
     }
 }
@@ -2297,9 +2297,9 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskFillRule.html">ffi::GskFillRule</a> {
         <span class="kw">match </span><span class="self"><a href="#335">self</a> </span>{
-            <span class="self">Self</span>::Winding =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_RULE_WINDING.html">ffi::GSK_FILL_RULE_WINDING</a>,
-            <span class="self">Self</span>::EvenOdd =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_RULE_EVEN_ODD.html">ffi::GSK_FILL_RULE_EVEN_ODD</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#339">value</a>,
+            <a href="#317"><span class="self">Self</span>::Winding</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_RULE_WINDING.html">ffi::GSK_FILL_RULE_WINDING</a>,
+            <a href="#323"><span class="self">Self</span>::EvenOdd</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_RULE_EVEN_ODD.html">ffi::GSK_FILL_RULE_EVEN_ODD</a>,
+            <a href="#325"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#339">value</a>,
         }
     }
 }
@@ -2432,15 +2432,15 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskGLUniformType.html">ffi::GskGLUniformType</a> {
         <span class="kw">match </span><span class="self"><a href="#470">self</a> </span>{
-            <span class="self">Self</span>::None =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_NONE.html">ffi::GSK_GL_UNIFORM_TYPE_NONE</a>,
-            <span class="self">Self</span>::Float =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_FLOAT.html">ffi::GSK_GL_UNIFORM_TYPE_FLOAT</a>,
-            <span class="self">Self</span>::Int =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_INT.html">ffi::GSK_GL_UNIFORM_TYPE_INT</a>,
-            <span class="self">Self</span>::Uint =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_UINT.html">ffi::GSK_GL_UNIFORM_TYPE_UINT</a>,
-            <span class="self">Self</span>::Bool =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_BOOL.html">ffi::GSK_GL_UNIFORM_TYPE_BOOL</a>,
-            <span class="self">Self</span>::Vec2 =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC2.html">ffi::GSK_GL_UNIFORM_TYPE_VEC2</a>,
-            <span class="self">Self</span>::Vec3 =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC3.html">ffi::GSK_GL_UNIFORM_TYPE_VEC3</a>,
-            <span class="self">Self</span>::Vec4 =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC4.html">ffi::GSK_GL_UNIFORM_TYPE_VEC4</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#480">value</a>,
+            <a href="#439"><span class="self">Self</span>::None</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_NONE.html">ffi::GSK_GL_UNIFORM_TYPE_NONE</a>,
+            <a href="#442"><span class="self">Self</span>::Float</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_FLOAT.html">ffi::GSK_GL_UNIFORM_TYPE_FLOAT</a>,
+            <a href="#445"><span class="self">Self</span>::Int</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_INT.html">ffi::GSK_GL_UNIFORM_TYPE_INT</a>,
+            <a href="#448"><span class="self">Self</span>::Uint</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_UINT.html">ffi::GSK_GL_UNIFORM_TYPE_UINT</a>,
+            <a href="#451"><span class="self">Self</span>::Bool</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_BOOL.html">ffi::GSK_GL_UNIFORM_TYPE_BOOL</a>,
+            <a href="#454"><span class="self">Self</span>::Vec2</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC2.html">ffi::GSK_GL_UNIFORM_TYPE_VEC2</a>,
+            <a href="#457"><span class="self">Self</span>::Vec3</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC3.html">ffi::GSK_GL_UNIFORM_TYPE_VEC3</a>,
+            <a href="#460"><span class="self">Self</span>::Vec4</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC4.html">ffi::GSK_GL_UNIFORM_TYPE_VEC4</a>,
+            <a href="#462"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#480">value</a>,
         }
     }
 }
@@ -2566,10 +2566,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskLineCap.html">ffi::GskLineCap</a> {
         <span class="kw">match </span><span class="self"><a href="#604">self</a> </span>{
-            <span class="self">Self</span>::Butt =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_BUTT.html">ffi::GSK_LINE_CAP_BUTT</a>,
-            <span class="self">Self</span>::Round =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_ROUND.html">ffi::GSK_LINE_CAP_ROUND</a>,
-            <span class="self">Self</span>::Square =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_SQUARE.html">ffi::GSK_LINE_CAP_SQUARE</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#609">value</a>,
+            <a href="#584"><span class="self">Self</span>::Butt</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_BUTT.html">ffi::GSK_LINE_CAP_BUTT</a>,
+            <a href="#588"><span class="self">Self</span>::Round</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_ROUND.html">ffi::GSK_LINE_CAP_ROUND</a>,
+            <a href="#592"><span class="self">Self</span>::Square</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_CAP_SQUARE.html">ffi::GSK_LINE_CAP_SQUARE</a>,
+            <a href="#594"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#609">value</a>,
         }
     }
 }
@@ -2702,10 +2702,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskLineJoin.html">ffi::GskLineJoin</a> {
         <span class="kw">match </span><span class="self"><a href="#740">self</a> </span>{
-            <span class="self">Self</span>::Miter =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_MITER.html">ffi::GSK_LINE_JOIN_MITER</a>,
-            <span class="self">Self</span>::Round =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_ROUND.html">ffi::GSK_LINE_JOIN_ROUND</a>,
-            <span class="self">Self</span>::Bevel =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_BEVEL.html">ffi::GSK_LINE_JOIN_BEVEL</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#745">value</a>,
+            <a href="#720"><span class="self">Self</span>::Miter</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_MITER.html">ffi::GSK_LINE_JOIN_MITER</a>,
+            <a href="#724"><span class="self">Self</span>::Round</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_ROUND.html">ffi::GSK_LINE_JOIN_ROUND</a>,
+            <a href="#728"><span class="self">Self</span>::Bevel</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINE_JOIN_BEVEL.html">ffi::GSK_LINE_JOIN_BEVEL</a>,
+            <a href="#730"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#745">value</a>,
         }
     }
 }
@@ -2829,11 +2829,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskMaskMode.html">ffi::GskMaskMode</a> {
         <span class="kw">match </span><span class="self"><a href="#867">self</a> </span>{
-            <span class="self">Self</span>::Alpha =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_ALPHA.html">ffi::GSK_MASK_MODE_ALPHA</a>,
-            <span class="self">Self</span>::InvertedAlpha =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_ALPHA.html">ffi::GSK_MASK_MODE_INVERTED_ALPHA</a>,
-            <span class="self">Self</span>::Luminance =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_LUMINANCE.html">ffi::GSK_MASK_MODE_LUMINANCE</a>,
-            <span class="self">Self</span>::InvertedLuminance =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_LUMINANCE.html">ffi::GSK_MASK_MODE_INVERTED_LUMINANCE</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#873">value</a>,
+            <a href="#844"><span class="self">Self</span>::Alpha</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_ALPHA.html">ffi::GSK_MASK_MODE_ALPHA</a>,
+            <a href="#847"><span class="self">Self</span>::InvertedAlpha</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_ALPHA.html">ffi::GSK_MASK_MODE_INVERTED_ALPHA</a>,
+            <a href="#851"><span class="self">Self</span>::Luminance</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_LUMINANCE.html">ffi::GSK_MASK_MODE_LUMINANCE</a>,
+            <a href="#855"><span class="self">Self</span>::InvertedLuminance</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_LUMINANCE.html">ffi::GSK_MASK_MODE_INVERTED_LUMINANCE</a>,
+            <a href="#857"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#873">value</a>,
         }
     }
 }
@@ -2970,11 +2970,11 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskPathDirection.html">ffi::GskPathDirection</a> {
         <span class="kw">match </span><span class="self"><a href="#1008">self</a> </span>{
-            <span class="self">Self</span>::FromStart =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_FROM_START.html">ffi::GSK_PATH_FROM_START</a>,
-            <span class="self">Self</span>::ToStart =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_TO_START.html">ffi::GSK_PATH_TO_START</a>,
-            <span class="self">Self</span>::ToEnd =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_TO_END.html">ffi::GSK_PATH_TO_END</a>,
-            <span class="self">Self</span>::FromEnd =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_FROM_END.html">ffi::GSK_PATH_FROM_END</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1014">value</a>,
+            <a href="#984"><span class="self">Self</span>::FromStart</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_FROM_START.html">ffi::GSK_PATH_FROM_START</a>,
+            <a href="#988"><span class="self">Self</span>::ToStart</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_TO_START.html">ffi::GSK_PATH_TO_START</a>,
+            <a href="#992"><span class="self">Self</span>::ToEnd</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_TO_END.html">ffi::GSK_PATH_TO_END</a>,
+            <a href="#996"><span class="self">Self</span>::FromEnd</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_FROM_END.html">ffi::GSK_PATH_FROM_END</a>,
+            <a href="#998"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1014">value</a>,
         }
     }
 }
@@ -3113,13 +3113,13 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskPathOperation.html">ffi::GskPathOperation</a> {
         <span class="kw">match </span><span class="self"><a href="#1151">self</a> </span>{
-            <span class="self">Self</span>::Move =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_MOVE.html">ffi::GSK_PATH_MOVE</a>,
-            <span class="self">Self</span>::Close =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CLOSE.html">ffi::GSK_PATH_CLOSE</a>,
-            <span class="self">Self</span>::Line =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_LINE.html">ffi::GSK_PATH_LINE</a>,
-            <span class="self">Self</span>::Quad =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_QUAD.html">ffi::GSK_PATH_QUAD</a>,
-            <span class="self">Self</span>::Cubic =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CUBIC.html">ffi::GSK_PATH_CUBIC</a>,
-            <span class="self">Self</span>::Conic =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CONIC.html">ffi::GSK_PATH_CONIC</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1159">value</a>,
+            <a href="#1116"><span class="self">Self</span>::Move</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_MOVE.html">ffi::GSK_PATH_MOVE</a>,
+            <a href="#1120"><span class="self">Self</span>::Close</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CLOSE.html">ffi::GSK_PATH_CLOSE</a>,
+            <a href="#1124"><span class="self">Self</span>::Line</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_LINE.html">ffi::GSK_PATH_LINE</a>,
+            <a href="#1129"><span class="self">Self</span>::Quad</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_QUAD.html">ffi::GSK_PATH_QUAD</a>,
+            <a href="#1134"><span class="self">Self</span>::Cubic</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CUBIC.html">ffi::GSK_PATH_CUBIC</a>,
+            <a href="#1139"><span class="self">Self</span>::Conic</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_PATH_CONIC.html">ffi::GSK_PATH_CONIC</a>,
+            <a href="#1141"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1159">value</a>,
         }
     }
 }
@@ -3330,43 +3330,43 @@
 
     <span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskRenderNodeType.html">ffi::GskRenderNodeType</a> {
         <span class="kw">match </span><span class="self"><a href="#1368">self</a> </span>{
-            <span class="self">Self</span>::NotARenderNode =&gt; <a href="../../../gsk4_sys/constant.GSK_NOT_A_RENDER_NODE.html">ffi::GSK_NOT_A_RENDER_NODE</a>,
-            <span class="self">Self</span>::ContainerNode =&gt; <a href="../../../gsk4_sys/constant.GSK_CONTAINER_NODE.html">ffi::GSK_CONTAINER_NODE</a>,
-            <span class="self">Self</span>::CairoNode =&gt; <a href="../../../gsk4_sys/constant.GSK_CAIRO_NODE.html">ffi::GSK_CAIRO_NODE</a>,
-            <span class="self">Self</span>::ColorNode =&gt; <a href="../../../gsk4_sys/constant.GSK_COLOR_NODE.html">ffi::GSK_COLOR_NODE</a>,
-            <span class="self">Self</span>::LinearGradientNode =&gt; <a href="../../../gsk4_sys/constant.GSK_LINEAR_GRADIENT_NODE.html">ffi::GSK_LINEAR_GRADIENT_NODE</a>,
-            <span class="self">Self</span>::RepeatingLinearGradientNode =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEATING_LINEAR_GRADIENT_NODE.html">ffi::GSK_REPEATING_LINEAR_GRADIENT_NODE</a>,
-            <span class="self">Self</span>::RadialGradientNode =&gt; <a href="../../../gsk4_sys/constant.GSK_RADIAL_GRADIENT_NODE.html">ffi::GSK_RADIAL_GRADIENT_NODE</a>,
-            <span class="self">Self</span>::RepeatingRadialGradientNode =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEATING_RADIAL_GRADIENT_NODE.html">ffi::GSK_REPEATING_RADIAL_GRADIENT_NODE</a>,
-            <span class="self">Self</span>::ConicGradientNode =&gt; <a href="../../../gsk4_sys/constant.GSK_CONIC_GRADIENT_NODE.html">ffi::GSK_CONIC_GRADIENT_NODE</a>,
-            <span class="self">Self</span>::BorderNode =&gt; <a href="../../../gsk4_sys/constant.GSK_BORDER_NODE.html">ffi::GSK_BORDER_NODE</a>,
-            <span class="self">Self</span>::TextureNode =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXTURE_NODE.html">ffi::GSK_TEXTURE_NODE</a>,
-            <span class="self">Self</span>::InsetShadowNode =&gt; <a href="../../../gsk4_sys/constant.GSK_INSET_SHADOW_NODE.html">ffi::GSK_INSET_SHADOW_NODE</a>,
-            <span class="self">Self</span>::OutsetShadowNode =&gt; <a href="../../../gsk4_sys/constant.GSK_OUTSET_SHADOW_NODE.html">ffi::GSK_OUTSET_SHADOW_NODE</a>,
-            <span class="self">Self</span>::TransformNode =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_NODE.html">ffi::GSK_TRANSFORM_NODE</a>,
-            <span class="self">Self</span>::OpacityNode =&gt; <a href="../../../gsk4_sys/constant.GSK_OPACITY_NODE.html">ffi::GSK_OPACITY_NODE</a>,
-            <span class="self">Self</span>::ColorMatrixNode =&gt; <a href="../../../gsk4_sys/constant.GSK_COLOR_MATRIX_NODE.html">ffi::GSK_COLOR_MATRIX_NODE</a>,
-            <span class="self">Self</span>::RepeatNode =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEAT_NODE.html">ffi::GSK_REPEAT_NODE</a>,
-            <span class="self">Self</span>::ClipNode =&gt; <a href="../../../gsk4_sys/constant.GSK_CLIP_NODE.html">ffi::GSK_CLIP_NODE</a>,
-            <span class="self">Self</span>::RoundedClipNode =&gt; <a href="../../../gsk4_sys/constant.GSK_ROUNDED_CLIP_NODE.html">ffi::GSK_ROUNDED_CLIP_NODE</a>,
-            <span class="self">Self</span>::ShadowNode =&gt; <a href="../../../gsk4_sys/constant.GSK_SHADOW_NODE.html">ffi::GSK_SHADOW_NODE</a>,
-            <span class="self">Self</span>::BlendNode =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_NODE.html">ffi::GSK_BLEND_NODE</a>,
-            <span class="self">Self</span>::CrossFadeNode =&gt; <a href="../../../gsk4_sys/constant.GSK_CROSS_FADE_NODE.html">ffi::GSK_CROSS_FADE_NODE</a>,
-            <span class="self">Self</span>::TextNode =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXT_NODE.html">ffi::GSK_TEXT_NODE</a>,
-            <span class="self">Self</span>::BlurNode =&gt; <a href="../../../gsk4_sys/constant.GSK_BLUR_NODE.html">ffi::GSK_BLUR_NODE</a>,
-            <span class="self">Self</span>::DebugNode =&gt; <a href="../../../gsk4_sys/constant.GSK_DEBUG_NODE.html">ffi::GSK_DEBUG_NODE</a>,
-            <span class="self">Self</span>::GlShaderNode =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_SHADER_NODE.html">ffi::GSK_GL_SHADER_NODE</a>,
+            <a href="#1259"><span class="self">Self</span>::NotARenderNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_NOT_A_RENDER_NODE.html">ffi::GSK_NOT_A_RENDER_NODE</a>,
+            <a href="#1262"><span class="self">Self</span>::ContainerNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CONTAINER_NODE.html">ffi::GSK_CONTAINER_NODE</a>,
+            <a href="#1265"><span class="self">Self</span>::CairoNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CAIRO_NODE.html">ffi::GSK_CAIRO_NODE</a>,
+            <a href="#1268"><span class="self">Self</span>::ColorNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_COLOR_NODE.html">ffi::GSK_COLOR_NODE</a>,
+            <a href="#1271"><span class="self">Self</span>::LinearGradientNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_LINEAR_GRADIENT_NODE.html">ffi::GSK_LINEAR_GRADIENT_NODE</a>,
+            <a href="#1274"><span class="self">Self</span>::RepeatingLinearGradientNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEATING_LINEAR_GRADIENT_NODE.html">ffi::GSK_REPEATING_LINEAR_GRADIENT_NODE</a>,
+            <a href="#1277"><span class="self">Self</span>::RadialGradientNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_RADIAL_GRADIENT_NODE.html">ffi::GSK_RADIAL_GRADIENT_NODE</a>,
+            <a href="#1280"><span class="self">Self</span>::RepeatingRadialGradientNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEATING_RADIAL_GRADIENT_NODE.html">ffi::GSK_REPEATING_RADIAL_GRADIENT_NODE</a>,
+            <a href="#1283"><span class="self">Self</span>::ConicGradientNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CONIC_GRADIENT_NODE.html">ffi::GSK_CONIC_GRADIENT_NODE</a>,
+            <a href="#1286"><span class="self">Self</span>::BorderNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BORDER_NODE.html">ffi::GSK_BORDER_NODE</a>,
+            <a href="#1289"><span class="self">Self</span>::TextureNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXTURE_NODE.html">ffi::GSK_TEXTURE_NODE</a>,
+            <a href="#1292"><span class="self">Self</span>::InsetShadowNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_INSET_SHADOW_NODE.html">ffi::GSK_INSET_SHADOW_NODE</a>,
+            <a href="#1295"><span class="self">Self</span>::OutsetShadowNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_OUTSET_SHADOW_NODE.html">ffi::GSK_OUTSET_SHADOW_NODE</a>,
+            <a href="#1298"><span class="self">Self</span>::TransformNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_NODE.html">ffi::GSK_TRANSFORM_NODE</a>,
+            <a href="#1301"><span class="self">Self</span>::OpacityNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_OPACITY_NODE.html">ffi::GSK_OPACITY_NODE</a>,
+            <a href="#1304"><span class="self">Self</span>::ColorMatrixNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_COLOR_MATRIX_NODE.html">ffi::GSK_COLOR_MATRIX_NODE</a>,
+            <a href="#1307"><span class="self">Self</span>::RepeatNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_REPEAT_NODE.html">ffi::GSK_REPEAT_NODE</a>,
+            <a href="#1310"><span class="self">Self</span>::ClipNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CLIP_NODE.html">ffi::GSK_CLIP_NODE</a>,
+            <a href="#1313"><span class="self">Self</span>::RoundedClipNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_ROUNDED_CLIP_NODE.html">ffi::GSK_ROUNDED_CLIP_NODE</a>,
+            <a href="#1316"><span class="self">Self</span>::ShadowNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SHADOW_NODE.html">ffi::GSK_SHADOW_NODE</a>,
+            <a href="#1319"><span class="self">Self</span>::BlendNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLEND_NODE.html">ffi::GSK_BLEND_NODE</a>,
+            <a href="#1322"><span class="self">Self</span>::CrossFadeNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_CROSS_FADE_NODE.html">ffi::GSK_CROSS_FADE_NODE</a>,
+            <a href="#1325"><span class="self">Self</span>::TextNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXT_NODE.html">ffi::GSK_TEXT_NODE</a>,
+            <a href="#1328"><span class="self">Self</span>::BlurNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_BLUR_NODE.html">ffi::GSK_BLUR_NODE</a>,
+            <a href="#1331"><span class="self">Self</span>::DebugNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_DEBUG_NODE.html">ffi::GSK_DEBUG_NODE</a>,
+            <a href="#1334"><span class="self">Self</span>::GlShaderNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_GL_SHADER_NODE.html">ffi::GSK_GL_SHADER_NODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_10"</span>)]
-            </span><span class="self">Self</span>::TextureScaleNode =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXTURE_SCALE_NODE.html">ffi::GSK_TEXTURE_SCALE_NODE</a>,
+            </span><a href="#1339"><span class="self">Self</span>::TextureScaleNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TEXTURE_SCALE_NODE.html">ffi::GSK_TEXTURE_SCALE_NODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_10"</span>)]
-            </span><span class="self">Self</span>::MaskNode =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_NODE.html">ffi::GSK_MASK_NODE</a>,
+            </span><a href="#1344"><span class="self">Self</span>::MaskNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_MASK_NODE.html">ffi::GSK_MASK_NODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::FillNode =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_NODE.html">ffi::GSK_FILL_NODE</a>,
+            </span><a href="#1349"><span class="self">Self</span>::FillNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_FILL_NODE.html">ffi::GSK_FILL_NODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::StrokeNode =&gt; <a href="../../../gsk4_sys/constant.GSK_STROKE_NODE.html">ffi::GSK_STROKE_NODE</a>,
+            </span><a href="#1354"><span class="self">Self</span>::StrokeNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_STROKE_NODE.html">ffi::GSK_STROKE_NODE</a>,
             <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
-            </span><span class="self">Self</span>::SubsurfaceNode =&gt; <a href="../../../gsk4_sys/constant.GSK_SUBSURFACE_NODE.html">ffi::GSK_SUBSURFACE_NODE</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1406">value</a>,
+            </span><a href="#1359"><span class="self">Self</span>::SubsurfaceNode</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SUBSURFACE_NODE.html">ffi::GSK_SUBSURFACE_NODE</a>,
+            <a href="#1361"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1406">value</a>,
         }
     }
 }
@@ -3504,10 +3504,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskScalingFilter.html">ffi::GskScalingFilter</a> {
         <span class="kw">match </span><span class="self"><a href="#1542">self</a> </span>{
-            <span class="self">Self</span>::Linear =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_LINEAR.html">ffi::GSK_SCALING_FILTER_LINEAR</a>,
-            <span class="self">Self</span>::Nearest =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_NEAREST.html">ffi::GSK_SCALING_FILTER_NEAREST</a>,
-            <span class="self">Self</span>::Trilinear =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_TRILINEAR.html">ffi::GSK_SCALING_FILTER_TRILINEAR</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1547">value</a>,
+            <a href="#1524"><span class="self">Self</span>::Linear</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_LINEAR.html">ffi::GSK_SCALING_FILTER_LINEAR</a>,
+            <a href="#1527"><span class="self">Self</span>::Nearest</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_NEAREST.html">ffi::GSK_SCALING_FILTER_NEAREST</a>,
+            <a href="#1532"><span class="self">Self</span>::Trilinear</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SCALING_FILTER_TRILINEAR.html">ffi::GSK_SCALING_FILTER_TRILINEAR</a>,
+            <a href="#1534"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1547">value</a>,
         }
     }
 }
@@ -3610,10 +3610,10 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskSerializationError.html">ffi::GskSerializationError</a> {
         <span class="kw">match </span><span class="self"><a href="#1648">self</a> </span>{
-            <span class="self">Self</span>::UnsupportedFormat =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_FORMAT.html">ffi::GSK_SERIALIZATION_UNSUPPORTED_FORMAT</a>,
-            <span class="self">Self</span>::UnsupportedVersion =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_VERSION.html">ffi::GSK_SERIALIZATION_UNSUPPORTED_VERSION</a>,
-            <span class="self">Self</span>::InvalidData =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_INVALID_DATA.html">ffi::GSK_SERIALIZATION_INVALID_DATA</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1653">value</a>,
+            <a href="#1630"><span class="self">Self</span>::UnsupportedFormat</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_FORMAT.html">ffi::GSK_SERIALIZATION_UNSUPPORTED_FORMAT</a>,
+            <a href="#1634"><span class="self">Self</span>::UnsupportedVersion</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_VERSION.html">ffi::GSK_SERIALIZATION_UNSUPPORTED_VERSION</a>,
+            <a href="#1638"><span class="self">Self</span>::InvalidData</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_SERIALIZATION_INVALID_DATA.html">ffi::GSK_SERIALIZATION_INVALID_DATA</a>,
+            <a href="#1640"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1653">value</a>,
         }
     }
 }
@@ -3651,7 +3651,7 @@
     </span><span class="kw">fn </span>from(code: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) -&gt; <a class="prelude-ty" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html">Option</a>&lt;<span class="self">Self</span>&gt; {
         <span class="macro">skip_assert_initialized!</span>();
         <span class="kw">match unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#1688">code</a>) } {
-            value =&gt; <span class="prelude-val">Some</span>(<a href="#1691">value</a>),
+            value =&gt; <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#1691">value</a>),
         }
     }
 }
@@ -3765,14 +3765,14 @@
     <span class="attr">#[inline]
     </span><span class="kw">fn </span>into_glib(<span class="self">self</span>) -&gt; <a href="../../../gsk4_sys/type.GskTransformCategory.html">ffi::GskTransformCategory</a> {
         <span class="kw">match </span><span class="self"><a href="#1803">self</a> </span>{
-            <span class="self">Self</span>::Unknown =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_UNKNOWN.html">ffi::GSK_TRANSFORM_CATEGORY_UNKNOWN</a>,
-            <span class="self">Self</span>::Any =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_ANY.html">ffi::GSK_TRANSFORM_CATEGORY_ANY</a>,
-            <span class="self">Self</span>::_3d =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_3D.html">ffi::GSK_TRANSFORM_CATEGORY_3D</a>,
-            <span class="self">Self</span>::_2d =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D.html">ffi::GSK_TRANSFORM_CATEGORY_2D</a>,
-            <span class="self">Self</span>::_2dAffine =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D_AFFINE.html">ffi::GSK_TRANSFORM_CATEGORY_2D_AFFINE</a>,
-            <span class="self">Self</span>::_2dTranslate =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D_TRANSLATE.html">ffi::GSK_TRANSFORM_CATEGORY_2D_TRANSLATE</a>,
-            <span class="self">Self</span>::Identity =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_IDENTITY.html">ffi::GSK_TRANSFORM_CATEGORY_IDENTITY</a>,
-            <span class="self">Self</span>::__Unknown(value) =&gt; <a href="#1812">value</a>,
+            <a href="#1769"><span class="self">Self</span>::Unknown</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_UNKNOWN.html">ffi::GSK_TRANSFORM_CATEGORY_UNKNOWN</a>,
+            <a href="#1773"><span class="self">Self</span>::Any</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_ANY.html">ffi::GSK_TRANSFORM_CATEGORY_ANY</a>,
+            <a href="#1777"><span class="self">Self</span>::_3d</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_3D.html">ffi::GSK_TRANSFORM_CATEGORY_3D</a>,
+            <a href="#1782"><span class="self">Self</span>::_2d</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D.html">ffi::GSK_TRANSFORM_CATEGORY_2D</a>,
+            <a href="#1787"><span class="self">Self</span>::_2dAffine</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D_AFFINE.html">ffi::GSK_TRANSFORM_CATEGORY_2D_AFFINE</a>,
+            <a href="#1790"><span class="self">Self</span>::_2dTranslate</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_2D_TRANSLATE.html">ffi::GSK_TRANSFORM_CATEGORY_2D_TRANSLATE</a>,
+            <a href="#1793"><span class="self">Self</span>::Identity</a> =&gt; <a href="../../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_IDENTITY.html">ffi::GSK_TRANSFORM_CATEGORY_IDENTITY</a>,
+            <a href="#1795"><span class="self">Self</span>::__Unknown</a>(value) =&gt; <a href="#1812">value</a>,
         }
     }
 }

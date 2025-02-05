@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/im_context.rs`."><title>im_context.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../../static.files/storage-59e33391.js"></script><script defer src="../../../static.files/src-script-56102188.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/subclass/im_context.rs`."><title>im_context.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-302de22f.js"></script><script defer src="../../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -1017,7 +1017,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#232">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#233">parent_class</a>).commit {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#233">parent_class</a>).commit {
                 <a href="#234">f</a>(
                     <a class="self" href="#230">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#230">string</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -1031,7 +1031,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#246">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#247">parent_class</a>).delete_surrounding {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#247">parent_class</a>).delete_surrounding {
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#248">f</a>(
                     <a class="self" href="#244">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#244">offset</a>,
@@ -1048,7 +1048,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#263">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#264">parent_class</a>).filter_keypress {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#264">parent_class</a>).filter_keypress {
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#265">f</a>(
                     <a class="self" href="#261">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#261">event</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -1063,7 +1063,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#278">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#279">parent_class</a>).focus_in {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#279">parent_class</a>).focus_in {
                 <a href="#280">f</a>(<a class="self" href="#276">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1073,7 +1073,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#288">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#289">parent_class</a>).focus_out {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#289">parent_class</a>).focus_out {
                 <a href="#290">f</a>(<a class="self" href="#286">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1083,7 +1083,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#298">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#299">parent_class</a>).get_surrounding {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#299">parent_class</a>).get_surrounding {
                 <span class="kw">let </span><span class="kw-2">mut </span>text = <a href="https://doc.rust-lang.org/nightly/core/ptr/fn.null_mut.html">std::ptr::null_mut</a>();
                 <span class="kw">let </span><span class="kw-2">mut </span>cursor_index = <a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.uninit">std::mem::MaybeUninit::uninit</a>();
                 <span class="kw">let </span>ret = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#300">f</a>(
@@ -1092,11 +1092,11 @@
                     <a href="#302">cursor_index</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.as_mut_ptr">as_mut_ptr</a>(),
                 ));
                 <span class="kw">if </span>ret {
-                    <span class="kw">return </span><span class="prelude-val">Some</span>((<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#301">text</a>), <a href="#302">cursor_index</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()));
+                    <span class="kw">return </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib_full.html">from_glib_full</a>(<a href="#301">text</a>), <a href="#302">cursor_index</a>.<a href="https://doc.rust-lang.org/nightly/core/mem/maybe_uninit/union.MaybeUninit.html#method.assume_init">assume_init</a>()));
                 }
             }
-            <span class="prelude-val">None
-        </span>}
+            <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None"><a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.None">None</a>
+        </a>}
     }
 
     <span class="kw">fn </span>parent_preedit_string(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; (<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/gstring/struct.GString.html">GString</a>, <a href="https://gtk-rs.org/gtk-rs-core/git/docs/pango/auto/attr_list/struct.AttrList.html">AttrList</a>, <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>) {
@@ -1127,7 +1127,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#342">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#343">parent_class</a>).preedit_changed {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#343">parent_class</a>).preedit_changed {
                 <a href="#344">f</a>(<a class="self" href="#340">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1137,7 +1137,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#352">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#353">parent_class</a>).preedit_end {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#353">parent_class</a>).preedit_end {
                 <a href="#354">f</a>(<a class="self" href="#350">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1147,7 +1147,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#362">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#363">parent_class</a>).preedit_start {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#363">parent_class</a>).preedit_start {
                 <a href="#364">f</a>(<a class="self" href="#360">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1157,7 +1157,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#372">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#373">parent_class</a>).reset {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#373">parent_class</a>).reset {
                 <a href="#374">f</a>(<a class="self" href="#370">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1168,7 +1168,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#383">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#384">parent_class</a>).retrieve_surrounding {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#384">parent_class</a>).retrieve_surrounding {
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#385">f</a>(<span class="self"><a href="#381">self</a>
                     </span>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>()
                     .<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;()
@@ -1184,7 +1184,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#399">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#400">parent_class</a>).set_client_widget {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#400">parent_class</a>).set_client_widget {
                 <a href="#401">f</a>(
                     <a class="self" href="#397">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#397">widget</a>.<a href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#method.map">map</a>(|p| <a href="#404">p</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsRef.html#tymethod.as_ref">as_ref</a>()).<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -1197,7 +1197,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#412">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#413">parent_class</a>).set_cursor_location {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#413">parent_class</a>).set_cursor_location {
                 <a href="#414">f</a>(
                     <a class="self" href="#410">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#410">area</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0 </span><span class="kw">as </span><span class="kw-2">*mut </span><span class="kw">_</span>,
@@ -1212,7 +1212,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#427">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#428">parent_class</a>).set_surrounding {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#428">parent_class</a>).set_surrounding {
                 <a href="#429">f</a>(
                     <a class="self" href="#425">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#425">text</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -1227,7 +1227,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#442">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#443">parent_class</a>).set_use_preedit {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#443">parent_class</a>).set_use_preedit {
                 <a href="#444">f</a>(
                     <a class="self" href="#440">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#440">use_preedit</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>(),
@@ -1242,7 +1242,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#457">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#458">parent_class</a>).activate_osk {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#458">parent_class</a>).activate_osk {
                 <a href="#459">f</a>(<a class="self" href="#455">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)
             }
         }
@@ -1254,7 +1254,7 @@
         <span class="kw">unsafe </span>{
             <span class="kw">let </span>data = <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassType.html#tymethod.type_data"><span class="self">Self</span>::type_data</a>();
             <span class="kw">let </span>parent_class = <a href="#469">data</a>.<a href="https://doc.rust-lang.org/nightly/core/ptr/non_null/struct.NonNull.html#method.as_ref">as_ref</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/struct.TypeData.html#method.parent_class">parent_class</a>() <span class="kw">as </span><span class="kw-2">*mut </span><a href="../../../gtk4_sys/struct.GtkIMContextClass.html">ffi::GtkIMContextClass</a>;
-            <span class="kw">if let </span><span class="prelude-val">Some</span>(f) = (<span class="kw-2">*</span><a href="#470">parent_class</a>).activate_osk_with_event {
+            <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(f) = (<span class="kw-2">*</span><a href="#470">parent_class</a>).activate_osk_with_event {
                 <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="#471">f</a>(
                     <a class="self" href="#467">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.ObjectSubclassExt.html#tymethod.obj">obj</a>().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.Cast.html#tymethod.unsafe_cast_ref">unsafe_cast_ref</a>::&lt;<a href="../auto/im_context.rs.html#14-130">IMContext</a>&gt;().<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
                     <a href="#467">event</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>,
@@ -1275,31 +1275,31 @@
         <a class="macro" href="../rt.rs.html#24-36">assert_initialized_main_thread!</a>();
 
         <span class="kw">let </span>klass = <a href="#486">class</a>.<a href="https://doc.rust-lang.org/nightly/core/convert/trait.AsMut.html#tymethod.as_mut">as_mut</a>();
-        <a href="#491">klass</a>.commit = <span class="prelude-val">Some</span>(<a href="#521-530">im_context_commit</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.delete_surrounding = <span class="prelude-val">Some</span>(<a href="#532-541">im_context_delete_surrounding</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.filter_keypress = <span class="prelude-val">Some</span>(<a href="#543-551">im_context_filter_keypress</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.focus_in = <span class="prelude-val">Some</span>(<a href="#553-558">im_context_focus_in</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.focus_out = <span class="prelude-val">Some</span>(<a href="#560-565">im_context_focus_out</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.get_preedit_string = <span class="prelude-val">Some</span>(<a href="#567-581">im_context_get_preedit_string</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.get_surrounding = <span class="prelude-val">Some</span>(<a href="#583-600">im_context_get_surrounding</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.preedit_changed = <span class="prelude-val">Some</span>(<a href="#602-607">im_context_preedit_changed</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.preedit_end = <span class="prelude-val">Some</span>(<a href="#609-614">im_context_preedit_end</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.preedit_start = <span class="prelude-val">Some</span>(<a href="#616-621">im_context_preedit_start</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.reset = <span class="prelude-val">Some</span>(<a href="#623-628">im_context_reset</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.retrieve_surrounding = <span class="prelude-val">Some</span>(<a href="#630-637">im_context_retrieve_surrounding</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.set_client_widget = <span class="prelude-val">Some</span>(<a href="#639-648">im_context_set_client_widget</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.set_cursor_location = <span class="prelude-val">Some</span>(<a href="#650-659">im_context_set_cursor_location</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.set_surrounding = <span class="prelude-val">Some</span>(<a href="#661-679">im_context_set_surrounding</a>::&lt;T&gt;);
-        <a href="#491">klass</a>.set_use_preedit = <span class="prelude-val">Some</span>(<a href="#681-689">im_context_set_use_preedit</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.commit = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#521-530">im_context_commit</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.delete_surrounding = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#532-541">im_context_delete_surrounding</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.filter_keypress = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#543-551">im_context_filter_keypress</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.focus_in = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#553-558">im_context_focus_in</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.focus_out = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#560-565">im_context_focus_out</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.get_preedit_string = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#567-581">im_context_get_preedit_string</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.get_surrounding = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#583-600">im_context_get_surrounding</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.preedit_changed = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#602-607">im_context_preedit_changed</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.preedit_end = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#609-614">im_context_preedit_end</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.preedit_start = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#616-621">im_context_preedit_start</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.reset = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#623-628">im_context_reset</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.retrieve_surrounding = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#630-637">im_context_retrieve_surrounding</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.set_client_widget = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#639-648">im_context_set_client_widget</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.set_cursor_location = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#650-659">im_context_set_cursor_location</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.set_surrounding = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#661-679">im_context_set_surrounding</a>::&lt;T&gt;);
+        <a href="#491">klass</a>.set_use_preedit = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#681-689">im_context_set_use_preedit</a>::&lt;T&gt;);
         <span class="attr">#[cfg(feature = <span class="string">"v4_10"</span>)]
         #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_10"</span>)))]
         </span>{
-            <a href="#491">klass</a>.activate_osk = <span class="prelude-val">Some</span>(<a href="#693-698">im_context_activate_osk</a>::&lt;T&gt;);
+            <a href="#491">klass</a>.activate_osk = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#693-698">im_context_activate_osk</a>::&lt;T&gt;);
         };
         <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
         #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
         </span>{
-            <a href="#491">klass</a>.activate_osk_with_event = <span class="prelude-val">Some</span>(<a href="#702-713">im_context_activate_osk_with_event</a>::&lt;T&gt;);
+            <a href="#491">klass</a>.activate_osk_with_event = <a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>(<a href="#702-713">im_context_activate_osk_with_event</a>::&lt;T&gt;);
         };
     }
 }
@@ -1374,7 +1374,7 @@
     <span class="kw">let </span>instance = <span class="kw-2">&amp;*</span>(<a href="#584">ptr</a> <span class="kw">as </span><span class="kw-2">*mut </span>T::Instance);
     <span class="kw">let </span>imp = <a href="#588">instance</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/subclass/types/trait.InstanceStructExt.html#tymethod.imp">imp</a>();
 
-    <span class="kw">if let </span><span class="prelude-val">Some</span>((text, cursor_idx)) = <a href="#589">imp</a>.<a href="#135-137">surrounding</a>() {
+    <span class="kw">if let </span><a class="prelude-val" href="https://doc.rust-lang.org/nightly/core/option/enum.Option.html#variant.Some">Some</a>((text, cursor_idx)) = <a href="#589">imp</a>.<a href="#135-137">surrounding</a>() {
         <span class="kw-2">*</span><a href="#585">text_ptr</a> = <a href="#591">text</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlibPtr.html#tymethod.into_glib_ptr">into_glib_ptr</a>();
         <span class="kw-2">*</span><a href="#586">cursor_index_ptr</a> = <a href="#591">cursor_idx</a>;
         <span class="bool-val">true</span>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>()

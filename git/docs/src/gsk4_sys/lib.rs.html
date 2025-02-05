@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4/sys/src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-46132b98.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gsk4_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.85.0-nightly (a4cb3c831 2024-12-17)" data-channel="nightly" data-search-js="search-036cda7a.js" data-settings-js="settings-0f613d39.js" ><script src="../../static.files/storage-59e33391.js"></script><script defer src="../../static.files/src-script-56102188.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-5f194d8c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gsk4/sys/src/lib.rs`."><title>lib.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../static.files/rustdoc-cf3c48c1.css"><meta name="rustdoc-vars" data-root-path="../../" data-static-root-path="../../static.files/" data-current-crate="gsk4_sys" data-themes="" data-resource-suffix="" data-rustdoc-version="1.86.0-nightly (bef3c3b01 2025-02-04)" data-channel="nightly" data-search-js="search-1b520363.js" data-settings-js="settings-6dad6058.js" ><script src="../../static.files/storage-302de22f.js"></script><script defer src="../../static.files/src-script-8fee9dc5.js"></script><script defer src="../../src-files.js"></script><script defer src="../../static.files/main-ddbd176c.js"></script><noscript><link rel="stylesheet" href="../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -2494,14 +2494,14 @@
 </span><span class="kw">use </span>libc::{intptr_t, off_t, size_t, ssize_t, time_t, uintptr_t, FILE};
 <span class="attr">#[allow(unused_imports)]
 </span><span class="kw">use </span>std::ffi::{
-    <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_double.html">c_double</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_long.html">c_long</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_short.html">c_short</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uchar.html">c_uchar</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_ulong.html">c_ulong</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_ushort.html">c_ushort</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html">c_void</a>,
+    <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_double.html">c_double</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_long.html">c_long</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_short.html">c_short</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uchar.html">c_uchar</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_ulong.html">c_ulong</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_ushort.html">c_ushort</a>, <a href="https://doc.rust-lang.org/nightly/core/ffi/enum.c_void.html">c_void</a>,
 };
 
 <span class="attr">#[allow(unused_imports)]
 </span><span class="kw">use </span>glib::{gboolean, gconstpointer, gpointer, GType};
 
 <span class="comment">// Enums
-</span><span class="kw">pub type </span><a href="../../gsk4_sys/type.GskBlendMode.html">GskBlendMode</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+</span><span class="kw">pub type </span><a href="../../gsk4_sys/type.GskBlendMode.html">GskBlendMode</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_BLEND_MODE_DEFAULT.html">GSK_BLEND_MODE_DEFAULT</a>: <a href="#35">GskBlendMode</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_BLEND_MODE_MULTIPLY.html">GSK_BLEND_MODE_MULTIPLY</a>: <a href="#35">GskBlendMode</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_BLEND_MODE_SCREEN.html">GSK_BLEND_MODE_SCREEN</a>: <a href="#35">GskBlendMode</a> = <span class="number">2</span>;
@@ -2519,17 +2519,17 @@
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_BLEND_MODE_SATURATION.html">GSK_BLEND_MODE_SATURATION</a>: <a href="#35">GskBlendMode</a> = <span class="number">14</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_BLEND_MODE_LUMINOSITY.html">GSK_BLEND_MODE_LUMINOSITY</a>: <a href="#35">GskBlendMode</a> = <span class="number">15</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskCorner.html">GskCorner</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskCorner.html">GskCorner</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CORNER_TOP_LEFT.html">GSK_CORNER_TOP_LEFT</a>: <a href="#53">GskCorner</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CORNER_TOP_RIGHT.html">GSK_CORNER_TOP_RIGHT</a>: <a href="#53">GskCorner</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CORNER_BOTTOM_RIGHT.html">GSK_CORNER_BOTTOM_RIGHT</a>: <a href="#53">GskCorner</a> = <span class="number">2</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CORNER_BOTTOM_LEFT.html">GSK_CORNER_BOTTOM_LEFT</a>: <a href="#53">GskCorner</a> = <span class="number">3</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskFillRule.html">GskFillRule</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskFillRule.html">GskFillRule</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_FILL_RULE_WINDING.html">GSK_FILL_RULE_WINDING</a>: <a href="#59">GskFillRule</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_FILL_RULE_EVEN_ODD.html">GSK_FILL_RULE_EVEN_ODD</a>: <a href="#59">GskFillRule</a> = <span class="number">1</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskGLUniformType.html">GskGLUniformType</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskGLUniformType.html">GskGLUniformType</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_NONE.html">GSK_GL_UNIFORM_TYPE_NONE</a>: <a href="#63">GskGLUniformType</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_FLOAT.html">GSK_GL_UNIFORM_TYPE_FLOAT</a>: <a href="#63">GskGLUniformType</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_INT.html">GSK_GL_UNIFORM_TYPE_INT</a>: <a href="#63">GskGLUniformType</a> = <span class="number">2</span>;
@@ -2539,29 +2539,29 @@
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC3.html">GSK_GL_UNIFORM_TYPE_VEC3</a>: <a href="#63">GskGLUniformType</a> = <span class="number">6</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_GL_UNIFORM_TYPE_VEC4.html">GSK_GL_UNIFORM_TYPE_VEC4</a>: <a href="#63">GskGLUniformType</a> = <span class="number">7</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskLineCap.html">GskLineCap</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskLineCap.html">GskLineCap</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_CAP_BUTT.html">GSK_LINE_CAP_BUTT</a>: <a href="#73">GskLineCap</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_CAP_ROUND.html">GSK_LINE_CAP_ROUND</a>: <a href="#73">GskLineCap</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_CAP_SQUARE.html">GSK_LINE_CAP_SQUARE</a>: <a href="#73">GskLineCap</a> = <span class="number">2</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskLineJoin.html">GskLineJoin</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskLineJoin.html">GskLineJoin</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_JOIN_MITER.html">GSK_LINE_JOIN_MITER</a>: <a href="#78">GskLineJoin</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_JOIN_ROUND.html">GSK_LINE_JOIN_ROUND</a>: <a href="#78">GskLineJoin</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_LINE_JOIN_BEVEL.html">GSK_LINE_JOIN_BEVEL</a>: <a href="#78">GskLineJoin</a> = <span class="number">2</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskMaskMode.html">GskMaskMode</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskMaskMode.html">GskMaskMode</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_MASK_MODE_ALPHA.html">GSK_MASK_MODE_ALPHA</a>: <a href="#83">GskMaskMode</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_ALPHA.html">GSK_MASK_MODE_INVERTED_ALPHA</a>: <a href="#83">GskMaskMode</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_MASK_MODE_LUMINANCE.html">GSK_MASK_MODE_LUMINANCE</a>: <a href="#83">GskMaskMode</a> = <span class="number">2</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_MASK_MODE_INVERTED_LUMINANCE.html">GSK_MASK_MODE_INVERTED_LUMINANCE</a>: <a href="#83">GskMaskMode</a> = <span class="number">3</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathDirection.html">GskPathDirection</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathDirection.html">GskPathDirection</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_FROM_START.html">GSK_PATH_FROM_START</a>: <a href="#89">GskPathDirection</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_TO_START.html">GSK_PATH_TO_START</a>: <a href="#89">GskPathDirection</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_TO_END.html">GSK_PATH_TO_END</a>: <a href="#89">GskPathDirection</a> = <span class="number">2</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_FROM_END.html">GSK_PATH_FROM_END</a>: <a href="#89">GskPathDirection</a> = <span class="number">3</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathOperation.html">GskPathOperation</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathOperation.html">GskPathOperation</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_MOVE.html">GSK_PATH_MOVE</a>: <a href="#95">GskPathOperation</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_CLOSE.html">GSK_PATH_CLOSE</a>: <a href="#95">GskPathOperation</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_LINE.html">GSK_PATH_LINE</a>: <a href="#95">GskPathOperation</a> = <span class="number">2</span>;
@@ -2569,7 +2569,7 @@
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_CUBIC.html">GSK_PATH_CUBIC</a>: <a href="#95">GskPathOperation</a> = <span class="number">4</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_CONIC.html">GSK_PATH_CONIC</a>: <a href="#95">GskPathOperation</a> = <span class="number">5</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskRenderNodeType.html">GskRenderNodeType</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskRenderNodeType.html">GskRenderNodeType</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_NOT_A_RENDER_NODE.html">GSK_NOT_A_RENDER_NODE</a>: <a href="#103">GskRenderNodeType</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CONTAINER_NODE.html">GSK_CONTAINER_NODE</a>: <a href="#103">GskRenderNodeType</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_CAIRO_NODE.html">GSK_CAIRO_NODE</a>: <a href="#103">GskRenderNodeType</a> = <span class="number">2</span>;
@@ -2612,17 +2612,17 @@
 #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
 </span><span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SUBSURFACE_NODE.html">GSK_SUBSURFACE_NODE</a>: <a href="#103">GskRenderNodeType</a> = <span class="number">30</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskScalingFilter.html">GskScalingFilter</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskScalingFilter.html">GskScalingFilter</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SCALING_FILTER_LINEAR.html">GSK_SCALING_FILTER_LINEAR</a>: <a href="#146">GskScalingFilter</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SCALING_FILTER_NEAREST.html">GSK_SCALING_FILTER_NEAREST</a>: <a href="#146">GskScalingFilter</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SCALING_FILTER_TRILINEAR.html">GSK_SCALING_FILTER_TRILINEAR</a>: <a href="#146">GskScalingFilter</a> = <span class="number">2</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskSerializationError.html">GskSerializationError</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskSerializationError.html">GskSerializationError</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_FORMAT.html">GSK_SERIALIZATION_UNSUPPORTED_FORMAT</a>: <a href="#151">GskSerializationError</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SERIALIZATION_UNSUPPORTED_VERSION.html">GSK_SERIALIZATION_UNSUPPORTED_VERSION</a>: <a href="#151">GskSerializationError</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_SERIALIZATION_INVALID_DATA.html">GSK_SERIALIZATION_INVALID_DATA</a>: <a href="#151">GskSerializationError</a> = <span class="number">2</span>;
 
-<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskTransformCategory.html">GskTransformCategory</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+<span class="kw">pub type </span><a href="../../gsk4_sys/type.GskTransformCategory.html">GskTransformCategory</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_UNKNOWN.html">GSK_TRANSFORM_CATEGORY_UNKNOWN</a>: <a href="#156">GskTransformCategory</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_ANY.html">GSK_TRANSFORM_CATEGORY_ANY</a>: <a href="#156">GskTransformCategory</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_3D.html">GSK_TRANSFORM_CATEGORY_3D</a>: <a href="#156">GskTransformCategory</a> = <span class="number">2</span>;
@@ -2632,7 +2632,7 @@
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_TRANSFORM_CATEGORY_IDENTITY.html">GSK_TRANSFORM_CATEGORY_IDENTITY</a>: <a href="#156">GskTransformCategory</a> = <span class="number">6</span>;
 
 <span class="comment">// Flags
-</span><span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathForeachFlags.html">GskPathForeachFlags</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>;
+</span><span class="kw">pub type </span><a href="../../gsk4_sys/type.GskPathForeachFlags.html">GskPathForeachFlags</a> = <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_FOREACH_ALLOW_ONLY_LINES.html">GSK_PATH_FOREACH_ALLOW_ONLY_LINES</a>: <a href="#166">GskPathForeachFlags</a> = <span class="number">0</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_FOREACH_ALLOW_QUAD.html">GSK_PATH_FOREACH_ALLOW_QUAD</a>: <a href="#166">GskPathForeachFlags</a> = <span class="number">1</span>;
 <span class="kw">pub const </span><a href="../../gsk4_sys/constant.GSK_PATH_FOREACH_ALLOW_CUBIC.html">GSK_PATH_FOREACH_ALLOW_CUBIC</a>: <a href="#166">GskPathForeachFlags</a> = <span class="number">2</span>;
@@ -2671,7 +2671,7 @@
         <a href="#95">GskPathOperation</a>,
         <span class="kw-2">*const </span>graphene::graphene_point_t,
         size_t,
-        <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         gpointer,
     ) -&gt; gboolean,
 &gt;;
@@ -2702,7 +2702,7 @@
 <span class="attr">#[derive(Copy, Clone)]
 #[repr(C)]
 </span><span class="kw">pub struct </span><a href="../../gsk4_sys/struct.GskColorStop.html">GskColorStop</a> {
-    <span class="kw">pub </span>offset: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+    <span class="kw">pub </span>offset: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     <span class="kw">pub </span>color: gdk::GdkRGBA,
 }
 
@@ -2820,7 +2820,7 @@
 </span><span class="kw">pub struct </span><a href="../../gsk4_sys/struct.GskPathPoint__s1.html">GskPathPoint__s1</a> {
     <span class="kw">pub </span>contour: size_t,
     <span class="kw">pub </span>idx: size_t,
-    <span class="kw">pub </span>t: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+    <span class="kw">pub </span>t: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#351-355">GskPathPoint__s1</a> {
@@ -2876,9 +2876,9 @@
 #[repr(C)]
 </span><span class="kw">pub struct </span><a href="../../gsk4_sys/struct.GskShadow.html">GskShadow</a> {
     <span class="kw">pub </span>color: gdk::GdkRGBA,
-    <span class="kw">pub </span>dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-    <span class="kw">pub </span>dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-    <span class="kw">pub </span>radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+    <span class="kw">pub </span>dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+    <span class="kw">pub </span>dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+    <span class="kw">pub </span>radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
 }
 
 <span class="kw">impl </span><a href="https://doc.rust-lang.org/nightly/core/fmt/trait.Debug.html">::std::fmt::Debug</a> <span class="kw">for </span><a href="#408-413">GskShadow</a> {
@@ -3573,9 +3573,9 @@
     </span><span class="kw">pub fn </span>gsk_path_get_closest_point(
         self_: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>,
         point: <span class="kw-2">*const </span>graphene::graphene_point_t,
-        threshold: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        threshold: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         result: <span class="kw-2">*mut </span><a href="#337-339">GskPathPoint</a>,
-        distance: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        distance: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; gboolean;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3614,13 +3614,13 @@
     </span><span class="kw">pub fn </span>gsk_path_to_cairo(self_: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>, cr: <span class="kw-2">*mut </span>cairo::cairo_t);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_to_string(self_: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>) -&gt; <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>;
+    </span><span class="kw">pub fn </span>gsk_path_to_string(self_: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>) -&gt; <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_unref(self_: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_parse(string: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>) -&gt; <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>;
+    </span><span class="kw">pub fn </span>gsk_path_parse(string: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>) -&gt; <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>;
 
     <span class="comment">//=========================================================================
     // GskPathBuilder
@@ -3642,7 +3642,7 @@
     </span><span class="kw">pub fn </span>gsk_path_builder_add_circle(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
         center: <span class="kw-2">*const </span>graphene::graphene_point_t,
-        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3677,10 +3677,10 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3689,22 +3689,22 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_conic_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        weight: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        weight: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_cubic_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x3: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y3: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x3: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y3: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3718,26 +3718,26 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_html_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_builder_line_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_path_builder_line_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_builder_move_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_path_builder_move_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_quad_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3746,80 +3746,80 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_conic_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        weight: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        weight: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_cubic_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x3: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y3: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x3: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y3: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_html_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_builder_rel_line_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_path_builder_rel_line_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_builder_rel_move_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_path_builder_rel_move_to(self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>, x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_quad_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y1: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y2: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_rel_svg_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        rx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        ry: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x_axis_rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        rx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        ry: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x_axis_rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         large_arc: gboolean,
         positive_sweep: gboolean,
-        x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_builder_svg_arc_to(
         self_: <span class="kw-2">*mut </span><a href="#309-312">GskPathBuilder</a>,
-        rx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        ry: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        x_axis_rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        rx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        ry: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        x_axis_rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         large_arc: gboolean,
         positive_sweep: gboolean,
-        x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
@@ -3841,11 +3841,11 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_measure_new_with_tolerance(
         path: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>,
-        tolerance: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        tolerance: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_measure_get_length(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_path_measure_get_length(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_measure_get_path(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>;
@@ -3853,12 +3853,12 @@
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_measure_get_point(
         self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>,
-        distance: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        distance: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         result: <span class="kw-2">*mut </span><a href="#337-339">GskPathPoint</a>,
     ) -&gt; gboolean;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_path_measure_get_tolerance(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_path_measure_get_tolerance(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_measure_ref(self_: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>) -&gt; <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>;
@@ -3877,7 +3877,7 @@
     </span><span class="kw">pub fn </span>gsk_path_point_compare(
         point1: <span class="kw-2">*const </span><a href="#337-339">GskPathPoint</a>,
         point2: <span class="kw-2">*const </span><a href="#337-339">GskPathPoint</a>,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_point_copy(point: <span class="kw-2">*mut </span><a href="#337-339">GskPathPoint</a>) -&gt; <span class="kw-2">*mut </span><a href="#337-339">GskPathPoint</a>;
@@ -3897,13 +3897,13 @@
         path: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>,
         direction: <a href="#89">GskPathDirection</a>,
         center: <span class="kw-2">*mut </span>graphene::graphene_point_t,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_point_get_distance(
         point: <span class="kw-2">*const </span><a href="#337-339">GskPathPoint</a>,
         measure: <span class="kw-2">*mut </span><a href="#323-326">GskPathMeasure</a>,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_point_get_position(
@@ -3917,7 +3917,7 @@
         point: <span class="kw-2">*const </span><a href="#337-339">GskPathPoint</a>,
         path: <span class="kw-2">*mut </span><a href="#296-299">GskPath</a>,
         direction: <a href="#89">GskPathDirection</a>,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_path_point_get_tangent(
@@ -3953,7 +3953,7 @@
     <span class="kw">pub fn </span>gsk_rounded_rect_init_from_rect(
         self_: <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>,
         bounds: <span class="kw-2">*const </span>graphene::graphene_rect_t,
-        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>;
     <span class="kw">pub fn </span>gsk_rounded_rect_intersects_rect(
         self_: <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>,
@@ -3963,15 +3963,15 @@
     <span class="kw">pub fn </span>gsk_rounded_rect_normalize(self_: <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>) -&gt; <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>;
     <span class="kw">pub fn </span>gsk_rounded_rect_offset(
         self_: <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>,
-        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>;
     <span class="kw">pub fn </span>gsk_rounded_rect_shrink(
         self_: <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>,
-        top: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        right: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        bottom: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        left: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        top: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        right: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        bottom: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        left: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#378-381">GskRoundedRect</a>;
 
     <span class="comment">//=========================================================================
@@ -3990,37 +3990,37 @@
     ) -&gt; <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>;
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_bool(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: gboolean,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_float(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
-        value: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
+        value: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_int(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_uint(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_vec2(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: <span class="kw-2">*const </span>graphene::graphene_vec2_t,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_vec3(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: <span class="kw-2">*const </span>graphene::graphene_vec3_t,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_set_vec4(
         builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         value: <span class="kw-2">*const </span>graphene::graphene_vec4_t,
     );
     <span class="kw">pub fn </span>gsk_shader_args_builder_to_args(builder: <span class="kw-2">*mut </span><a href="#394-397">GskShaderArgsBuilder</a>)
@@ -4035,7 +4035,7 @@
     </span><span class="kw">pub fn </span>gsk_stroke_get_type() -&gt; GType;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_new(line_width: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>;
+    </span><span class="kw">pub fn </span>gsk_stroke_new(line_width: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_stroke_copy(other: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>;
@@ -4044,10 +4044,10 @@
     </span><span class="kw">pub fn </span>gsk_stroke_free(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_get_dash(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>, n_dash: <span class="kw-2">*mut </span>size_t) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_stroke_get_dash(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>, n_dash: <span class="kw-2">*mut </span>size_t) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_get_dash_offset(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_stroke_get_dash_offset(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_stroke_get_line_cap(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="#73">GskLineCap</a>;
@@ -4056,16 +4056,16 @@
     </span><span class="kw">pub fn </span>gsk_stroke_get_line_join(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="#78">GskLineJoin</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_get_line_width(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_stroke_get_line_width(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_get_miter_limit(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_stroke_get_miter_limit(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_set_dash(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, dash: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>, n_dash: size_t);
+    </span><span class="kw">pub fn </span>gsk_stroke_set_dash(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, dash: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>, n_dash: size_t);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_set_dash_offset(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, offset: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_stroke_set_dash_offset(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, offset: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_stroke_set_line_cap(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, line_cap: <a href="#73">GskLineCap</a>);
@@ -4074,10 +4074,10 @@
     </span><span class="kw">pub fn </span>gsk_stroke_set_line_join(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, line_join: <a href="#78">GskLineJoin</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_set_line_width(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, line_width: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_stroke_set_line_width(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, line_width: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_stroke_set_miter_limit(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, limit: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>);
+    </span><span class="kw">pub fn </span>gsk_stroke_set_miter_limit(self_: <span class="kw-2">*mut </span><a href="#428-431">GskStroke</a>, limit: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>);
     <span class="attr">#[cfg(feature = <span class="string">"v4_14"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_14"</span>)))]
     </span><span class="kw">pub fn </span>gsk_stroke_to_cairo(self_: <span class="kw-2">*const </span><a href="#428-431">GskStroke</a>, cr: <span class="kw-2">*mut </span>cairo::cairo_t);
@@ -4097,70 +4097,70 @@
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
         matrix: <span class="kw-2">*const </span>graphene::graphene_matrix_t,
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
-    <span class="kw">pub fn </span>gsk_transform_perspective(next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>, depth: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
+    <span class="kw">pub fn </span>gsk_transform_perspective(next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>, depth: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_print(self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>, string: <span class="kw-2">*mut </span>glib::GString);
     <span class="kw">pub fn </span>gsk_transform_ref(self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
-    <span class="kw">pub fn </span>gsk_transform_rotate(next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>, angle: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
+    <span class="kw">pub fn </span>gsk_transform_rotate(next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>, angle: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_rotate_3d(
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        angle: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        angle: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         axis: <span class="kw-2">*const </span>graphene::graphene_vec3_t,
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_scale(
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        factor_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        factor_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        factor_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        factor_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_scale_3d(
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        factor_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        factor_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        factor_z: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        factor_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        factor_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        factor_z: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_6"</span>)))]
     </span><span class="kw">pub fn </span>gsk_transform_skew(
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        skew_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        skew_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        skew_x: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        skew_y: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_to_2d(
         self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        out_xx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_yx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_xy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_yy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        out_xx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_yx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_xy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_yy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="attr">#[cfg(feature = <span class="string">"v4_6"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_6"</span>)))]
     </span><span class="kw">pub fn </span>gsk_transform_to_2d_components(
         self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        out_skew_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_skew_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_scale_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_scale_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_angle: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        out_skew_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_skew_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_scale_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_scale_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_angle: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="kw">pub fn </span>gsk_transform_to_affine(
         self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        out_scale_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_scale_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        out_scale_x: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_scale_y: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="kw">pub fn </span>gsk_transform_to_matrix(
         self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
         out_matrix: <span class="kw-2">*mut </span>graphene::graphene_matrix_t,
     );
-    <span class="kw">pub fn </span>gsk_transform_to_string(self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>) -&gt; <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>;
+    <span class="kw">pub fn </span>gsk_transform_to_string(self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>) -&gt; <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>;
     <span class="kw">pub fn </span>gsk_transform_to_translate(
         self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
-        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        out_dx: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        out_dy: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     );
     <span class="kw">pub fn </span>gsk_transform_transform(
         next: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>,
@@ -4186,7 +4186,7 @@
     ) -&gt; <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>;
     <span class="kw">pub fn </span>gsk_transform_unref(self_: <span class="kw-2">*mut </span><a href="#441-444">GskTransform</a>);
     <span class="kw">pub fn </span>gsk_transform_parse(
-        string: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>,
+        string: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>,
         out_transform: <span class="kw-2">*mut *mut </span><a href="#441-444">GskTransform</a>,
     ) -&gt; gboolean;
 
@@ -4207,9 +4207,9 @@
     // GskBlurNode
     //=========================================================================
     </span><span class="kw">pub fn </span>gsk_blur_node_get_type() -&gt; GType;
-    <span class="kw">pub fn </span>gsk_blur_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#481-484">GskBlurNode</a>;
+    <span class="kw">pub fn </span>gsk_blur_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>) -&gt; <span class="kw-2">*mut </span><a href="#481-484">GskBlurNode</a>;
     <span class="kw">pub fn </span>gsk_blur_node_get_child(node: <span class="kw-2">*const </span><a href="#481-484">GskBlurNode</a>) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_blur_node_get_radius(node: <span class="kw-2">*const </span><a href="#481-484">GskBlurNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_blur_node_get_radius(node: <span class="kw-2">*const </span><a href="#481-484">GskBlurNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskBorderNode
@@ -4217,12 +4217,12 @@
     </span><span class="kw">pub fn </span>gsk_border_node_get_type() -&gt; GType;
     <span class="kw">pub fn </span>gsk_border_node_new(
         outline: <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>,
-        border_width: <span class="kw-2">*const </span>[<a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>; <span class="number">4</span>],
+        border_width: <span class="kw-2">*const </span>[<a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>; <span class="number">4</span>],
         border_color: <span class="kw-2">*const </span>[gdk::GdkRGBA; <span class="number">4</span>],
     ) -&gt; <span class="kw-2">*mut </span><a href="#494-497">GskBorderNode</a>;
     <span class="kw">pub fn </span>gsk_border_node_get_colors(node: <span class="kw-2">*const </span><a href="#494-497">GskBorderNode</a>) -&gt; <span class="kw-2">*const </span>gdk::GdkRGBA;
     <span class="kw">pub fn </span>gsk_border_node_get_outline(node: <span class="kw-2">*const </span><a href="#494-497">GskBorderNode</a>) -&gt; <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>;
-    <span class="kw">pub fn </span>gsk_border_node_get_widths(node: <span class="kw-2">*const </span><a href="#494-497">GskBorderNode</a>) -&gt; <span class="kw-2">*const </span>[<a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>; <span class="number">4</span>];
+    <span class="kw">pub fn </span>gsk_border_node_get_widths(node: <span class="kw-2">*const </span><a href="#494-497">GskBorderNode</a>) -&gt; <span class="kw-2">*const </span>[<a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>; <span class="number">4</span>];
 
     <span class="comment">//=========================================================================
     // GskBroadwayRenderer
@@ -4293,13 +4293,13 @@
     <span class="kw">pub fn </span>gsk_conic_gradient_node_new(
         bounds: <span class="kw-2">*const </span>graphene::graphene_rect_t,
         center: <span class="kw-2">*const </span>graphene::graphene_point_t,
-        rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        rotation: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         color_stops: <span class="kw-2">*const </span><a href="#235-238">GskColorStop</a>,
         n_color_stops: size_t,
     ) -&gt; <span class="kw-2">*mut </span><a href="#593-596">GskConicGradientNode</a>;
     <span class="attr">#[cfg(feature = <span class="string">"v4_2"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_2"</span>)))]
-    </span><span class="kw">pub fn </span>gsk_conic_gradient_node_get_angle(node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    </span><span class="kw">pub fn </span>gsk_conic_gradient_node_get_angle(node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_conic_gradient_node_get_center(
         node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>,
     ) -&gt; <span class="kw-2">*const </span>graphene::graphene_point_t;
@@ -4308,7 +4308,7 @@
         n_stops: <span class="kw-2">*mut </span>size_t,
     ) -&gt; <span class="kw-2">*const </span><a href="#235-238">GskColorStop</a>;
     <span class="kw">pub fn </span>gsk_conic_gradient_node_get_n_color_stops(node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>) -&gt; size_t;
-    <span class="kw">pub fn </span>gsk_conic_gradient_node_get_rotation(node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_conic_gradient_node_get_rotation(node: <span class="kw-2">*const </span><a href="#593-596">GskConicGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskContainerNode
@@ -4316,13 +4316,13 @@
     </span><span class="kw">pub fn </span>gsk_container_node_get_type() -&gt; GType;
     <span class="kw">pub fn </span>gsk_container_node_new(
         children: <span class="kw-2">*mut *mut </span><a href="#799-802">GskRenderNode</a>,
-        n_children: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>,
+        n_children: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#607-610">GskContainerNode</a>;
     <span class="kw">pub fn </span>gsk_container_node_get_child(
         node: <span class="kw-2">*const </span><a href="#607-610">GskContainerNode</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_container_node_get_n_children(node: <span class="kw-2">*const </span><a href="#607-610">GskContainerNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>;
+    <span class="kw">pub fn </span>gsk_container_node_get_n_children(node: <span class="kw-2">*const </span><a href="#607-610">GskContainerNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>;
 
     <span class="comment">//=========================================================================
     // GskCrossFadeNode
@@ -4331,10 +4331,10 @@
     <span class="kw">pub fn </span>gsk_cross_fade_node_new(
         start: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>,
         end: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>,
-        progress: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        progress: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#621-624">GskCrossFadeNode</a>;
     <span class="kw">pub fn </span>gsk_cross_fade_node_get_end_child(node: <span class="kw-2">*const </span><a href="#621-624">GskCrossFadeNode</a>) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_cross_fade_node_get_progress(node: <span class="kw-2">*const </span><a href="#621-624">GskCrossFadeNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_cross_fade_node_get_progress(node: <span class="kw-2">*const </span><a href="#621-624">GskCrossFadeNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_cross_fade_node_get_start_child(node: <span class="kw-2">*const </span><a href="#621-624">GskCrossFadeNode</a>)
         -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
 
@@ -4342,10 +4342,10 @@
     // GskDebugNode
     //=========================================================================
     </span><span class="kw">pub fn </span>gsk_debug_node_get_type() -&gt; GType;
-    <span class="kw">pub fn </span>gsk_debug_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, message: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>)
+    <span class="kw">pub fn </span>gsk_debug_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, message: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>)
         -&gt; <span class="kw-2">*mut </span><a href="#635-638">GskDebugNode</a>;
     <span class="kw">pub fn </span>gsk_debug_node_get_child(node: <span class="kw-2">*const </span><a href="#635-638">GskDebugNode</a>) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_debug_node_get_message(node: <span class="kw-2">*const </span><a href="#635-638">GskDebugNode</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>;
+    <span class="kw">pub fn </span>gsk_debug_node_get_message(node: <span class="kw-2">*const </span><a href="#635-638">GskDebugNode</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>;
 
     <span class="comment">//=========================================================================
     // GskFillNode
@@ -4385,7 +4385,7 @@
     //=========================================================================
     </span><span class="kw">pub fn </span>gsk_gl_shader_get_type() -&gt; GType;
     <span class="kw">pub fn </span>gsk_gl_shader_new_from_bytes(sourcecode: <span class="kw-2">*mut </span>glib::GBytes) -&gt; <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_new_from_resource(resource_path: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>) -&gt; <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_new_from_resource(resource_path: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>) -&gt; <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_compile(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         renderer: <span class="kw-2">*mut </span><a href="#813-816">GskRenderer</a>,
@@ -4393,56 +4393,56 @@
     ) -&gt; gboolean;
     <span class="kw">pub fn </span>gsk_gl_shader_find_uniform_by_name(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
-        name: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
+        name: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>,
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_format_args(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, ...) -&gt; <span class="kw-2">*mut </span>glib::GBytes;
     <span class="comment">//pub fn gsk_gl_shader_format_args_va(shader: *mut GskGLShader, uniforms: /*Unimplemented*/va_list) -&gt; *mut glib::GBytes;
     </span><span class="kw">pub fn </span>gsk_gl_shader_get_arg_bool(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
     ) -&gt; gboolean;
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_float(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
-    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
+    ) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_int(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
     ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.i32.html">i32</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_uint(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
     ) -&gt; <a href="https://doc.rust-lang.org/nightly/std/primitive.u32.html">u32</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_vec2(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         out_value: <span class="kw-2">*mut </span>graphene::graphene_vec2_t,
     );
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_vec3(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         out_value: <span class="kw-2">*mut </span>graphene::graphene_vec3_t,
     );
     <span class="kw">pub fn </span>gsk_gl_shader_get_arg_vec4(
         shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>,
         args: <span class="kw-2">*mut </span>glib::GBytes,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>,
         out_value: <span class="kw-2">*mut </span>graphene::graphene_vec4_t,
     );
     <span class="kw">pub fn </span>gsk_gl_shader_get_args_size(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; size_t;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_n_textures(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_n_uniforms(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_resource(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_get_n_textures(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_get_n_uniforms(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_get_resource(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_get_source(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>) -&gt; <span class="kw-2">*mut </span>glib::GBytes;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_name(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_offset(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_type(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_int.html">c_int</a>)
+    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_name(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>) -&gt; <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_offset(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_get_uniform_type(shader: <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>, idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_int.html">c_int</a>)
         -&gt; <a href="#63">GskGLUniformType</a>;
 
     <span class="comment">//=========================================================================
@@ -4454,14 +4454,14 @@
         bounds: <span class="kw-2">*const </span>graphene::graphene_rect_t,
         args: <span class="kw-2">*mut </span>glib::GBytes,
         children: <span class="kw-2">*mut *mut </span><a href="#799-802">GskRenderNode</a>,
-        n_children: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>,
+        n_children: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#688-691">GskGLShaderNode</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_node_get_args(node: <span class="kw-2">*const </span><a href="#688-691">GskGLShaderNode</a>) -&gt; <span class="kw-2">*mut </span>glib::GBytes;
     <span class="kw">pub fn </span>gsk_gl_shader_node_get_child(
         node: <span class="kw-2">*const </span><a href="#688-691">GskGLShaderNode</a>,
-        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>,
+        idx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_gl_shader_node_get_n_children(node: <span class="kw-2">*const </span><a href="#688-691">GskGLShaderNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>;
+    <span class="kw">pub fn </span>gsk_gl_shader_node_get_n_children(node: <span class="kw-2">*const </span><a href="#688-691">GskGLShaderNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>;
     <span class="kw">pub fn </span>gsk_gl_shader_node_get_shader(node: <span class="kw-2">*const </span><a href="#688-691">GskGLShaderNode</a>) -&gt; <span class="kw-2">*mut </span><a href="#675-678">GskGLShader</a>;
 
     <span class="comment">//=========================================================================
@@ -4471,19 +4471,19 @@
     <span class="kw">pub fn </span>gsk_inset_shadow_node_new(
         outline: <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>,
         color: <span class="kw-2">*const </span>gdk::GdkRGBA,
-        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        spread: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        blur_radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        spread: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        blur_radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#702-705">GskInsetShadowNode</a>;
-    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_blur_radius(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_blur_radius(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_inset_shadow_node_get_color(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <span class="kw-2">*const </span>gdk::GdkRGBA;
-    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_dx(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
-    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_dy(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_dx(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_dy(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_inset_shadow_node_get_outline(
         node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>,
     ) -&gt; <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>;
-    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_spread(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_inset_shadow_node_get_spread(node: <span class="kw-2">*const </span><a href="#702-705">GskInsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskLinearGradientNode
@@ -4546,10 +4546,10 @@
     // GskOpacityNode
     //=========================================================================
     </span><span class="kw">pub fn </span>gsk_opacity_node_get_type() -&gt; GType;
-    <span class="kw">pub fn </span>gsk_opacity_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, opacity: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>)
+    <span class="kw">pub fn </span>gsk_opacity_node_new(child: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>, opacity: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>)
         -&gt; <span class="kw-2">*mut </span><a href="#757-760">GskOpacityNode</a>;
     <span class="kw">pub fn </span>gsk_opacity_node_get_child(node: <span class="kw-2">*const </span><a href="#757-760">GskOpacityNode</a>) -&gt; <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>;
-    <span class="kw">pub fn </span>gsk_opacity_node_get_opacity(node: <span class="kw-2">*const </span><a href="#757-760">GskOpacityNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_opacity_node_get_opacity(node: <span class="kw-2">*const </span><a href="#757-760">GskOpacityNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskOutsetShadowNode
@@ -4558,21 +4558,21 @@
     <span class="kw">pub fn </span>gsk_outset_shadow_node_new(
         outline: <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>,
         color: <span class="kw-2">*const </span>gdk::GdkRGBA,
-        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        spread: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        blur_radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        dx: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        dy: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        spread: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        blur_radius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
     ) -&gt; <span class="kw-2">*mut </span><a href="#771-774">GskOutsetShadowNode</a>;
-    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_blur_radius(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_blur_radius(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_outset_shadow_node_get_color(
         node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>,
     ) -&gt; <span class="kw-2">*const </span>gdk::GdkRGBA;
-    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_dx(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
-    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_dy(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_dx(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_dy(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_outset_shadow_node_get_outline(
         node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>,
     ) -&gt; <span class="kw-2">*const </span><a href="#378-381">GskRoundedRect</a>;
-    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_spread(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_outset_shadow_node_get_spread(node: <span class="kw-2">*const </span><a href="#771-774">GskOutsetShadowNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskRadialGradientNode
@@ -4581,10 +4581,10 @@
     <span class="kw">pub fn </span>gsk_radial_gradient_node_new(
         bounds: <span class="kw-2">*const </span>graphene::graphene_rect_t,
         center: <span class="kw-2">*const </span>graphene::graphene_point_t,
-        hradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        vradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        start: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        end: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        hradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        vradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        start: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        end: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         color_stops: <span class="kw-2">*const </span><a href="#235-238">GskColorStop</a>,
         n_color_stops: size_t,
     ) -&gt; <span class="kw-2">*mut </span><a href="#785-788">GskRadialGradientNode</a>;
@@ -4595,12 +4595,12 @@
         node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>,
         n_stops: <span class="kw-2">*mut </span>size_t,
     ) -&gt; <span class="kw-2">*const </span><a href="#235-238">GskColorStop</a>;
-    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_end(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
-    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_hradius(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_end(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_hradius(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
     <span class="kw">pub fn </span>gsk_radial_gradient_node_get_n_color_stops(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>)
         -&gt; size_t;
-    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_start(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
-    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_vradius(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_start(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
+    <span class="kw">pub fn </span>gsk_radial_gradient_node_get_vradius(node: <span class="kw-2">*const </span><a href="#785-788">GskRadialGradientNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>;
 
     <span class="comment">//=========================================================================
     // GskRenderNode
@@ -4628,7 +4628,7 @@
     <span class="kw">pub fn </span>gsk_render_node_unref(node: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>);
     <span class="kw">pub fn </span>gsk_render_node_write_to_file(
         node: <span class="kw-2">*mut </span><a href="#799-802">GskRenderNode</a>,
-        filename: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_char.html">c_char</a>,
+        filename: <span class="kw-2">*const </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_char.html">c_char</a>,
         error: <span class="kw-2">*mut *mut </span>glib::GError,
     ) -&gt; gboolean;
 
@@ -4696,10 +4696,10 @@
     <span class="kw">pub fn </span>gsk_repeating_radial_gradient_node_new(
         bounds: <span class="kw-2">*const </span>graphene::graphene_rect_t,
         center: <span class="kw-2">*const </span>graphene::graphene_point_t,
-        hradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        vradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        start: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
-        end: <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_float.html">c_float</a>,
+        hradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        vradius: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        start: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
+        end: <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_float.html">c_float</a>,
         color_stops: <span class="kw-2">*const </span><a href="#235-238">GskColorStop</a>,
         n_color_stops: size_t,
     ) -&gt; <span class="kw-2">*mut </span><a href="#854-857">GskRepeatingRadialGradientNode</a>;
@@ -4785,9 +4785,9 @@
     <span class="kw">pub fn </span>gsk_text_node_get_font(node: <span class="kw-2">*const </span><a href="#924-927">GskTextNode</a>) -&gt; <span class="kw-2">*mut </span>pango::PangoFont;
     <span class="kw">pub fn </span>gsk_text_node_get_glyphs(
         node: <span class="kw-2">*const </span><a href="#924-927">GskTextNode</a>,
-        n_glyphs: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>,
+        n_glyphs: <span class="kw-2">*mut </span><a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>,
     ) -&gt; <span class="kw-2">*const </span>pango::PangoGlyphInfo;
-    <span class="kw">pub fn </span>gsk_text_node_get_num_glyphs(node: <span class="kw-2">*const </span><a href="#924-927">GskTextNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/type.c_uint.html">c_uint</a>;
+    <span class="kw">pub fn </span>gsk_text_node_get_num_glyphs(node: <span class="kw-2">*const </span><a href="#924-927">GskTextNode</a>) -&gt; <a href="https://doc.rust-lang.org/nightly/core/ffi/primitives/type.c_uint.html">c_uint</a>;
     <span class="kw">pub fn </span>gsk_text_node_get_offset(node: <span class="kw-2">*const </span><a href="#924-927">GskTextNode</a>) -&gt; <span class="kw-2">*const </span>graphene::graphene_point_t;
     <span class="attr">#[cfg(feature = <span class="string">"v4_2"</span>)]
     #[cfg_attr(docsrs, doc(cfg(feature = <span class="string">"v4_2"</span>)))]

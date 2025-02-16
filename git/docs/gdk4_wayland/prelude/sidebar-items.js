@@ -1,1 +1,1 @@
-window.SIDEBAR_ITEMS = {"trait":["WaylandSurfaceExtManual"]};
+window.SIDEBAR_ITEMS = {"trait":["WaylandSurfaceExt","WaylandSurfaceExtManual"]};

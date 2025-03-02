@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/revealer.rs`."><title>revealer.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-6c3ea77c.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.87.0-nightly (5bc623145 2025-02-16)" data-channel="nightly" data-search-js="search-f7327375.js" data-settings-js="settings-6dad6058.js" ><script src="../../../static.files/storage-3a5871a4.js"></script><script defer src="../../../static.files/src-script-b8d3f215.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-5332ae0c.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="generator" content="rustdoc"><meta name="description" content="Source of the Rust file `gtk4/src/auto/revealer.rs`."><title>revealer.rs - source</title><script>if(window.location.protocol!=="file:")document.head.insertAdjacentHTML("beforeend","SourceSerif4-Regular-6b053e98.ttf.woff2,FiraSans-Italic-81dc35de.woff2,FiraSans-Regular-0fe48ade.woff2,FiraSans-MediumItalic-ccf7e434.woff2,FiraSans-Medium-e1aa3f0a.woff2,SourceCodePro-Regular-8badfe75.ttf.woff2,SourceCodePro-Semibold-aa29a496.ttf.woff2".split(",").map(f=>`<link rel="preload" as="font" type="font/woff2" crossorigin href="../../../static.files/${f}">`).join(""))</script><link rel="stylesheet" href="../../../static.files/normalize-9960930a.css"><link rel="stylesheet" href="../../../static.files/rustdoc-916cea96.css"><meta name="rustdoc-vars" data-root-path="../../../" data-static-root-path="../../../static.files/" data-current-crate="gtk4" data-themes="" data-resource-suffix="" data-rustdoc-version="1.87.0-nightly (8c392966a 2025-03-01)" data-channel="nightly" data-search-js="search-f7327375.js" data-settings-js="settings-d72f25bb.js" ><script src="../../../static.files/storage-d8ac8691.js"></script><script defer src="../../../static.files/src-script-b8d3f215.js"></script><script defer src="../../../src-files.js"></script><script defer src="../../../static.files/main-a7bf3405.js"></script><noscript><link rel="stylesheet" href="../../../static.files/noscript-893ab5e7.css"></noscript><link rel="alternate icon" type="image/png" href="../../../static.files/favicon-32x32-6580c154.png"><link rel="icon" type="image/svg+xml" href="../../../static.files/favicon-044be391.svg"></head><body class="rustdoc src"><!--[if lte IE 11]><div class="warning">This old browser is unsupported and will most likely display funky things.</div><![endif]-->
 <script type="text/javascript">
     document.addEventListener("DOMContentLoaded", checkDocsLatestStable);
 
@@ -76,8 +76,8 @@
 <a href=#3 id=3 data-nosnippet>3</a>// DO NOT EDIT
 <a href=#4 id=4 data-nosnippet>4</a>
 <a href=#5 id=5 data-nosnippet>5</a></span><span class="kw">use crate</span>::{
-<a href=#6 id=6 data-nosnippet>6</a>    <a href="../../../gtk4_sys/index.html">ffi</a>, <a href="accessible.rs.html#19-68">Accessible</a>, <a href="enums.rs.html#1021-1321">AccessibleRole</a>, <a href="../enums.rs.html#77-107">Align</a>, <a href="buildable.rs.html#8-32">Buildable</a>, <a href="constraint_target.rs.html#8-23">ConstraintTarget</a>, <a href="layout_manager.rs.html#8-71">LayoutManager</a>, <a href="enums.rs.html#7996-8007">Overflow</a>,
-<a href=#7 id=7 data-nosnippet>7</a>    <a href="enums.rs.html#10047-10080">RevealerTransitionType</a>, <a href="widget.rs.html#19-864">Widget</a>,
+<a href=#6 id=6 data-nosnippet>6</a>    <a href="../../../gtk4_sys/index.html">ffi</a>, <a href="accessible.rs.html#19-70">Accessible</a>, <a href="enums.rs.html#1021-1321">AccessibleRole</a>, <a href="../enums.rs.html#77-107">Align</a>, <a href="buildable.rs.html#8-31">Buildable</a>, <a href="constraint_target.rs.html#8-23">ConstraintTarget</a>, <a href="layout_manager.rs.html#8-70">LayoutManager</a>, <a href="enums.rs.html#8009-8020">Overflow</a>,
+<a href=#7 id=7 data-nosnippet>7</a>    <a href="enums.rs.html#10060-10093">RevealerTransitionType</a>, <a href="widget.rs.html#19-864">Widget</a>,
 <a href=#8 id=8 data-nosnippet>8</a>};
 <a href=#9 id=9 data-nosnippet>9</a><span class="kw">use </span>glib::{
 <a href=#10 id=10 data-nosnippet>10</a>    <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/prelude/index.html">prelude</a>::<span class="kw-2">*</span>,
@@ -87,7 +87,7 @@
 <a href=#14 id=14 data-nosnippet>14</a><span class="kw">use </span><a href="https://doc.rust-lang.org/nightly/alloc/boxed/struct.Box.html">std::boxed::Box</a> <span class="kw">as </span>Box_;
 <a href=#15 id=15 data-nosnippet>15</a>
 <a href=#16 id=16 data-nosnippet>16</a><a class="macro" href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/macro.wrapper.html">glib::wrapper!</a> {
-<a href=#17 id=17 data-nosnippet>17</a>    <span class="doccomment">/// A [`Revealer`][crate::Revealer] animates the transition of its child from invisible to visible.
+<a href=#17 id=17 data-nosnippet>17</a>    <span class="doccomment">/// Animates the transition of its child from invisible to visible.
 <a href=#18 id=18 data-nosnippet>18</a>    ///
 <a href=#19 id=19 data-nosnippet>19</a>    /// The style of transition can be controlled with
 <a href=#20 id=20 data-nosnippet>20</a>    /// [`set_transition_type()`][Self::set_transition_type()].
@@ -104,7 +104,7 @@
 <a href=#31 id=31 data-nosnippet>31</a>    ///
 <a href=#32 id=32 data-nosnippet>32</a>    /// # Accessibility
 <a href=#33 id=33 data-nosnippet>33</a>    ///
-<a href=#34 id=34 data-nosnippet>34</a>    /// [`Revealer`][crate::Revealer] uses the [`AccessibleRole::Group`][crate::AccessibleRole::Group] role.
+<a href=#34 id=34 data-nosnippet>34</a>    /// [`Revealer`][crate::Revealer] uses the [enum@Gtk.AccessibleRole.group] role.
 <a href=#35 id=35 data-nosnippet>35</a>    ///
 <a href=#36 id=36 data-nosnippet>36</a>    /// The child of [`Revealer`][crate::Revealer], if set, is always available in the accessibility
 <a href=#37 id=37 data-nosnippet>37</a>    /// tree, regardless of the state of the revealer widget.
@@ -444,7 +444,7 @@
 <a href=#371 id=371 data-nosnippet>371</a>    ///
 <a href=#372 id=372 data-nosnippet>372</a>    /// [`WidgetExt`][trait@crate::prelude::WidgetExt], [`trait@glib::ObjectExt`], [`AccessibleExt`][trait@crate::prelude::AccessibleExt], [`BuildableExt`][trait@crate::prelude::BuildableExt], [`ConstraintTargetExt`][trait@crate::prelude::ConstraintTargetExt], [`WidgetExtManual`][trait@crate::prelude::WidgetExtManual], [`AccessibleExtManual`][trait@crate::prelude::AccessibleExtManual]
 <a href=#373 id=373 data-nosnippet>373</a>    </span><span class="attr">#[doc(alias = <span class="string">"GtkRevealer"</span>)]
-<a href=#374 id=374 data-nosnippet>374</a>    </span><span class="kw">pub struct </span><a href="../../../gtk4/struct.Revealer.html">Revealer</a>(Object&lt;<a href="../../../gtk4_sys/struct.GtkRevealer.html">ffi::GtkRevealer</a>&gt;) @extends <a href="widget.rs.html#19-864">Widget</a>, @implements <a href="accessible.rs.html#19-68">Accessible</a>, <a href="buildable.rs.html#8-32">Buildable</a>, <a href="constraint_target.rs.html#8-23">ConstraintTarget</a>;
+<a href=#374 id=374 data-nosnippet>374</a>    </span><span class="kw">pub struct </span><a href="../../../gtk4/struct.Revealer.html">Revealer</a>(Object&lt;<a href="../../../gtk4_sys/struct.GtkRevealer.html">ffi::GtkRevealer</a>&gt;) @extends <a href="widget.rs.html#19-864">Widget</a>, @implements <a href="accessible.rs.html#19-70">Accessible</a>, <a href="buildable.rs.html#8-31">Buildable</a>, <a href="constraint_target.rs.html#8-23">ConstraintTarget</a>;
 <a href=#375 id=375 data-nosnippet>375</a>
 <a href=#376 id=376 data-nosnippet>376</a>    <span class="kw">match fn </span>{
 <a href=#377 id=377 data-nosnippet>377</a>        type_ =&gt; || ffi::gtk_revealer_get_type(),
@@ -536,7 +536,7 @@
 <a href=#463 id=463 data-nosnippet>463</a>    </span><span class="attr">#[doc(alias = <span class="string">"gtk_revealer_get_transition_type"</span>)]
 <a href=#464 id=464 data-nosnippet>464</a>    #[doc(alias = <span class="string">"get_transition_type"</span>)]
 <a href=#465 id=465 data-nosnippet>465</a>    #[doc(alias = <span class="string">"transition-type"</span>)]
-<a href=#466 id=466 data-nosnippet>466</a>    </span><span class="kw">pub fn </span>transition_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#10047-10080">RevealerTransitionType</a> {
+<a href=#466 id=466 data-nosnippet>466</a>    </span><span class="kw">pub fn </span>transition_type(<span class="kw-2">&amp;</span><span class="self">self</span>) -&gt; <a href="enums.rs.html#10060-10093">RevealerTransitionType</a> {
 <a href=#467 id=467 data-nosnippet>467</a>        <span class="kw">unsafe </span>{ <a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/fn.from_glib.html">from_glib</a>(<a href="../../../gtk4_sys/fn.gtk_revealer_get_transition_type.html">ffi::gtk_revealer_get_transition_type</a>(<a class="self" href="#466">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>)) }
 <a href=#468 id=468 data-nosnippet>468</a>    }
 <a href=#469 id=469 data-nosnippet>469</a>
@@ -587,7 +587,7 @@
 <a href=#514 id=514 data-nosnippet>514</a>    /// the new transition type
 <a href=#515 id=515 data-nosnippet>515</a>    </span><span class="attr">#[doc(alias = <span class="string">"gtk_revealer_set_transition_type"</span>)]
 <a href=#516 id=516 data-nosnippet>516</a>    #[doc(alias = <span class="string">"transition-type"</span>)]
-<a href=#517 id=517 data-nosnippet>517</a>    </span><span class="kw">pub fn </span>set_transition_type(<span class="kw-2">&amp;</span><span class="self">self</span>, transition: <a href="enums.rs.html#10047-10080">RevealerTransitionType</a>) {
+<a href=#517 id=517 data-nosnippet>517</a>    </span><span class="kw">pub fn </span>set_transition_type(<span class="kw-2">&amp;</span><span class="self">self</span>, transition: <a href="enums.rs.html#10060-10093">RevealerTransitionType</a>) {
 <a href=#518 id=518 data-nosnippet>518</a>        <span class="kw">unsafe </span>{
 <a href=#519 id=519 data-nosnippet>519</a>            <a href="../../../gtk4_sys/fn.gtk_revealer_set_transition_type.html">ffi::gtk_revealer_set_transition_type</a>(<a class="self" href="#517">self</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.ToGlibPtr.html#tymethod.to_glib_none">to_glib_none</a>().<span class="number">0</span>, <a href="#517">transition</a>.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/translate/trait.IntoGlib.html#tymethod.into_glib">into_glib</a>());
 <a href=#520 id=520 data-nosnippet>520</a>        }
@@ -758,7 +758,7 @@
 <a href=#685 id=685 data-nosnippet>685</a>    }
 <a href=#686 id=686 data-nosnippet>686</a>
 <a href=#687 id=687 data-nosnippet>687</a>    <span class="doccomment">/// The type of animation used to transition.
-<a href=#688 id=688 data-nosnippet>688</a>    </span><span class="kw">pub fn </span>transition_type(<span class="self">self</span>, transition_type: <a href="enums.rs.html#10047-10080">RevealerTransitionType</a>) -&gt; <span class="self">Self </span>{
+<a href=#688 id=688 data-nosnippet>688</a>    </span><span class="kw">pub fn </span>transition_type(<span class="self">self</span>, transition_type: <a href="enums.rs.html#10060-10093">RevealerTransitionType</a>) -&gt; <span class="self">Self </span>{
 <a href=#689 id=689 data-nosnippet>689</a>        <span class="self">Self </span>{
 <a href=#690 id=690 data-nosnippet>690</a>            builder: <a class="self" href="#688">self</a>.builder.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.ObjectBuilder.html#method.property">property</a>(<span class="string">"transition-type"</span>, <a href="#688">transition_type</a>),
 <a href=#691 id=691 data-nosnippet>691</a>        }
@@ -869,7 +869,7 @@
 <a href=#796 id=796 data-nosnippet>796</a>    ///
 <a href=#797 id=797 data-nosnippet>797</a>    /// This property is meant to be set by widget implementations,
 <a href=#798 id=798 data-nosnippet>798</a>    /// typically in their instance init function.
-<a href=#799 id=799 data-nosnippet>799</a>    </span><span class="kw">pub fn </span>layout_manager(<span class="self">self</span>, layout_manager: <span class="kw-2">&amp;</span><span class="kw">impl </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html">IsA</a>&lt;<a href="layout_manager.rs.html#8-71">LayoutManager</a>&gt;) -&gt; <span class="self">Self </span>{
+<a href=#799 id=799 data-nosnippet>799</a>    </span><span class="kw">pub fn </span>layout_manager(<span class="self">self</span>, layout_manager: <span class="kw-2">&amp;</span><span class="kw">impl </span><a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/trait.IsA.html">IsA</a>&lt;<a href="layout_manager.rs.html#8-70">LayoutManager</a>&gt;) -&gt; <span class="self">Self </span>{
 <a href=#800 id=800 data-nosnippet>800</a>        <span class="self">Self </span>{
 <a href=#801 id=801 data-nosnippet>801</a>            builder: <span class="self"><a href="#799">self</a>
 <a href=#802 id=802 data-nosnippet>802</a>                </span>.builder
@@ -959,7 +959,7 @@
 <a href=#886 id=886 data-nosnippet>886</a>    ///
 <a href=#887 id=887 data-nosnippet>887</a>    /// This property is meant to be set by widget implementations,
 <a href=#888 id=888 data-nosnippet>888</a>    /// typically in their instance init function.
-<a href=#889 id=889 data-nosnippet>889</a>    </span><span class="kw">pub fn </span>overflow(<span class="self">self</span>, overflow: <a href="enums.rs.html#7996-8007">Overflow</a>) -&gt; <span class="self">Self </span>{
+<a href=#889 id=889 data-nosnippet>889</a>    </span><span class="kw">pub fn </span>overflow(<span class="self">self</span>, overflow: <a href="enums.rs.html#8009-8020">Overflow</a>) -&gt; <span class="self">Self </span>{
 <a href=#890 id=890 data-nosnippet>890</a>        <span class="self">Self </span>{
 <a href=#891 id=891 data-nosnippet>891</a>            builder: <a class="self" href="#889">self</a>.builder.<a href="https://gtk-rs.org/gtk-rs-core/git/docs/glib/object/struct.ObjectBuilder.html#method.property">property</a>(<span class="string">"overflow"</span>, <a href="#889">overflow</a>),
 <a href=#892 id=892 data-nosnippet>892</a>        }
